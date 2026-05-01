@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>C# SDK for Moonshot AI / Kimi APIs, including chat completions, models, files, token estimation, batches, and balance.</Description>
+    <PackageTags>api;client;sdk;dotnet;openapi;moonshot;kimi;llm;ai;chat-completion;files;batches</PackageTags>
+  </PropertyGroup>
+
+</Project>
