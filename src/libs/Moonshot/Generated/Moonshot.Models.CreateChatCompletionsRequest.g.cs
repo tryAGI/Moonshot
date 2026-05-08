@@ -34,6 +34,19 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickKimiK26(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.KimiK26ChatRequest? value)
+        {
+            value = KimiK26;
+            return IsKimiK26;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK25ChatRequest? KimiK25 { get; init; }
 #else
@@ -47,6 +60,19 @@ namespace Moonshot
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KimiK25))]
 #endif
         public bool IsKimiK25 => KimiK25 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickKimiK25(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.KimiK25ChatRequest? value)
+        {
+            value = KimiK25;
+            return IsKimiK25;
+        }
 
         /// <summary>
         /// 
@@ -68,6 +94,19 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickKimiK20905Preview(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.KimiK2ChatRequest? value)
+        {
+            value = KimiK20905Preview;
+            return IsKimiK20905Preview;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK2ThinkingChatRequest? KimiK2Thinking { get; init; }
 #else
@@ -85,6 +124,19 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickKimiK2Thinking(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.KimiK2ThinkingChatRequest? value)
+        {
+            value = KimiK2Thinking;
+            return IsKimiK2Thinking;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.MoonshotV1ChatRequest? MoonshotV18k { get; init; }
 #else
@@ -98,6 +150,19 @@ namespace Moonshot
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MoonshotV18k))]
 #endif
         public bool IsMoonshotV18k => MoonshotV18k != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickMoonshotV18k(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.MoonshotV1ChatRequest? value)
+        {
+            value = MoonshotV18k;
+            return IsMoonshotV18k;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -283,6 +348,48 @@ namespace Moonshot
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<global::Moonshot.KimiK26ChatRequest?>? kimiK26 = null,
+
+            global::System.Action<global::Moonshot.KimiK25ChatRequest?>? kimiK25 = null,
+
+            global::System.Action<global::Moonshot.KimiK2ChatRequest?>? kimiK20905Preview = null,
+
+            global::System.Action<global::Moonshot.KimiK2ThinkingChatRequest?>? kimiK2Thinking = null,
+
+            global::System.Action<global::Moonshot.MoonshotV1ChatRequest?>? moonshotV18k = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsKimiK26)
+            {
+                kimiK26?.Invoke(KimiK26!);
+            }
+            else if (IsKimiK25)
+            {
+                kimiK25?.Invoke(KimiK25!);
+            }
+            else if (IsKimiK20905Preview)
+            {
+                kimiK20905Preview?.Invoke(KimiK20905Preview!);
+            }
+            else if (IsKimiK2Thinking)
+            {
+                kimiK2Thinking?.Invoke(KimiK2Thinking!);
+            }
+            else if (IsMoonshotV18k)
+            {
+                moonshotV18k?.Invoke(MoonshotV18k!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<global::Moonshot.KimiK26ChatRequest?>? kimiK26 = null,
             global::System.Action<global::Moonshot.KimiK25ChatRequest?>? kimiK25 = null,
             global::System.Action<global::Moonshot.KimiK2ChatRequest?>? kimiK20905Preview = null,
