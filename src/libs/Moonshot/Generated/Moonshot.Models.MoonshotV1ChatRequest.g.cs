@@ -42,6 +42,13 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public global::Moonshot.ChatRequestBase PickBase() => IsBase
+            ? Base!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Base' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.MoonshotV1ChatRequestVariant2? MoonshotV1ChatRequestVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Moonshot
             value = MoonshotV1ChatRequestVariant2;
             return IsMoonshotV1ChatRequestVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Moonshot.MoonshotV1ChatRequestVariant2 PickMoonshotV1ChatRequestVariant2() => IsMoonshotV1ChatRequestVariant2
+            ? MoonshotV1ChatRequestVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MoonshotV1ChatRequestVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public static MoonshotV1ChatRequest FromBase(global::Moonshot.ChatRequestBase? value) => new MoonshotV1ChatRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MoonshotV1ChatRequest(global::Moonshot.MoonshotV1ChatRequestVariant2 value) => new MoonshotV1ChatRequest((global::Moonshot.MoonshotV1ChatRequestVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Moonshot
         {
             MoonshotV1ChatRequestVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MoonshotV1ChatRequest FromMoonshotV1ChatRequestVariant2(global::Moonshot.MoonshotV1ChatRequestVariant2? value) => new MoonshotV1ChatRequest(value);
 
         /// <summary>
         /// 

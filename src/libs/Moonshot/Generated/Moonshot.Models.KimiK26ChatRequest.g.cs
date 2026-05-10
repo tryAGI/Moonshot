@@ -42,6 +42,13 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public global::Moonshot.ChatRequestBase PickBase() => IsBase
+            ? Base!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Base' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK26ChatRequestVariant2? KimiK26ChatRequestVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Moonshot
             value = KimiK26ChatRequestVariant2;
             return IsKimiK26ChatRequestVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Moonshot.KimiK26ChatRequestVariant2 PickKimiK26ChatRequestVariant2() => IsKimiK26ChatRequestVariant2
+            ? KimiK26ChatRequestVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK26ChatRequestVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public static KimiK26ChatRequest FromBase(global::Moonshot.ChatRequestBase? value) => new KimiK26ChatRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator KimiK26ChatRequest(global::Moonshot.KimiK26ChatRequestVariant2 value) => new KimiK26ChatRequest((global::Moonshot.KimiK26ChatRequestVariant2?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Moonshot
         {
             KimiK26ChatRequestVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static KimiK26ChatRequest FromKimiK26ChatRequestVariant2(global::Moonshot.KimiK26ChatRequestVariant2? value) => new KimiK26ChatRequest(value);
 
         /// <summary>
         /// 
