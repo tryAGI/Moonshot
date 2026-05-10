@@ -47,6 +47,13 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public global::Moonshot.KimiK26ChatRequest PickKimiK26() => IsKimiK26
+            ? KimiK26!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK26' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK25ChatRequest? KimiK25 { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Moonshot
             value = KimiK25;
             return IsKimiK25;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Moonshot.KimiK25ChatRequest PickKimiK25() => IsKimiK25
+            ? KimiK25!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK25' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public global::Moonshot.KimiK2ChatRequest PickKimiK20905Preview() => IsKimiK20905Preview
+            ? KimiK20905Preview!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK20905Preview' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK2ThinkingChatRequest? KimiK2Thinking { get; init; }
 #else
@@ -137,6 +158,13 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public global::Moonshot.KimiK2ThinkingChatRequest PickKimiK2Thinking() => IsKimiK2Thinking
+            ? KimiK2Thinking!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK2Thinking' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.MoonshotV1ChatRequest? MoonshotV18k { get; init; }
 #else
@@ -163,6 +191,13 @@ namespace Moonshot
             value = MoonshotV18k;
             return IsMoonshotV18k;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Moonshot.MoonshotV1ChatRequest PickMoonshotV18k() => IsMoonshotV18k
+            ? MoonshotV18k!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'MoonshotV18k' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -180,6 +215,11 @@ namespace Moonshot
         {
             KimiK26 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreateChatCompletionsRequest FromKimiK26(global::Moonshot.KimiK26ChatRequest? value) => new CreateChatCompletionsRequest(value);
 
         /// <summary>
         /// 
@@ -202,6 +242,11 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public static CreateChatCompletionsRequest FromKimiK25(global::Moonshot.KimiK25ChatRequest? value) => new CreateChatCompletionsRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CreateChatCompletionsRequest(global::Moonshot.KimiK2ChatRequest value) => new CreateChatCompletionsRequest((global::Moonshot.KimiK2ChatRequest?)value);
 
         /// <summary>
@@ -216,6 +261,11 @@ namespace Moonshot
         {
             KimiK20905Preview = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreateChatCompletionsRequest FromKimiK20905Preview(global::Moonshot.KimiK2ChatRequest? value) => new CreateChatCompletionsRequest(value);
 
         /// <summary>
         /// 
@@ -238,6 +288,11 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public static CreateChatCompletionsRequest FromKimiK2Thinking(global::Moonshot.KimiK2ThinkingChatRequest? value) => new CreateChatCompletionsRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CreateChatCompletionsRequest(global::Moonshot.MoonshotV1ChatRequest value) => new CreateChatCompletionsRequest((global::Moonshot.MoonshotV1ChatRequest?)value);
 
         /// <summary>
@@ -252,6 +307,11 @@ namespace Moonshot
         {
             MoonshotV18k = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreateChatCompletionsRequest FromMoonshotV18k(global::Moonshot.MoonshotV1ChatRequest? value) => new CreateChatCompletionsRequest(value);
 
         /// <summary>
         /// 
