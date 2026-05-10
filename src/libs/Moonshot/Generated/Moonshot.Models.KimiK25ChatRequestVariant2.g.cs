@@ -56,5 +56,6 @@ namespace Moonshot
         public KimiK25ChatRequestVariant2()
         {
         }
+
     }
 }

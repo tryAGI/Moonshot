@@ -146,5 +146,6 @@ namespace Moonshot
         public ChatRequestBase()
         {
         }
+
     }
 }

@@ -111,5 +111,6 @@ namespace Moonshot
         public MoonshotV1ChatRequestVariant2()
         {
         }
+
     }
 }

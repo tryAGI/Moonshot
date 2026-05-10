@@ -77,5 +77,6 @@ namespace Moonshot
         public BatchCreateRequest()
         {
         }
+
     }
 }

@@ -51,5 +51,6 @@ namespace Moonshot
         public MessageContentVariant2ItemImageUrl()
         {
         }
+
     }
 }

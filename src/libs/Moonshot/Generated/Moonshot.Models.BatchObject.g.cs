@@ -238,5 +238,6 @@ namespace Moonshot
         public BatchObject()
         {
         }
+
     }
 }
