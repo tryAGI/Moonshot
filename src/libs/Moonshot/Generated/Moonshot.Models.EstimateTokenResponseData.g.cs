@@ -45,5 +45,6 @@ namespace Moonshot
         public EstimateTokenResponseData()
         {
         }
+
     }
 }

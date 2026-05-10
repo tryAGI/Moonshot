@@ -40,5 +40,6 @@ namespace Moonshot
         public CreateChatCompletionsRequestDiscriminator()
         {
         }
+
     }
 }

@@ -50,5 +50,6 @@ namespace Moonshot
         public ChatCompletionResponseChoiceMessageToolCallFunction()
         {
         }
+
     }
 }

@@ -111,5 +111,6 @@ namespace Moonshot
         public KimiK2ChatRequestVariant2()
         {
         }
+
     }
 }

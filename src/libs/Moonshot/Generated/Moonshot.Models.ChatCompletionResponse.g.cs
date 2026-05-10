@@ -98,5 +98,6 @@ namespace Moonshot
         public ChatCompletionResponse()
         {
         }
+
     }
 }
