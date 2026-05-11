@@ -200,6 +200,8 @@ namespace Moonshot
                     httpRequestMessage: __httpRequest,
                     request: request);
 
+                global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
@@ -778,6 +780,8 @@ namespace Moonshot
                     httpRequestMessage: __httpRequest,
                     request: request);
 
+                global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
@@ -1311,6 +1315,8 @@ namespace Moonshot
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
+
+                global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
 
                 return __httpRequest;
             }

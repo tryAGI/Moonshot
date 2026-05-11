@@ -166,6 +166,8 @@ namespace Moonshot
                     after: after,
                     limit: limit);
 
+                global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
