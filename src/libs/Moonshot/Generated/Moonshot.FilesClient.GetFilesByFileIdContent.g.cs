@@ -149,6 +149,8 @@ namespace Moonshot
                     httpRequestMessage: __httpRequest,
                     fileId: fileId!);
 
+                global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 

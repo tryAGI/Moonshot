@@ -140,6 +140,8 @@ namespace Moonshot
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest);
 
+                global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
+
                 return __httpRequest;
             }
 
