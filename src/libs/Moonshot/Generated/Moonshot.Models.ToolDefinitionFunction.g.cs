@@ -22,7 +22,7 @@ namespace Moonshot
         public string? Description { get; set; }
 
         /// <summary>
-        /// Function parameters as JSON Schema. Must conform to the MFJS (Moonshot Flavored JSON Schema) specification
+        /// Function parameters as JSON Schema. Must conform to the [MFJS (Moonshot Flavored JSON Schema) specification](https://github.com/MoonshotAI/walle/blob/main/docs/mfjs-spec.md).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parameters")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -48,7 +48,7 @@ namespace Moonshot
         /// Function name. Must follow the regex: ^[a-zA-Z_][a-zA-Z0-9-_]{2,63}$
         /// </param>
         /// <param name="parameters">
-        /// Function parameters as JSON Schema. Must conform to the MFJS (Moonshot Flavored JSON Schema) specification
+        /// Function parameters as JSON Schema. Must conform to the [MFJS (Moonshot Flavored JSON Schema) specification](https://github.com/MoonshotAI/walle/blob/main/docs/mfjs-spec.md).
         /// </param>
         /// <param name="description">
         /// Description of what the function does

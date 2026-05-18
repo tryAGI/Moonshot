@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Function parameters as JSON Schema. Must conform to the MFJS (Moonshot Flavored JSON Schema) specification
+    /// Function parameters as JSON Schema. Must conform to the [MFJS (Moonshot Flavored JSON Schema) specification](https://github.com/MoonshotAI/walle/blob/main/docs/mfjs-spec.md).
     /// </summary>
     public sealed partial class ToolDefinitionFunctionParameters
     {
