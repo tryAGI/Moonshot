@@ -100,6 +100,7 @@ namespace Moonshot.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ChatRequestBase), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ChatRequestBase> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ChatRequestBase).Name}");
                     @base = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -110,9 +111,13 @@ namespace Moonshot.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (@base == null && kimiK2ThinkingChatRequestVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK2ThinkingChatRequestVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2).Name}");
                     kimiK2ThinkingChatRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

@@ -21,6 +21,19 @@ namespace Moonshot
         /// Create Batch<br/>
         /// Create a batch task. You need to first upload a JSONL file with purpose="batch" via the Files API, then use the returned file_id to create the task.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Moonshot.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.BatchObject>> CreateBatchesAsResponseAsync(
+
+            global::Moonshot.BatchCreateRequest request,
+            global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Batch<br/>
+        /// Create a batch task. You need to first upload a JSONL file with purpose="batch" via the Files API, then use the returned file_id to create the task.
+        /// </summary>
         /// <param name="inputFileId">
         /// ID of the input file, must be a .jsonl file uploaded with purpose="batch"
         /// </param>

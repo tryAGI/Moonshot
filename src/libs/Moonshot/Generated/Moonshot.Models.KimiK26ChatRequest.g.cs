@@ -29,6 +29,26 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickBase(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.ChatRequestBase? value)
+        {
+            value = Base;
+            return IsBase;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Moonshot.ChatRequestBase PickBase() => IsBase
+            ? Base!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Base' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK26ChatRequestVariant2? KimiK26ChatRequestVariant2 { get; init; }
 #else
@@ -42,6 +62,26 @@ namespace Moonshot
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KimiK26ChatRequestVariant2))]
 #endif
         public bool IsKimiK26ChatRequestVariant2 => KimiK26ChatRequestVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickKimiK26ChatRequestVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.KimiK26ChatRequestVariant2? value)
+        {
+            value = KimiK26ChatRequestVariant2;
+            return IsKimiK26ChatRequestVariant2;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Moonshot.KimiK26ChatRequestVariant2 PickKimiK26ChatRequestVariant2() => IsKimiK26ChatRequestVariant2
+            ? KimiK26ChatRequestVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK26ChatRequestVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -63,6 +103,11 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        public static KimiK26ChatRequest FromBase(global::Moonshot.ChatRequestBase? value) => new KimiK26ChatRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator KimiK26ChatRequest(global::Moonshot.KimiK26ChatRequestVariant2 value) => new KimiK26ChatRequest((global::Moonshot.KimiK26ChatRequestVariant2?)value);
 
         /// <summary>
@@ -77,6 +122,11 @@ namespace Moonshot
         {
             KimiK26ChatRequestVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static KimiK26ChatRequest FromKimiK26ChatRequestVariant2(global::Moonshot.KimiK26ChatRequestVariant2? value) => new KimiK26ChatRequest(value);
 
         /// <summary>
         /// 
@@ -118,8 +168,8 @@ namespace Moonshot
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Moonshot.ChatRequestBase?, TResult>? @base = null,
-            global::System.Func<global::Moonshot.KimiK26ChatRequestVariant2?, TResult>? kimiK26ChatRequestVariant2 = null,
+            global::System.Func<global::Moonshot.ChatRequestBase, TResult>? @base = null,
+            global::System.Func<global::Moonshot.KimiK26ChatRequestVariant2, TResult>? kimiK26ChatRequestVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +193,32 @@ namespace Moonshot
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Moonshot.ChatRequestBase?>? @base = null,
-            global::System.Action<global::Moonshot.KimiK26ChatRequestVariant2?>? kimiK26ChatRequestVariant2 = null,
+            global::System.Action<global::Moonshot.ChatRequestBase>? @base = null,
+
+            global::System.Action<global::Moonshot.KimiK26ChatRequestVariant2>? kimiK26ChatRequestVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsBase)
+            {
+                @base?.Invoke(Base!);
+            }
+            else if (IsKimiK26ChatRequestVariant2)
+            {
+                kimiK26ChatRequestVariant2?.Invoke(KimiK26ChatRequestVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Moonshot.ChatRequestBase>? @base = null,
+            global::System.Action<global::Moonshot.KimiK26ChatRequestVariant2>? kimiK26ChatRequestVariant2 = null,
             bool validate = true)
         {
             if (validate)
