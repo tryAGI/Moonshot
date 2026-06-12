@@ -12,23 +12,15 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
-        KimiK20711Preview,
-        /// <summary>
-        /// 
-        /// </summary>
-        KimiK20905Preview,
-        /// <summary>
-        /// 
-        /// </summary>
-        KimiK2TurboPreview,
-        /// <summary>
-        /// 
-        /// </summary>
         KimiK25,
         /// <summary>
         /// 
         /// </summary>
         KimiK26,
+        /// <summary>
+        /// 
+        /// </summary>
+        KimiK27Code,
         /// <summary>
         /// 
         /// </summary>
@@ -71,11 +63,9 @@ namespace Moonshot
         {
             return value switch
             {
-                EstimateTokenRequestModel.KimiK20711Preview => "kimi-k2-0711-preview",
-                EstimateTokenRequestModel.KimiK20905Preview => "kimi-k2-0905-preview",
-                EstimateTokenRequestModel.KimiK2TurboPreview => "kimi-k2-turbo-preview",
                 EstimateTokenRequestModel.KimiK25 => "kimi-k2.5",
                 EstimateTokenRequestModel.KimiK26 => "kimi-k2.6",
+                EstimateTokenRequestModel.KimiK27Code => "kimi-k2.7-code",
                 EstimateTokenRequestModel.MoonshotV1128k => "moonshot-v1-128k",
                 EstimateTokenRequestModel.MoonshotV1128kVisionPreview => "moonshot-v1-128k-vision-preview",
                 EstimateTokenRequestModel.MoonshotV132k => "moonshot-v1-32k",
@@ -93,11 +83,9 @@ namespace Moonshot
         {
             return value switch
             {
-                "kimi-k2-0711-preview" => EstimateTokenRequestModel.KimiK20711Preview,
-                "kimi-k2-0905-preview" => EstimateTokenRequestModel.KimiK20905Preview,
-                "kimi-k2-turbo-preview" => EstimateTokenRequestModel.KimiK2TurboPreview,
                 "kimi-k2.5" => EstimateTokenRequestModel.KimiK25,
                 "kimi-k2.6" => EstimateTokenRequestModel.KimiK26,
+                "kimi-k2.7-code" => EstimateTokenRequestModel.KimiK27Code,
                 "moonshot-v1-128k" => EstimateTokenRequestModel.MoonshotV1128k,
                 "moonshot-v1-128k-vision-preview" => EstimateTokenRequestModel.MoonshotV1128kVisionPreview,
                 "moonshot-v1-32k" => EstimateTokenRequestModel.MoonshotV132k,

@@ -4,10 +4,10 @@
 namespace Moonshot.JsonConverters
 {
     /// <inheritdoc />
-    public class KimiK2ThinkingChatRequestJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Moonshot.KimiK2ThinkingChatRequest>
+    public class KimiK27CodeChatRequestJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Moonshot.KimiK27CodeChatRequest>
     {
         /// <inheritdoc />
-        public override global::Moonshot.KimiK2ThinkingChatRequest Read(
+        public override global::Moonshot.KimiK27CodeChatRequest Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -49,19 +49,17 @@ namespace Moonshot.JsonConverters
             if (__jsonProps.Contains("stream_options.include_usage")) __score0++;
             if (__jsonProps.Contains("tools")) __score0++;
             var __score1 = 0;
-            if (__jsonProps.Contains("frequency_penalty")) __score1++;
             if (__jsonProps.Contains("model")) __score1++;
-            if (__jsonProps.Contains("n")) __score1++;
-            if (__jsonProps.Contains("presence_penalty")) __score1++;
-            if (__jsonProps.Contains("temperature")) __score1++;
-            if (__jsonProps.Contains("top_p")) __score1++;
+            if (__jsonProps.Contains("thinking")) __score1++;
+            if (__jsonProps.Contains("thinking.keep")) __score1++;
+            if (__jsonProps.Contains("thinking.type")) __score1++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
             global::Moonshot.ChatRequestBase? @base = default;
-            global::Moonshot.KimiK2ThinkingChatRequestVariant2? kimiK2ThinkingChatRequestVariant2 = default;
+            global::Moonshot.KimiK27CodeChatRequestVariant2? kimiK27CodeChatRequestVariant2 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -83,9 +81,9 @@ namespace Moonshot.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK2ThinkingChatRequestVariant2> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2).Name}");
-                        kimiK2ThinkingChatRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK27CodeChatRequestVariant2> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK27CodeChatRequestVariant2).Name}");
+                        kimiK27CodeChatRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -96,7 +94,7 @@ namespace Moonshot.JsonConverters
                 }
             }
 
-            if (@base == null && kimiK2ThinkingChatRequestVariant2 == null)
+            if (@base == null && kimiK27CodeChatRequestVariant2 == null)
             {
                 try
                 {
@@ -113,14 +111,14 @@ namespace Moonshot.JsonConverters
                 }
             }
 
-            if (@base == null && kimiK2ThinkingChatRequestVariant2 == null)
+            if (@base == null && kimiK27CodeChatRequestVariant2 == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK2ThinkingChatRequestVariant2> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2).Name}");
-                    kimiK2ThinkingChatRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK27CodeChatRequestVariant2> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK27CodeChatRequestVariant2).Name}");
+                    kimiK27CodeChatRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -130,10 +128,10 @@ namespace Moonshot.JsonConverters
                 }
             }
 
-            var __value = new global::Moonshot.KimiK2ThinkingChatRequest(
+            var __value = new global::Moonshot.KimiK27CodeChatRequest(
                 @base,
 
-                kimiK2ThinkingChatRequestVariant2
+                kimiK27CodeChatRequestVariant2
                 );
 
             return __value;
@@ -142,7 +140,7 @@ namespace Moonshot.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Moonshot.KimiK2ThinkingChatRequest value,
+            global::Moonshot.KimiK27CodeChatRequest value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
@@ -154,11 +152,11 @@ namespace Moonshot.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ChatRequestBase).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Base!, typeInfo);
             }
-            else if (value.IsKimiK2ThinkingChatRequestVariant2)
+            else if (value.IsKimiK27CodeChatRequestVariant2)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK2ThinkingChatRequestVariant2?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK2ThinkingChatRequestVariant2!, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK27CodeChatRequestVariant2?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK27CodeChatRequestVariant2).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK27CodeChatRequestVariant2!, typeInfo);
             }
         }
     }

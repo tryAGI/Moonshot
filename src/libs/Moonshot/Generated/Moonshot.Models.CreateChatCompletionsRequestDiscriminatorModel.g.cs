@@ -11,31 +11,15 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
-        KimiK20711Preview,
-        /// <summary>
-        /// 
-        /// </summary>
-        KimiK20905Preview,
-        /// <summary>
-        /// 
-        /// </summary>
-        KimiK2Thinking,
-        /// <summary>
-        /// 
-        /// </summary>
-        KimiK2ThinkingTurbo,
-        /// <summary>
-        /// 
-        /// </summary>
-        KimiK2TurboPreview,
-        /// <summary>
-        /// 
-        /// </summary>
         KimiK25,
         /// <summary>
         /// 
         /// </summary>
         KimiK26,
+        /// <summary>
+        /// 
+        /// </summary>
+        KimiK27Code,
         /// <summary>
         /// 
         /// </summary>
@@ -78,13 +62,9 @@ namespace Moonshot
         {
             return value switch
             {
-                CreateChatCompletionsRequestDiscriminatorModel.KimiK20711Preview => "kimi-k2-0711-preview",
-                CreateChatCompletionsRequestDiscriminatorModel.KimiK20905Preview => "kimi-k2-0905-preview",
-                CreateChatCompletionsRequestDiscriminatorModel.KimiK2Thinking => "kimi-k2-thinking",
-                CreateChatCompletionsRequestDiscriminatorModel.KimiK2ThinkingTurbo => "kimi-k2-thinking-turbo",
-                CreateChatCompletionsRequestDiscriminatorModel.KimiK2TurboPreview => "kimi-k2-turbo-preview",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK25 => "kimi-k2.5",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK26 => "kimi-k2.6",
+                CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code => "kimi-k2.7-code",
                 CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128k => "moonshot-v1-128k",
                 CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128kVisionPreview => "moonshot-v1-128k-vision-preview",
                 CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132k => "moonshot-v1-32k",
@@ -102,13 +82,9 @@ namespace Moonshot
         {
             return value switch
             {
-                "kimi-k2-0711-preview" => CreateChatCompletionsRequestDiscriminatorModel.KimiK20711Preview,
-                "kimi-k2-0905-preview" => CreateChatCompletionsRequestDiscriminatorModel.KimiK20905Preview,
-                "kimi-k2-thinking" => CreateChatCompletionsRequestDiscriminatorModel.KimiK2Thinking,
-                "kimi-k2-thinking-turbo" => CreateChatCompletionsRequestDiscriminatorModel.KimiK2ThinkingTurbo,
-                "kimi-k2-turbo-preview" => CreateChatCompletionsRequestDiscriminatorModel.KimiK2TurboPreview,
                 "kimi-k2.5" => CreateChatCompletionsRequestDiscriminatorModel.KimiK25,
                 "kimi-k2.6" => CreateChatCompletionsRequestDiscriminatorModel.KimiK26,
+                "kimi-k2.7-code" => CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code,
                 "moonshot-v1-128k" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128k,
                 "moonshot-v1-128k-vision-preview" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128kVisionPreview,
                 "moonshot-v1-32k" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132k,
