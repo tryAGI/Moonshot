@@ -41,14 +41,6 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.MoonshotV1ChatRequestVariant2ModelNullableJsonConverter),
 
-            typeof(global::Moonshot.JsonConverters.KimiK2ChatRequestVariant2ModelJsonConverter),
-
-            typeof(global::Moonshot.JsonConverters.KimiK2ChatRequestVariant2ModelNullableJsonConverter),
-
-            typeof(global::Moonshot.JsonConverters.KimiK2ThinkingChatRequestVariant2ModelJsonConverter),
-
-            typeof(global::Moonshot.JsonConverters.KimiK2ThinkingChatRequestVariant2ModelNullableJsonConverter),
-
             typeof(global::Moonshot.JsonConverters.KimiK25ChatRequestVariant2ModelJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.KimiK25ChatRequestVariant2ModelNullableJsonConverter),
@@ -68,6 +60,18 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.KimiK26ChatRequestVariant2ThinkingKeepJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.KimiK26ChatRequestVariant2ThinkingKeepNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestVariant2ModelJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestVariant2ModelNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestVariant2ThinkingTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestVariant2ThinkingTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestVariant2ThinkingKeepJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestVariant2ThinkingKeepNullableJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ChatCompletionResponseChoiceMessageRoleJsonConverter),
 
@@ -107,13 +111,11 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.MoonshotV1ChatRequestJsonConverter),
 
-            typeof(global::Moonshot.JsonConverters.KimiK2ChatRequestJsonConverter),
-
-            typeof(global::Moonshot.JsonConverters.KimiK2ThinkingChatRequestJsonConverter),
-
             typeof(global::Moonshot.JsonConverters.KimiK25ChatRequestJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.KimiK26ChatRequestJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.CreateChatCompletionsRequestJsonConverter),
 
@@ -165,12 +167,6 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MoonshotV1ChatRequestVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MoonshotV1ChatRequestVariant2Model), TypeInfoPropertyName = "MoonshotV1ChatRequestVariant2Model2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK2ChatRequest), TypeInfoPropertyName = "KimiK2ChatRequest2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK2ChatRequestVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK2ChatRequestVariant2Model), TypeInfoPropertyName = "KimiK2ChatRequestVariant2Model2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK2ThinkingChatRequest), TypeInfoPropertyName = "KimiK2ThinkingChatRequest2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2Model), TypeInfoPropertyName = "KimiK2ThinkingChatRequestVariant2Model2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK25ChatRequest), TypeInfoPropertyName = "KimiK25ChatRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK25ChatRequestVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK25ChatRequestVariant2Model), TypeInfoPropertyName = "KimiK25ChatRequestVariant2Model2")]
@@ -182,6 +178,12 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2Thinking))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2ThinkingType), TypeInfoPropertyName = "KimiK26ChatRequestVariant2ThinkingType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2ThinkingKeep), TypeInfoPropertyName = "KimiK26ChatRequestVariant2ThinkingKeep2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequest), TypeInfoPropertyName = "KimiK27CodeChatRequest2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2Model), TypeInfoPropertyName = "KimiK27CodeChatRequestVariant2Model2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2Thinking))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2ThinkingType), TypeInfoPropertyName = "KimiK27CodeChatRequestVariant2ThinkingType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2ThinkingKeep), TypeInfoPropertyName = "KimiK27CodeChatRequestVariant2ThinkingKeep2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTimeOffset))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ChatCompletionResponseChoice>))]
