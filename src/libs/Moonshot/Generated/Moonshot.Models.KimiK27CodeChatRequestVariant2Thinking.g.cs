@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Controls thinking for the kimi-k2.7-code model, and whether to fully preserve reasoning_content across multi-turn conversations. Optional parameter. Default value is {"type": "enabled"}.<br/>
+    /// Controls thinking for the kimi-k2.7-code model, and whether to fully preserve reasoning_content across multi-turn conversations. Optional parameter. Default value is {"type": "enabled", "keep": "all"}.<br/>
     /// Differences from kimi-k2.6:<br/>
     /// - `type` only accepts `"enabled"`. Unlike kimi-k2.6, `"disabled"` is NOT supported — passing it returns an error. Thinking is always on for this model.<br/>
     /// - `keep` only accepts the valid value `"all"`; omitting it or passing `"all"` is treated as `"all"` on the server, while any other invalid value returns an error. Preserved Thinking is therefore always enabled for this model.

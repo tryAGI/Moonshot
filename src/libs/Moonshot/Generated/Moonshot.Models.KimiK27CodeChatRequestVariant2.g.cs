@@ -18,7 +18,7 @@ namespace Moonshot
         public global::Moonshot.KimiK27CodeChatRequestVariant2Model Model { get; set; } = global::Moonshot.KimiK27CodeChatRequestVariant2Model.KimiK27Code;
 
         /// <summary>
-        /// Controls thinking for the kimi-k2.7-code model, and whether to fully preserve reasoning_content across multi-turn conversations. Optional parameter. Default value is {"type": "enabled"}.<br/>
+        /// Controls thinking for the kimi-k2.7-code model, and whether to fully preserve reasoning_content across multi-turn conversations. Optional parameter. Default value is {"type": "enabled", "keep": "all"}.<br/>
         /// Differences from kimi-k2.6:<br/>
         /// - `type` only accepts `"enabled"`. Unlike kimi-k2.6, `"disabled"` is NOT supported — passing it returns an error. Thinking is always on for this model.<br/>
         /// - `keep` only accepts the valid value `"all"`; omitting it or passing `"all"` is treated as `"all"` on the server, while any other invalid value returns an error. Preserved Thinking is therefore always enabled for this model.
@@ -36,7 +36,7 @@ namespace Moonshot
         /// Initializes a new instance of the <see cref="KimiK27CodeChatRequestVariant2" /> class.
         /// </summary>
         /// <param name="thinking">
-        /// Controls thinking for the kimi-k2.7-code model, and whether to fully preserve reasoning_content across multi-turn conversations. Optional parameter. Default value is {"type": "enabled"}.<br/>
+        /// Controls thinking for the kimi-k2.7-code model, and whether to fully preserve reasoning_content across multi-turn conversations. Optional parameter. Default value is {"type": "enabled", "keep": "all"}.<br/>
         /// Differences from kimi-k2.6:<br/>
         /// - `type` only accepts `"enabled"`. Unlike kimi-k2.6, `"disabled"` is NOT supported — passing it returns an error. Thinking is always on for this model.<br/>
         /// - `keep` only accepts the valid value `"all"`; omitting it or passing `"all"` is treated as `"all"` on the server, while any other invalid value returns an error. Preserved Thinking is therefore always enabled for this model.
