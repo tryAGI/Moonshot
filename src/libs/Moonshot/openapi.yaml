@@ -378,8 +378,8 @@
 						"properties": {
 							"model": {
 								"type": "string",
-								"description": "Model ID",
-								"enum": ["kimi-k2.7-code"],
+								"description": "Model ID. Either `kimi-k2.7-code` or its high-speed variant `kimi-k2.7-code-highspeed`; the two are the same model with identical parameters, while the high-speed variant outputs at approximately 180 Tokens/s (up to 260 Tokens/s in short-context scenarios).",
+								"enum": ["kimi-k2.7-code", "kimi-k2.7-code-highspeed"],
 								"default": "kimi-k2.7-code"
 							},
 							"thinking": {
@@ -550,6 +550,7 @@
 						"default": "kimi-k2.5",
 						"enum": [
 							"kimi-k2.7-code",
+							"kimi-k2.7-code-highspeed",
 							"kimi-k2.6",
 							"kimi-k2.5",
 							"moonshot-v1-8k",
@@ -1218,6 +1219,7 @@
 											"propertyName": "model",
 											"mapping": {
 												"kimi-k2.7-code": "#/components/schemas/KimiK27CodeChatRequest",
+												"kimi-k2.7-code-highspeed": "#/components/schemas/KimiK27CodeChatRequest",
 												"kimi-k2.6": "#/components/schemas/KimiK26ChatRequest",
 												"kimi-k2.5": "#/components/schemas/KimiK25ChatRequest",
 										"moonshot-v1-8k": "#/components/schemas/MoonshotV1ChatRequest",
