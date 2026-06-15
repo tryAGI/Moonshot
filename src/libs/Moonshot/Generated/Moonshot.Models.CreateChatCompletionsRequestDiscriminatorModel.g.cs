@@ -23,6 +23,10 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
+        KimiK27CodeHighspeed,
+        /// <summary>
+        /// 
+        /// </summary>
         MoonshotV1128k,
         /// <summary>
         /// 
@@ -65,6 +69,7 @@ namespace Moonshot
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK25 => "kimi-k2.5",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK26 => "kimi-k2.6",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code => "kimi-k2.7-code",
+                CreateChatCompletionsRequestDiscriminatorModel.KimiK27CodeHighspeed => "kimi-k2.7-code-highspeed",
                 CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128k => "moonshot-v1-128k",
                 CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128kVisionPreview => "moonshot-v1-128k-vision-preview",
                 CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132k => "moonshot-v1-32k",
@@ -85,6 +90,7 @@ namespace Moonshot
                 "kimi-k2.5" => CreateChatCompletionsRequestDiscriminatorModel.KimiK25,
                 "kimi-k2.6" => CreateChatCompletionsRequestDiscriminatorModel.KimiK26,
                 "kimi-k2.7-code" => CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code,
+                "kimi-k2.7-code-highspeed" => CreateChatCompletionsRequestDiscriminatorModel.KimiK27CodeHighspeed,
                 "moonshot-v1-128k" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128k,
                 "moonshot-v1-128k-vision-preview" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128kVisionPreview,
                 "moonshot-v1-32k" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132k,

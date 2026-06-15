@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Model ID<br/>
+    /// Model ID. Either `kimi-k2.7-code` or its high-speed variant `kimi-k2.7-code-highspeed`; the two are the same model with identical parameters, while the high-speed variant outputs at approximately 180 Tokens/s (up to 260 Tokens/s in short-context scenarios).<br/>
     /// Default Value: kimi-k2.7-code
     /// </summary>
     public enum KimiK27CodeChatRequestVariant2Model
@@ -13,6 +13,10 @@ namespace Moonshot
         /// 
         /// </summary>
         KimiK27Code,
+        /// <summary>
+        /// 
+        /// </summary>
+        KimiK27CodeHighspeed,
     }
 
     /// <summary>
@@ -28,6 +32,7 @@ namespace Moonshot
             return value switch
             {
                 KimiK27CodeChatRequestVariant2Model.KimiK27Code => "kimi-k2.7-code",
+                KimiK27CodeChatRequestVariant2Model.KimiK27CodeHighspeed => "kimi-k2.7-code-highspeed",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -39,6 +44,7 @@ namespace Moonshot
             return value switch
             {
                 "kimi-k2.7-code" => KimiK27CodeChatRequestVariant2Model.KimiK27Code,
+                "kimi-k2.7-code-highspeed" => KimiK27CodeChatRequestVariant2Model.KimiK27CodeHighspeed,
                 _ => null,
             };
         }
