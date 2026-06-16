@@ -2,7 +2,7 @@
 
 namespace Moonshot
 {
-    public sealed partial class KimiK2ThinkingChatRequestVariant2
+    public readonly partial struct KimiK27CodeChatRequest
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -34,14 +34,14 @@ namespace Moonshot
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::Moonshot.KimiK2ThinkingChatRequestVariant2? FromJson(
+        public static global::Moonshot.KimiK27CodeChatRequest? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2),
-                jsonSerializerContext) as global::Moonshot.KimiK2ThinkingChatRequestVariant2;
+                typeof(global::Moonshot.KimiK27CodeChatRequest),
+                jsonSerializerContext) as global::Moonshot.KimiK27CodeChatRequest?;
         }
 
         /// <summary>
@@ -51,11 +51,11 @@ namespace Moonshot
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::Moonshot.KimiK2ThinkingChatRequestVariant2? FromJson(
+        public static global::Moonshot.KimiK27CodeChatRequest? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::Moonshot.KimiK2ThinkingChatRequestVariant2>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::Moonshot.KimiK27CodeChatRequest>(
                 json,
                 jsonSerializerOptions);
         }
@@ -63,14 +63,14 @@ namespace Moonshot
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::Moonshot.KimiK2ThinkingChatRequestVariant2?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::Moonshot.KimiK27CodeChatRequest?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::Moonshot.KimiK2ThinkingChatRequestVariant2),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Moonshot.KimiK2ThinkingChatRequestVariant2;
+                typeof(global::Moonshot.KimiK27CodeChatRequest),
+                jsonSerializerContext).ConfigureAwait(false)) as global::Moonshot.KimiK27CodeChatRequest?;
         }
 
         /// <summary>
@@ -80,11 +80,11 @@ namespace Moonshot
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::Moonshot.KimiK2ThinkingChatRequestVariant2?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Moonshot.KimiK27CodeChatRequest?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Moonshot.KimiK2ThinkingChatRequestVariant2?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Moonshot.KimiK27CodeChatRequest?>(
                 jsonStream,
                 jsonSerializerOptions);
         }

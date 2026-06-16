@@ -164,71 +164,71 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK2ChatRequest? Type34 { get; set; }
+        public global::Moonshot.KimiK25ChatRequest? Type34 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK2ChatRequestVariant2? Type35 { get; set; }
+        public global::Moonshot.KimiK25ChatRequestVariant2? Type35 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK2ChatRequestVariant2Model? Type36 { get; set; }
+        public global::Moonshot.KimiK25ChatRequestVariant2Model? Type36 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK2ThinkingChatRequest? Type37 { get; set; }
+        public global::Moonshot.KimiK25ChatRequestVariant2Thinking? Type37 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK2ThinkingChatRequestVariant2? Type38 { get; set; }
+        public global::Moonshot.KimiK25ChatRequestVariant2ThinkingType? Type38 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK2ThinkingChatRequestVariant2Model? Type39 { get; set; }
+        public global::Moonshot.KimiK26ChatRequest? Type39 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK25ChatRequest? Type40 { get; set; }
+        public global::Moonshot.KimiK26ChatRequestVariant2? Type40 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK25ChatRequestVariant2? Type41 { get; set; }
+        public global::Moonshot.KimiK26ChatRequestVariant2Model? Type41 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK25ChatRequestVariant2Model? Type42 { get; set; }
+        public global::Moonshot.KimiK26ChatRequestVariant2Thinking? Type42 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK25ChatRequestVariant2Thinking? Type43 { get; set; }
+        public global::Moonshot.KimiK26ChatRequestVariant2ThinkingType? Type43 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK25ChatRequestVariant2ThinkingType? Type44 { get; set; }
+        public global::Moonshot.KimiK26ChatRequestVariant2ThinkingKeep? Type44 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK26ChatRequest? Type45 { get; set; }
+        public global::Moonshot.KimiK27CodeChatRequest? Type45 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK26ChatRequestVariant2? Type46 { get; set; }
+        public global::Moonshot.KimiK27CodeChatRequestVariant2? Type46 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK26ChatRequestVariant2Model? Type47 { get; set; }
+        public global::Moonshot.KimiK27CodeChatRequestVariant2Model? Type47 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK26ChatRequestVariant2Thinking? Type48 { get; set; }
+        public global::Moonshot.KimiK27CodeChatRequestVariant2Thinking? Type48 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK26ChatRequestVariant2ThinkingType? Type49 { get; set; }
+        public global::Moonshot.KimiK27CodeChatRequestVariant2ThinkingType? Type49 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.KimiK26ChatRequestVariant2ThinkingKeep? Type50 { get; set; }
+        public global::Moonshot.KimiK27CodeChatRequestVariant2ThinkingKeep? Type50 { get; set; }
         /// <summary>
         /// 
         /// </summary>
