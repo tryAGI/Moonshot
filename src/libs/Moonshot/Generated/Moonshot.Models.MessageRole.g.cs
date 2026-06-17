@@ -4,7 +4,8 @@
 namespace Moonshot
 {
     /// <summary>
-    /// The role of the message sender
+    /// The role of the message sender<br/>
+    /// Example: user
     /// </summary>
     public enum MessageRole
     {

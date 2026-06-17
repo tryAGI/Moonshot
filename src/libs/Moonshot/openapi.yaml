@@ -26,6 +26,7 @@
 					"role": {
 						"type": "string",
 						"enum": ["system", "user", "assistant"],
+						"example": "user",
 						"description": "The role of the message sender"
 					},
 					"content": {
@@ -88,6 +89,7 @@
 								}
 							}
 						],
+						"example": "Hello",
 						"description": "The content of the message. Can be a plain text string, or an array of objects with text/image_url/video_url types (for multimodal input)"
 					},
 					"name": {
