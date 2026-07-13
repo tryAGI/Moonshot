@@ -4,9 +4,9 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    /// Token usage statistics. Object in the final chunk with usage, null in ordinary chunks
     /// </summary>
-    public sealed partial class ChatCompletionResponseUsage
+    public sealed partial class ChatCompletionChunkUsage
     {
         /// <summary>
         /// Number of tokens in the prompt
@@ -39,7 +39,7 @@ namespace Moonshot
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatCompletionResponseUsage" /> class.
+        /// Initializes a new instance of the <see cref="ChatCompletionChunkUsage" /> class.
         /// </summary>
         /// <param name="promptTokens">
         /// Number of tokens in the prompt
@@ -56,7 +56,7 @@ namespace Moonshot
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public ChatCompletionResponseUsage(
+        public ChatCompletionChunkUsage(
             int? promptTokens,
             int? completionTokens,
             int? totalTokens,
@@ -69,9 +69,9 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatCompletionResponseUsage" /> class.
+        /// Initializes a new instance of the <see cref="ChatCompletionChunkUsage" /> class.
         /// </summary>
-        public ChatCompletionResponseUsage()
+        public ChatCompletionChunkUsage()
         {
         }
 

@@ -28,6 +28,12 @@ namespace Moonshot
         public global::System.Collections.Generic.IList<global::Moonshot.ChatCompletionResponseChoiceMessageToolCall>? ToolCalls { get; set; }
 
         /// <summary>
+        /// Reasoning process (returned only when thinking mode is enabled)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reasoning_content")]
+        public string? ReasoningContent { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -43,17 +49,22 @@ namespace Moonshot
         /// <param name="toolCalls">
         /// Tool calls made by the model
         /// </param>
+        /// <param name="reasoningContent">
+        /// Reasoning process (returned only when thinking mode is enabled)
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ChatCompletionResponseChoiceMessage(
             global::Moonshot.ChatCompletionResponseChoiceMessageRole? role,
             string? content,
-            global::System.Collections.Generic.IList<global::Moonshot.ChatCompletionResponseChoiceMessageToolCall>? toolCalls)
+            global::System.Collections.Generic.IList<global::Moonshot.ChatCompletionResponseChoiceMessageToolCall>? toolCalls,
+            string? reasoningContent)
         {
             this.Role = role;
             this.Content = content;
             this.ToolCalls = toolCalls;
+            this.ReasoningContent = reasoningContent;
         }
 
         /// <summary>

@@ -4,9 +4,9 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    /// Token usage statistics (optional)
     /// </summary>
-    public sealed partial class ChatCompletionResponseUsage
+    public sealed partial class ChoiceDeltaUsage
     {
         /// <summary>
         /// Number of tokens in the prompt
@@ -27,19 +27,13 @@ namespace Moonshot
         public int? TotalTokens { get; set; }
 
         /// <summary>
-        /// Number of tokens served from cache
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("cached_tokens")]
-        public int? CachedTokens { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatCompletionResponseUsage" /> class.
+        /// Initializes a new instance of the <see cref="ChoiceDeltaUsage" /> class.
         /// </summary>
         /// <param name="promptTokens">
         /// Number of tokens in the prompt
@@ -50,28 +44,23 @@ namespace Moonshot
         /// <param name="totalTokens">
         /// Total number of tokens used
         /// </param>
-        /// <param name="cachedTokens">
-        /// Number of tokens served from cache
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public ChatCompletionResponseUsage(
+        public ChoiceDeltaUsage(
             int? promptTokens,
             int? completionTokens,
-            int? totalTokens,
-            int? cachedTokens)
+            int? totalTokens)
         {
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
             this.TotalTokens = totalTokens;
-            this.CachedTokens = cachedTokens;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatCompletionResponseUsage" /> class.
+        /// Initializes a new instance of the <see cref="ChoiceDeltaUsage" /> class.
         /// </summary>
-        public ChatCompletionResponseUsage()
+        public ChoiceDeltaUsage()
         {
         }
 
