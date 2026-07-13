@@ -3,11 +3,11 @@
 
 namespace Moonshot
 {
-    public partial class UtilitiesClient
+    public partial class CachingClient
     {
 
 
-        private static readonly global::Moonshot.EndPointSecurityRequirement s_CreateTokenizersEstimateTokenCountSecurityRequirement0 =
+        private static readonly global::Moonshot.EndPointSecurityRequirement s_CreateCachingSecurityRequirement0 =
             new global::Moonshot.EndPointSecurityRequirement
             {
                 Authorizations = new global::Moonshot.EndPointAuthorizationRequirement[]
@@ -21,41 +21,41 @@ namespace Moonshot
                     },
                 },
             };
-        private static readonly global::Moonshot.EndPointSecurityRequirement[] s_CreateTokenizersEstimateTokenCountSecurityRequirements =
+        private static readonly global::Moonshot.EndPointSecurityRequirement[] s_CreateCachingSecurityRequirements =
             new global::Moonshot.EndPointSecurityRequirement[]
-            {                s_CreateTokenizersEstimateTokenCountSecurityRequirement0,
+            {                s_CreateCachingSecurityRequirement0,
             };
-        partial void PrepareCreateTokenizersEstimateTokenCountArguments(
+        partial void PrepareCreateCachingArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Moonshot.EstimateTokenRequest request);
-        partial void PrepareCreateTokenizersEstimateTokenCountRequest(
+            global::Moonshot.CreateCachingRequest request);
+        partial void PrepareCreateCachingRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Moonshot.EstimateTokenRequest request);
-        partial void ProcessCreateTokenizersEstimateTokenCountResponse(
+            global::Moonshot.CreateCachingRequest request);
+        partial void ProcessCreateCachingResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateTokenizersEstimateTokenCountResponseContent(
+        partial void ProcessCreateCachingResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Estimate Token Count<br/>
-        /// Estimates the number of tokens that would be used for a given set of messages and model. The input structure is almost identical to that of chat completion.
+        /// Create Cache<br/>
+        /// Create a context cache for reuse in subsequent chat requests. Pass the messages you want to cache (usually system prompts or knowledge documents) and tool definitions.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Moonshot.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Moonshot.EstimateTokenResponse> CreateTokenizersEstimateTokenCountAsync(
+        public async global::System.Threading.Tasks.Task<global::Moonshot.CacheObject> CreateCachingAsync(
 
-            global::Moonshot.EstimateTokenRequest request,
+            global::Moonshot.CreateCachingRequest request,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateTokenizersEstimateTokenCountAsResponseAsync(
+            var __response = await CreateCachingAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
@@ -65,16 +65,16 @@ namespace Moonshot
             return __response.Body;
         }
         /// <summary>
-        /// Estimate Token Count<br/>
-        /// Estimates the number of tokens that would be used for a given set of messages and model. The input structure is almost identical to that of chat completion.
+        /// Create Cache<br/>
+        /// Create a context cache for reuse in subsequent chat requests. Pass the messages you want to cache (usually system prompts or knowledge documents) and tool definitions.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Moonshot.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.EstimateTokenResponse>> CreateTokenizersEstimateTokenCountAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.CacheObject>> CreateCachingAsResponseAsync(
 
-            global::Moonshot.EstimateTokenRequest request,
+            global::Moonshot.CreateCachingRequest request,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -82,15 +82,15 @@ namespace Moonshot
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateTokenizersEstimateTokenCountArguments(
+            PrepareCreateCachingArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Moonshot.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateTokenizersEstimateTokenCountSecurityRequirements,
-                operationName: "CreateTokenizersEstimateTokenCountAsync");
+                securityRequirements: s_CreateCachingSecurityRequirements,
+                operationName: "CreateCachingAsync");
 
             using var __timeoutCancellationTokenSource = global::Moonshot.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -110,7 +110,7 @@ namespace Moonshot
             {
 
                             var __pathBuilder = new global::Moonshot.PathBuilder(
-                                path: "/v1/tokenizers/estimate-token-count",
+                                path: "/v1/caching",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Moonshot.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -155,7 +155,7 @@ namespace Moonshot
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateTokenizersEstimateTokenCountRequest(
+                PrepareCreateCachingRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -177,9 +177,9 @@ namespace Moonshot
                     await global::Moonshot.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createTokenizersEstimateTokenCount",
-                                methodName: "CreateTokenizersEstimateTokenCountAsync",
-                                pathTemplate: "\"/v1/tokenizers/estimate-token-count\"",
+                                operationId: "createCaching",
+                                methodName: "CreateCachingAsync",
+                                pathTemplate: "\"/v1/caching\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -211,9 +211,9 @@ namespace Moonshot
                         await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createTokenizersEstimateTokenCount",
-                                methodName: "CreateTokenizersEstimateTokenCountAsync",
-                                pathTemplate: "\"/v1/tokenizers/estimate-token-count\"",
+                                operationId: "createCaching",
+                                methodName: "CreateCachingAsync",
+                                pathTemplate: "\"/v1/caching\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -252,9 +252,9 @@ namespace Moonshot
                         await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createTokenizersEstimateTokenCount",
-                                methodName: "CreateTokenizersEstimateTokenCountAsync",
-                                pathTemplate: "\"/v1/tokenizers/estimate-token-count\"",
+                                operationId: "createCaching",
+                                methodName: "CreateCachingAsync",
+                                pathTemplate: "\"/v1/caching\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -292,7 +292,7 @@ namespace Moonshot
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateTokenizersEstimateTokenCountResponse(
+                ProcessCreateCachingResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -300,9 +300,9 @@ namespace Moonshot
                     await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createTokenizersEstimateTokenCount",
-                                methodName: "CreateTokenizersEstimateTokenCountAsync",
-                                pathTemplate: "\"/v1/tokenizers/estimate-token-count\"",
+                                operationId: "createCaching",
+                                methodName: "CreateCachingAsync",
+                                pathTemplate: "\"/v1/caching\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -322,9 +322,9 @@ namespace Moonshot
                     await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createTokenizersEstimateTokenCount",
-                                methodName: "CreateTokenizersEstimateTokenCountAsync",
-                                pathTemplate: "\"/v1/tokenizers/estimate-token-count\"",
+                                operationId: "createCaching",
+                                methodName: "CreateCachingAsync",
+                                pathTemplate: "\"/v1/caching\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -463,7 +463,7 @@ namespace Moonshot
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateTokenizersEstimateTokenCountResponseContent(
+                                ProcessCreateCachingResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -472,9 +472,9 @@ namespace Moonshot
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Moonshot.EstimateTokenResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Moonshot.CacheObject.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.EstimateTokenResponse>(
+                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.CacheObject>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Moonshot.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -504,9 +504,9 @@ namespace Moonshot
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Moonshot.EstimateTokenResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Moonshot.CacheObject.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.EstimateTokenResponse>(
+                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.CacheObject>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Moonshot.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -547,32 +547,46 @@ namespace Moonshot
             }
         }
         /// <summary>
-        /// Estimate Token Count<br/>
-        /// Estimates the number of tokens that would be used for a given set of messages and model. The input structure is almost identical to that of chat completion.
+        /// Create Cache<br/>
+        /// Create a context cache for reuse in subsequent chat requests. Pass the messages you want to cache (usually system prompts or knowledge documents) and tool definitions.
         /// </summary>
         /// <param name="model">
-        /// Model ID<br/>
-        /// Default Value: kimi-k2.5
+        /// Model ID
         /// </param>
         /// <param name="messages">
-        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty
+        /// List of messages to cache
+        /// </param>
+        /// <param name="tools">
+        /// List of tool definitions to cache (optional)
+        /// </param>
+        /// <param name="name">
+        /// Business identifier for the cache (optional)
+        /// </param>
+        /// <param name="ttl">
+        /// Cache TTL in seconds, optional. For example, 3600 = 1 hour
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Moonshot.EstimateTokenResponse> CreateTokenizersEstimateTokenCountAsync(
+        public async global::System.Threading.Tasks.Task<global::Moonshot.CacheObject> CreateCachingAsync(
+            string model,
             global::System.Collections.Generic.IList<global::Moonshot.Message> messages,
-            global::Moonshot.EstimateTokenRequestModel model = global::Moonshot.EstimateTokenRequestModel.KimiK25,
+            global::System.Collections.Generic.IList<global::Moonshot.ToolDefinition>? tools = default,
+            string? name = default,
+            int? ttl = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Moonshot.EstimateTokenRequest
+            var __request = new global::Moonshot.CreateCachingRequest
             {
                 Model = model,
                 Messages = messages,
+                Tools = tools,
+                Name = name,
+                Ttl = ttl,
             };
 
-            return await CreateTokenizersEstimateTokenCountAsync(
+            return await CreateCachingAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

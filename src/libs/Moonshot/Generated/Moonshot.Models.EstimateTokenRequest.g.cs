@@ -19,7 +19,7 @@ namespace Moonshot
         public required global::Moonshot.EstimateTokenRequestModel Model { get; set; } = global::Moonshot.EstimateTokenRequestModel.KimiK25;
 
         /// <summary>
-        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, or assistant. content must not be empty
+        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -39,7 +39,7 @@ namespace Moonshot
         /// Default Value: kimi-k2.5
         /// </param>
         /// <param name="messages">
-        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, or assistant. content must not be empty
+        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

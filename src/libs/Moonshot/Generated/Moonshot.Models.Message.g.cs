@@ -9,7 +9,7 @@ namespace Moonshot
     public sealed partial class Message
     {
         /// <summary>
-        /// The role of the message sender<br/>
+        /// The role of the message sender. Supports system, user, assistant, tool.<br/>
         /// Example: user
         /// </summary>
         /// <example>user</example>
@@ -52,7 +52,7 @@ namespace Moonshot
         /// Initializes a new instance of the <see cref="Message" /> class.
         /// </summary>
         /// <param name="role">
-        /// The role of the message sender<br/>
+        /// The role of the message sender. Supports system, user, assistant, tool.<br/>
         /// Example: user
         /// </param>
         /// <param name="content">

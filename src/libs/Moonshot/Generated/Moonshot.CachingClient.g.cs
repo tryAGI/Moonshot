@@ -4,11 +4,10 @@
 namespace Moonshot
 {
     /// <summary>
-    /// API for Moonshot AI / Kimi large language model services<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public sealed partial class MoonshotClient : global::Moonshot.IMoonshotClient, global::System.IDisposable
+    public sealed partial class CachingClient : global::Moonshot.ICachingClient, global::System.IDisposable
     {
         /// <summary>
         /// Production
@@ -41,70 +40,7 @@ namespace Moonshot
 
 
         /// <summary>
-        /// 
-        /// </summary>
-        public BatchClient Batch => new BatchClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public BillingClient Billing => new BillingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public CachingClient Caching => new CachingClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ChatClient Chat => new ChatClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public FilesClient Files => new FilesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public UtilitiesClient Utilities => new UtilitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContext = JsonSerializerContext,
-        };
-
-        /// <summary>
-        /// Creates a new instance of the MoonshotClient.
+        /// Creates a new instance of the CachingClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -112,7 +48,7 @@ namespace Moonshot
         /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public MoonshotClient(
+        public CachingClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Moonshot.EndPointAuthorization>? authorizations = null,
@@ -126,14 +62,14 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// Creates a new instance of the MoonshotClient with explicit options but no base URL override.
+        /// Creates a new instance of the CachingClient with explicit options but no base URL override.
         /// Skips passing <c>baseUri</c> so the default base URL from the OpenAPI spec applies.
         /// </summary>
         /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public MoonshotClient(
+        public CachingClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Collections.Generic.List<global::Moonshot.EndPointAuthorization>? authorizations,
             global::Moonshot.AutoSDKClientOptions? options,
@@ -147,7 +83,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// Creates a new instance of the MoonshotClient.
+        /// Creates a new instance of the CachingClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -156,7 +92,7 @@ namespace Moonshot
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public MoonshotClient(
+        public CachingClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Uri? baseUri,
             global::System.Collections.Generic.List<global::Moonshot.EndPointAuthorization>? authorizations,

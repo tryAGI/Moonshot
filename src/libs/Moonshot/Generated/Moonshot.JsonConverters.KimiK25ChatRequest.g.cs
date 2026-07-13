@@ -47,6 +47,7 @@ namespace Moonshot.JsonConverters
             if (__jsonProps.Contains("stream")) __score0++;
             if (__jsonProps.Contains("stream_options")) __score0++;
             if (__jsonProps.Contains("stream_options.include_usage")) __score0++;
+            if (__jsonProps.Contains("tool_choice")) __score0++;
             if (__jsonProps.Contains("tools")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("model")) __score1++;

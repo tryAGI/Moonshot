@@ -2,51 +2,62 @@
 
 namespace Moonshot
 {
-    public partial interface IUtilitiesClient
+    public partial interface ICachingClient
     {
         /// <summary>
-        /// Estimate Token Count<br/>
-        /// Estimates the number of tokens that would be used for a given set of messages and model. The input structure is almost identical to that of chat completion.
+        /// Create Cache<br/>
+        /// Create a context cache for reuse in subsequent chat requests. Pass the messages you want to cache (usually system prompts or knowledge documents) and tool definitions.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Moonshot.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Moonshot.EstimateTokenResponse> CreateTokenizersEstimateTokenCountAsync(
+        global::System.Threading.Tasks.Task<global::Moonshot.CacheObject> CreateCachingAsync(
 
-            global::Moonshot.EstimateTokenRequest request,
+            global::Moonshot.CreateCachingRequest request,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Estimate Token Count<br/>
-        /// Estimates the number of tokens that would be used for a given set of messages and model. The input structure is almost identical to that of chat completion.
+        /// Create Cache<br/>
+        /// Create a context cache for reuse in subsequent chat requests. Pass the messages you want to cache (usually system prompts or knowledge documents) and tool definitions.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Moonshot.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.EstimateTokenResponse>> CreateTokenizersEstimateTokenCountAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.CacheObject>> CreateCachingAsResponseAsync(
 
-            global::Moonshot.EstimateTokenRequest request,
+            global::Moonshot.CreateCachingRequest request,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Estimate Token Count<br/>
-        /// Estimates the number of tokens that would be used for a given set of messages and model. The input structure is almost identical to that of chat completion.
+        /// Create Cache<br/>
+        /// Create a context cache for reuse in subsequent chat requests. Pass the messages you want to cache (usually system prompts or knowledge documents) and tool definitions.
         /// </summary>
         /// <param name="model">
-        /// Model ID<br/>
-        /// Default Value: kimi-k2.5
+        /// Model ID
         /// </param>
         /// <param name="messages">
-        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty
+        /// List of messages to cache
+        /// </param>
+        /// <param name="tools">
+        /// List of tool definitions to cache (optional)
+        /// </param>
+        /// <param name="name">
+        /// Business identifier for the cache (optional)
+        /// </param>
+        /// <param name="ttl">
+        /// Cache TTL in seconds, optional. For example, 3600 = 1 hour
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Moonshot.EstimateTokenResponse> CreateTokenizersEstimateTokenCountAsync(
+        global::System.Threading.Tasks.Task<global::Moonshot.CacheObject> CreateCachingAsync(
+            string model,
             global::System.Collections.Generic.IList<global::Moonshot.Message> messages,
-            global::Moonshot.EstimateTokenRequestModel model = global::Moonshot.EstimateTokenRequestModel.KimiK25,
+            global::System.Collections.Generic.IList<global::Moonshot.ToolDefinition>? tools = default,
+            string? name = default,
+            int? ttl = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

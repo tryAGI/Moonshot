@@ -11,7 +11,7 @@ namespace Moonshot
     public sealed partial class ChatRequestBase
     {
         /// <summary>
-        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, or assistant. content must not be empty. The content field can be a string or an array[object] (for multimodal input).
+        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty. The content field can be a string or an array[object] (for multimodal input).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messages")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -77,6 +77,13 @@ namespace Moonshot
         public string? SafetyIdentifier { get; set; }
 
         /// <summary>
+        /// Controls whether the model calls tools. `auto` (default): the model decides whether to call tools; `none`: no tool calls; `required`: force a tool call; or pass an object specifying a particular function to force that tool call.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tool_choice")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>))]
+        public global::Moonshot.OneOf<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>? ToolChoice { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -86,7 +93,7 @@ namespace Moonshot
         /// Initializes a new instance of the <see cref="ChatRequestBase" /> class.
         /// </summary>
         /// <param name="messages">
-        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, or assistant. content must not be empty. The content field can be a string or an array[object] (for multimodal input).
+        /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty. The content field can be a string or an array[object] (for multimodal input).
         /// </param>
         /// <param name="maxCompletionTokens">
         /// The maximum number of tokens to generate for the chat completion. If not specified, defaults to a reasonable integer such as 1024. If the result reaches the maximum number of tokens without ending, the finish reason will be "length"; otherwise, it will be "stop". This refers to the length of tokens you expect us to return, not the total length of input plus output. If input plus max_completion_tokens exceeds the model context window, the API returns invalid_request_error.
@@ -115,6 +122,9 @@ namespace Moonshot
         /// <param name="safetyIdentifier">
         /// A stable identifier used to help detect users of your application that may be violating usage policies. The ID should be a string that uniquely identifies each user. It is recommended to hash the username or email address to avoid sending any identifying information
         /// </param>
+        /// <param name="toolChoice">
+        /// Controls whether the model calls tools. `auto` (default): the model decides whether to call tools; `none`: no tool calls; `required`: force a tool call; or pass an object specifying a particular function to force that tool call.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -127,7 +137,8 @@ namespace Moonshot
             global::Moonshot.ChatRequestBaseStreamOptions? streamOptions,
             global::System.Collections.Generic.IList<global::Moonshot.ToolDefinition>? tools,
             string? promptCacheKey,
-            string? safetyIdentifier)
+            string? safetyIdentifier,
+            global::Moonshot.OneOf<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>? toolChoice)
         {
             this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.MaxCompletionTokens = maxCompletionTokens;
@@ -138,6 +149,7 @@ namespace Moonshot
             this.Tools = tools;
             this.PromptCacheKey = promptCacheKey;
             this.SafetyIdentifier = safetyIdentifier;
+            this.ToolChoice = toolChoice;
         }
 
         /// <summary>
