@@ -1261,6 +1261,49 @@
 				"required": [
 					"error"
 				]
+			},
+			"CacheObject": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string",
+						"description": "Cache ID"
+					},
+					"object": {
+						"type": "string",
+						"description": "Object type",
+						"example": "cache"
+					},
+					"model": {
+						"type": "string",
+						"description": "Model ID"
+					},
+					"status": {
+						"type": "string",
+						"description": "Cache status: pending (being created), active (ready), expired (expired)",
+						"enum": [
+							"pending",
+							"active",
+							"expired"
+						]
+					},
+					"created_at": {
+						"type": "integer",
+						"description": "Creation timestamp (Unix)"
+					},
+					"expires_at": {
+						"type": "integer",
+						"description": "Expiration timestamp (Unix)"
+					},
+					"ttl": {
+						"type": "integer",
+						"description": "Cache TTL in seconds"
+					},
+					"name": {
+						"type": "string",
+						"description": "Business identifier for the cache"
+					}
+				}
 			}
 		}
 	},
@@ -1784,11 +1827,6 @@
 								"schema": {
 									"$ref": "#/components/schemas/ChatCompletionResponse"
 								}
-							},
-							"text/event-stream": {
-								"schema": {
-									"$ref": "#/components/schemas/ChatCompletionChunk"
-								}
 							}
 						}
 					},
@@ -2145,6 +2183,171 @@
 					},
 					"404": {
 						"description": "Batch task not found",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Server error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v1/caching": {
+			"post": {
+				"summary": "Create Cache",
+				"description": "Create a context cache for reuse in subsequent chat requests. Pass the messages you want to cache (usually system prompts or knowledge documents) and tool definitions.",
+				"tags": [
+					"Caching"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"model": {
+										"type": "string",
+										"description": "Model ID"
+									},
+									"messages": {
+										"type": "array",
+										"description": "List of messages to cache",
+										"items": {
+											"$ref": "#/components/schemas/Message"
+										}
+									},
+									"tools": {
+										"type": "array",
+										"description": "List of tool definitions to cache (optional)",
+										"items": {
+											"$ref": "#/components/schemas/ToolDefinition"
+										}
+									},
+									"name": {
+										"type": "string",
+										"description": "Business identifier for the cache (optional)"
+									},
+									"ttl": {
+										"type": "integer",
+										"description": "Cache TTL in seconds, optional. For example, 3600 = 1 hour"
+									}
+								},
+								"required": [
+									"model",
+									"messages"
+								]
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Created cache object",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/CacheObject"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request - Invalid parameters",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized - Invalid or missing API key",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Server error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v1/caching/{cache_id}": {
+			"get": {
+				"summary": "Retrieve Cache Status",
+				"description": "Retrieve the current status and metadata of a specific cache.",
+				"tags": [
+					"Caching"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "cache_id",
+						"in": "path",
+						"required": true,
+						"description": "The cache ID",
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Cache object",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/CacheObject"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized - Invalid or missing API key",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "Cache not found",
 						"content": {
 							"application/json": {
 								"schema": {
