@@ -2,29 +2,30 @@
 
 namespace Moonshot
 {
-    public partial interface IChatClient
+    public partial interface ICachingClient
     {
         /// <summary>
-        /// Create Chat Completion<br/>
-        /// Creates a completion for the chat message. Supports standard chat, Partial Mode, and Tool Use (Function Calling).
+        /// Retrieve Cache Status<br/>
+        /// Retrieve the current status and metadata of a specific cache.
         /// </summary>
-        /// <param name="request"></param>
+        /// <param name="cacheId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Moonshot.ApiException"></exception>
-        global::System.Collections.Generic.IAsyncEnumerable<global::Moonshot.ChatCompletionChunk> CreateChatCompletionsAsStreamAsync(
-
-            global::Moonshot.CreateChatCompletionsRequest request,
+        global::System.Threading.Tasks.Task<global::Moonshot.CacheObject> GetCachingByCacheIdAsync(
+            string cacheId,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create Chat Completion<br/>
-        /// Creates a completion for the chat message. Supports standard chat, Partial Mode, and Tool Use (Function Calling).
+        /// Retrieve Cache Status<br/>
+        /// Retrieve the current status and metadata of a specific cache.
         /// </summary>
+        /// <param name="cacheId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Collections.Generic.IAsyncEnumerable<global::Moonshot.ChatCompletionChunk> CreateChatCompletionsAsStreamAsync(
+        /// <exception cref="global::Moonshot.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.CacheObject>> GetCachingByCacheIdAsResponseAsync(
+            string cacheId,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

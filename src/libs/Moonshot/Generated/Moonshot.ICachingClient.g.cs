@@ -4,11 +4,10 @@
 namespace Moonshot
 {
     /// <summary>
-    /// API for Moonshot AI / Kimi large language model services<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public partial interface IMoonshotClient : global::System.IDisposable
+    public partial interface ICachingClient : global::System.IDisposable
     {
         /// <summary>
         /// The HttpClient instance.
@@ -44,41 +43,6 @@ namespace Moonshot
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public BatchClient Batch { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public BillingClient Billing { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public CachingClient Caching { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ChatClient Chat { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public FilesClient Files { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ModelsClient Models { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public UtilitiesClient Utilities { get; }
 
     }
 }
