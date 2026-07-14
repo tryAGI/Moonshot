@@ -58,11 +58,6 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
-        public CachingClient Caching { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public ChatClient Chat { get; }
 
         /// <summary>

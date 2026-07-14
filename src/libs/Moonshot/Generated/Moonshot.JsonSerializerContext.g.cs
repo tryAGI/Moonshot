@@ -117,10 +117,6 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.BatchObjectStatusNullableJsonConverter),
 
-            typeof(global::Moonshot.JsonConverters.CacheObjectStatusJsonConverter),
-
-            typeof(global::Moonshot.JsonConverters.CacheObjectStatusNullableJsonConverter),
-
             typeof(global::Moonshot.JsonConverters.CreateFilesRequestPurposeJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.CreateFilesRequestPurposeNullableJsonConverter),
@@ -256,15 +252,12 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.BatchObject>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ErrorResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ErrorResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CacheObject))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CacheObjectStatus), TypeInfoPropertyName = "CacheObjectStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateFilesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateFilesRequestPurpose), TypeInfoPropertyName = "CreateFilesRequestPurpose2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateChatCompletionsRequest), TypeInfoPropertyName = "CreateChatCompletionsRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateChatCompletionsRequestDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel), TypeInfoPropertyName = "CreateChatCompletionsRequestDiscriminatorModel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateCachingRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.GetModelsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.GetModelsResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.GetModelsResponseDataItem))]
