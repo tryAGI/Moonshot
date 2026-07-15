@@ -432,51 +432,39 @@ namespace Moonshot
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CacheObject? Type101 { get; set; }
+        public global::Moonshot.CreateFilesRequest? Type101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CacheObjectStatus? Type102 { get; set; }
+        public byte[]? Type102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CreateFilesRequest? Type103 { get; set; }
+        public global::Moonshot.CreateFilesRequestPurpose? Type103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public byte[]? Type104 { get; set; }
+        public global::Moonshot.CreateChatCompletionsRequest? Type104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CreateFilesRequestPurpose? Type105 { get; set; }
+        public global::Moonshot.CreateChatCompletionsRequestDiscriminator? Type105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CreateChatCompletionsRequest? Type106 { get; set; }
+        public global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel? Type106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CreateChatCompletionsRequestDiscriminator? Type107 { get; set; }
+        public global::Moonshot.GetModelsResponse? Type107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel? Type108 { get; set; }
+        public global::System.Collections.Generic.IList<global::Moonshot.GetModelsResponseDataItem>? Type108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Moonshot.CreateCachingRequest? Type109 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Moonshot.GetModelsResponse? Type110 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.GetModelsResponseDataItem>? Type111 { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        public global::Moonshot.GetModelsResponseDataItem? Type112 { get; set; }
+        public global::Moonshot.GetModelsResponseDataItem? Type109 { get; set; }
 
         /// <summary>
         /// 

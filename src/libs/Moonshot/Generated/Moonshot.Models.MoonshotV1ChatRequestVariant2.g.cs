@@ -20,14 +20,14 @@ namespace Moonshot
 
         /// <summary>
         /// The sampling temperature to use, ranging from 0 to 1. A higher value (e.g., 0.7) will make the output more random, while a lower value (e.g., 0.2) will make it more focused and deterministic. Default is 0.0.<br/>
-        /// Default Value: 0F
+        /// Default Value: 0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("temperature")]
         public float? Temperature { get; set; }
 
         /// <summary>
         /// Another sampling method, where the model considers the results of tokens with a cumulative probability mass of top_p. Thus, 0.1 means only considering the top 10% of tokens by probability mass. Generally, we suggest changing either this or the temperature, but not both at the same time. Default is 1.0.<br/>
-        /// Default Value: 1F
+        /// Default Value: 1
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("top_p")]
         public float? TopP { get; set; }
@@ -68,11 +68,11 @@ namespace Moonshot
         /// </param>
         /// <param name="temperature">
         /// The sampling temperature to use, ranging from 0 to 1. A higher value (e.g., 0.7) will make the output more random, while a lower value (e.g., 0.2) will make it more focused and deterministic. Default is 0.0.<br/>
-        /// Default Value: 0F
+        /// Default Value: 0
         /// </param>
         /// <param name="topP">
         /// Another sampling method, where the model considers the results of tokens with a cumulative probability mass of top_p. Thus, 0.1 means only considering the top 10% of tokens by probability mass. Generally, we suggest changing either this or the temperature, but not both at the same time. Default is 1.0.<br/>
-        /// Default Value: 1F
+        /// Default Value: 1
         /// </param>
         /// <param name="n">
         /// The number of results to generate for each input message. Default is 1, must not exceed 5. When the temperature is very close to 0, only 1 result can be returned.<br/>
