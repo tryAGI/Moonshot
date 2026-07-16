@@ -21,6 +21,13 @@ namespace Moonshot.JsonConverters
                             throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.CreateChatCompletionsRequestDiscriminator)}");
             var discriminator = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, discriminatorTypeInfo);
 
+            global::Moonshot.KimiK3ChatRequest? kimiK3 = default;
+            if (discriminator?.Model == global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel.KimiK3)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK3ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK3ChatRequest> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.KimiK3ChatRequest)}");
+                kimiK3 = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Moonshot.KimiK27CodeChatRequest? kimiK27Code = default;
             if (discriminator?.Model == global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code)
             {
@@ -52,6 +59,8 @@ namespace Moonshot.JsonConverters
 
             var __value = new global::Moonshot.CreateChatCompletionsRequest(
                 discriminator?.Model,
+                kimiK3,
+
                 kimiK27Code,
 
                 kimiK26,
@@ -73,7 +82,13 @@ namespace Moonshot.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsKimiK27Code)
+            if (value.IsKimiK3)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK3ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK3ChatRequest> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK3ChatRequest).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK3!.Value, typeInfo);
+            }
+            else if (value.IsKimiK27Code)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK27CodeChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK27CodeChatRequest> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK27CodeChatRequest).Name}");
