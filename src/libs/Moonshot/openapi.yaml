@@ -212,8 +212,7 @@
             "description": "Tools available for the model to call from this message onward",
             "items": {
               "$ref": "#/components/schemas/ToolDefinition"
-            },
-            "maxItems": 128
+            }
           }
         },
         "required": [
@@ -323,8 +322,7 @@
             "description": "A list of tools the model may call",
             "items": {
               "$ref": "#/components/schemas/ToolDefinition"
-            },
-            "maxItems": 128
+            }
           },
           "prompt_cache_key": {
             "type": "string",
@@ -474,8 +472,7 @@
             "description": "A list of tools the model may call",
             "items": {
               "$ref": "#/components/schemas/ToolDefinition"
-            },
-            "maxItems": 128
+            }
           },
           "prompt_cache_key": {
             "type": "string",
@@ -560,10 +557,12 @@
               "reasoning_effort": {
                 "type": "string",
                 "enum": [
+                  "low",
+                  "high",
                   "max"
                 ],
                 "default": "max",
-                "description": "Kimi K3 always enables thinking with Preserved Thinking. Thinking effort only supports max."
+                "description": "Kimi K3 always enables thinking with Preserved Thinking. Thinking effort supports low, high, and max, with max as the default."
               }
             },
             "required": [
