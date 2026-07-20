@@ -4,11 +4,19 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Kimi K3 always enables thinking with Preserved Thinking. Thinking effort only supports max.<br/>
+    /// Kimi K3 always enables thinking with Preserved Thinking. Thinking effort supports low, high, and max, with max as the default.<br/>
     /// Default Value: max
     /// </summary>
     public enum KimiK3ChatRequestVariant2ReasoningEffort
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        High,
+        /// <summary>
+        /// 
+        /// </summary>
+        Low,
         /// <summary>
         /// 
         /// </summary>
@@ -27,6 +35,8 @@ namespace Moonshot
         {
             return value switch
             {
+                KimiK3ChatRequestVariant2ReasoningEffort.High => "high",
+                KimiK3ChatRequestVariant2ReasoningEffort.Low => "low",
                 KimiK3ChatRequestVariant2ReasoningEffort.Max => "max",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -38,6 +48,8 @@ namespace Moonshot
         {
             return value switch
             {
+                "high" => KimiK3ChatRequestVariant2ReasoningEffort.High,
+                "low" => KimiK3ChatRequestVariant2ReasoningEffort.Low,
                 "max" => KimiK3ChatRequestVariant2ReasoningEffort.Max,
                 _ => null,
             };
