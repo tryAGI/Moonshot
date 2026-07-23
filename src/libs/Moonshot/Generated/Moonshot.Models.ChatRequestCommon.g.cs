@@ -11,6 +11,25 @@ namespace Moonshot
     public sealed partial class ChatRequestCommon
     {
         /// <summary>
+        /// Whether to return log probabilities of the output tokens. If true, the log probability of each output token is returned in the logprobs field of the response message.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("logprobs")]
+        public bool? Logprobs { get; set; }
+
+        /// <summary>
+        /// An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. logprobs must be set to true when this parameter is used.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("top_logprobs")]
+        public int? TopLogprobs { get; set; }
+
+        /// <summary>
+        /// Configuration for a Predicted Output, which can greatly improve response times when large parts of the model response are known ahead of time (for example, regenerating a file with only minor changes).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prediction")]
+        public global::Moonshot.ChatRequestCommonPrediction? Prediction { get; set; }
+
+        /// <summary>
         /// Deprecated, please refer to max_completion_tokens
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max_tokens")]
@@ -85,6 +104,16 @@ namespace Moonshot
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatRequestCommon" /> class.
         /// </summary>
+        /// <param name="logprobs">
+        /// Whether to return log probabilities of the output tokens. If true, the log probability of each output token is returned in the logprobs field of the response message.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="topLogprobs">
+        /// An integer between 0 and 20 specifying the number of most likely tokens to return at each token position, each with an associated log probability. logprobs must be set to true when this parameter is used.
+        /// </param>
+        /// <param name="prediction">
+        /// Configuration for a Predicted Output, which can greatly improve response times when large parts of the model response are known ahead of time (for example, regenerating a file with only minor changes).
+        /// </param>
         /// <param name="maxCompletionTokens">
         /// The maximum number of tokens to generate for the chat completion. The default varies by model: for Kimi K3 it defaults to 131072 and can be set up to 1048576. If the result reaches the maximum number of tokens without ending, the finish reason will be "length"; otherwise, it will be "stop". This refers to the length of tokens you expect us to return, not the total length of input plus output. If input plus max_completion_tokens exceeds the model context window, the API returns invalid_request_error.
         /// </param>
@@ -119,6 +148,9 @@ namespace Moonshot
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ChatRequestCommon(
+            bool? logprobs,
+            int? topLogprobs,
+            global::Moonshot.ChatRequestCommonPrediction? prediction,
             int? maxCompletionTokens,
             global::Moonshot.ChatRequestCommonResponseFormat? responseFormat,
             global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<string>>? stop,
@@ -129,6 +161,9 @@ namespace Moonshot
             string? safetyIdentifier,
             global::Moonshot.OneOf<global::Moonshot.ChatRequestCommonToolChoiceEnum?, global::Moonshot.ChatRequestCommonToolChoiceEnum2>? toolChoice)
         {
+            this.Logprobs = logprobs;
+            this.TopLogprobs = topLogprobs;
+            this.Prediction = prediction;
             this.MaxCompletionTokens = maxCompletionTokens;
             this.ResponseFormat = responseFormat;
             this.Stop = stop;

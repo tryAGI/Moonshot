@@ -25,7 +25,7 @@ namespace Moonshot
         public required global::System.Collections.Generic.IList<global::Moonshot.KimiK3Message> Messages { get; set; }
 
         /// <summary>
-        /// Kimi K3 always enables thinking with Preserved Thinking. Thinking effort supports low, high, and max, with max as the default.<br/>
+        /// Kimi K3 always enables thinking with Preserved Thinking. Reasoning effort supports low, high, and max, with max as the default.<br/>
         /// Default Value: max
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasoning_effort")]
@@ -45,7 +45,7 @@ namespace Moonshot
         /// A list of Kimi K3 conversation messages. In addition to standard messages, you can insert a {"role": "system", "tools": [...]} message at any conversation position to dynamically load tools. A dynamic tool message omits content and only affects subsequent conversation turns.
         /// </param>
         /// <param name="reasoningEffort">
-        /// Kimi K3 always enables thinking with Preserved Thinking. Thinking effort supports low, high, and max, with max as the default.<br/>
+        /// Kimi K3 always enables thinking with Preserved Thinking. Reasoning effort supports low, high, and max, with max as the default.<br/>
         /// Default Value: max
         /// </param>
         /// <param name="model">

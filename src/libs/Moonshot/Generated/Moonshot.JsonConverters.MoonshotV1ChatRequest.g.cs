@@ -35,9 +35,13 @@ namespace Moonshot.JsonConverters
             }
 
             var __score0 = 0;
+            if (__jsonProps.Contains("logprobs")) __score0++;
             if (__jsonProps.Contains("max_completion_tokens")) __score0++;
             if (__jsonProps.Contains("max_tokens")) __score0++;
             if (__jsonProps.Contains("messages")) __score0++;
+            if (__jsonProps.Contains("prediction")) __score0++;
+            if (__jsonProps.Contains("prediction.content")) __score0++;
+            if (__jsonProps.Contains("prediction.type")) __score0++;
             if (__jsonProps.Contains("prompt_cache_key")) __score0++;
             if (__jsonProps.Contains("response_format")) __score0++;
             if (__jsonProps.Contains("response_format.json_schema")) __score0++;
@@ -49,6 +53,7 @@ namespace Moonshot.JsonConverters
             if (__jsonProps.Contains("stream_options.include_usage")) __score0++;
             if (__jsonProps.Contains("tool_choice")) __score0++;
             if (__jsonProps.Contains("tools")) __score0++;
+            if (__jsonProps.Contains("top_logprobs")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("frequency_penalty")) __score1++;
             if (__jsonProps.Contains("model")) __score1++;
