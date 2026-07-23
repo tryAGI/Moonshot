@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Kimi K3 always enables thinking with Preserved Thinking. Thinking effort supports low, high, and max, with max as the default.<br/>
+    /// Kimi K3 always enables thinking with Preserved Thinking. Reasoning effort supports low, high, and max, with max as the default.<br/>
     /// Default Value: max
     /// </summary>
     public enum KimiK3ChatRequestVariant2ReasoningEffort
