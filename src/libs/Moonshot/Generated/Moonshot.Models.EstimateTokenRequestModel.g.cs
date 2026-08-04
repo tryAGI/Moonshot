@@ -5,7 +5,7 @@ namespace Moonshot
 {
     /// <summary>
     /// Model ID<br/>
-    /// Default Value: kimi-k2.5
+    /// Default Value: kimi-k3
     /// </summary>
     public enum EstimateTokenRequestModel
     {
@@ -25,6 +25,10 @@ namespace Moonshot
         /// 
         /// </summary>
         KimiK27CodeHighspeed,
+        /// <summary>
+        /// 
+        /// </summary>
+        KimiK3,
         /// <summary>
         /// 
         /// </summary>
@@ -71,6 +75,7 @@ namespace Moonshot
                 EstimateTokenRequestModel.KimiK26 => "kimi-k2.6",
                 EstimateTokenRequestModel.KimiK27Code => "kimi-k2.7-code",
                 EstimateTokenRequestModel.KimiK27CodeHighspeed => "kimi-k2.7-code-highspeed",
+                EstimateTokenRequestModel.KimiK3 => "kimi-k3",
                 EstimateTokenRequestModel.MoonshotV1128k => "moonshot-v1-128k",
                 EstimateTokenRequestModel.MoonshotV1128kVisionPreview => "moonshot-v1-128k-vision-preview",
                 EstimateTokenRequestModel.MoonshotV132k => "moonshot-v1-32k",
@@ -92,6 +97,7 @@ namespace Moonshot
                 "kimi-k2.6" => EstimateTokenRequestModel.KimiK26,
                 "kimi-k2.7-code" => EstimateTokenRequestModel.KimiK27Code,
                 "kimi-k2.7-code-highspeed" => EstimateTokenRequestModel.KimiK27CodeHighspeed,
+                "kimi-k3" => EstimateTokenRequestModel.KimiK3,
                 "moonshot-v1-128k" => EstimateTokenRequestModel.MoonshotV1128k,
                 "moonshot-v1-128k-vision-preview" => EstimateTokenRequestModel.MoonshotV1128kVisionPreview,
                 "moonshot-v1-32k" => EstimateTokenRequestModel.MoonshotV132k,

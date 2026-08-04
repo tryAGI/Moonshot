@@ -552,7 +552,7 @@ namespace Moonshot
         /// </summary>
         /// <param name="model">
         /// Model ID<br/>
-        /// Default Value: kimi-k2.5
+        /// Default Value: kimi-k3
         /// </param>
         /// <param name="messages">
         /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty
@@ -562,7 +562,7 @@ namespace Moonshot
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Moonshot.EstimateTokenResponse> CreateTokenizersEstimateTokenCountAsync(
             global::System.Collections.Generic.IList<global::Moonshot.Message> messages,
-            global::Moonshot.EstimateTokenRequestModel model = global::Moonshot.EstimateTokenRequestModel.KimiK25,
+            global::Moonshot.EstimateTokenRequestModel model = global::Moonshot.EstimateTokenRequestModel.KimiK3,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
