@@ -9,7 +9,7 @@ namespace Moonshot
     public sealed partial class ToolDefinitionFunction
     {
         /// <summary>
-        /// Function name. Must follow the regex: ^[a-zA-Z_][a-zA-Z0-9-_]{2,63}$
+        /// Function name. Must follow the regex: ^[a-zA-Z_][a-zA-Z0-9-_]{0,255}$
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -45,7 +45,7 @@ namespace Moonshot
         /// Initializes a new instance of the <see cref="ToolDefinitionFunction" /> class.
         /// </summary>
         /// <param name="name">
-        /// Function name. Must follow the regex: ^[a-zA-Z_][a-zA-Z0-9-_]{2,63}$
+        /// Function name. Must follow the regex: ^[a-zA-Z_][a-zA-Z0-9-_]{0,255}$
         /// </param>
         /// <param name="parameters">
         /// Function parameters as JSON Schema. Must conform to the [MFJS (Moonshot Flavored JSON Schema) specification](https://github.com/MoonshotAI/walle/blob/main/docs/mfjs-spec.md).
