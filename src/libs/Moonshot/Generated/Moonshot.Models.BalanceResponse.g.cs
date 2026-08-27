@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BalanceResponse
     {
@@ -16,7 +16,7 @@ namespace Moonshot
         public required int Code { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonRequired]

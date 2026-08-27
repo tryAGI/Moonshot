@@ -134,7 +134,7 @@ namespace Moonshot
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Moonshot.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

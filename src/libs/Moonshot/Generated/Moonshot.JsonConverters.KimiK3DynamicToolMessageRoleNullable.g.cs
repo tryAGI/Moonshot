@@ -20,7 +20,7 @@ namespace Moonshot.JsonConverters
                     {
                         return global::Moonshot.KimiK3DynamicToolMessageRoleExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

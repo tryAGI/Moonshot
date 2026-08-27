@@ -20,7 +20,7 @@ namespace Moonshot.JsonConverters
                     {
                         return global::Moonshot.MoonshotV1ChatRequestVariant2ModelExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

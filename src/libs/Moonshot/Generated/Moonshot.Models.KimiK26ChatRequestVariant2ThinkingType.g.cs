@@ -9,11 +9,11 @@ namespace Moonshot
     public enum KimiK26ChatRequestVariant2ThinkingType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Disabled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enabled,
     }

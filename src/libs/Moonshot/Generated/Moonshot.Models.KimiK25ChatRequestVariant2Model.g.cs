@@ -10,7 +10,7 @@ namespace Moonshot
     public enum KimiK25ChatRequestVariant2Model
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KimiK25,
     }

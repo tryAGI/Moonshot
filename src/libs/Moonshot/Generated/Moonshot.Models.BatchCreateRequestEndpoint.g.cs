@@ -9,7 +9,7 @@ namespace Moonshot
     public enum BatchCreateRequestEndpoint
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         V1ChatCompletions,
     }

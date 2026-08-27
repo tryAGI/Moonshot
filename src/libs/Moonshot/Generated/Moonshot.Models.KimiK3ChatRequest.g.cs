@@ -5,12 +5,12 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct KimiK3ChatRequest : global::System.IEquatable<KimiK3ChatRequest>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.ChatRequestCommon? Common { get; init; }
@@ -19,7 +19,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Common))]
@@ -27,7 +27,7 @@ namespace Moonshot
         public bool IsCommon => Common != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCommon(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.ChatRequestCommon PickCommon() => IsCommon
             ? Common!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Common' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK3ChatRequestVariant2? KimiK3ChatRequestVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KimiK3ChatRequestVariant2))]
@@ -64,7 +64,7 @@ namespace Moonshot
         public bool IsKimiK3ChatRequestVariant2 => KimiK3ChatRequestVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickKimiK3ChatRequestVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.KimiK3ChatRequestVariant2 PickKimiK3ChatRequestVariant2() => IsKimiK3ChatRequestVariant2
             ? KimiK3ChatRequestVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK3ChatRequestVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator KimiK3ChatRequest(global::Moonshot.ChatRequestCommon value) => new KimiK3ChatRequest((global::Moonshot.ChatRequestCommon?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.ChatRequestCommon?(KimiK3ChatRequest @this) => @this.Common;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK3ChatRequest(global::Moonshot.ChatRequestCommon? value)
         {
@@ -101,22 +101,22 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static KimiK3ChatRequest FromCommon(global::Moonshot.ChatRequestCommon? value) => new KimiK3ChatRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator KimiK3ChatRequest(global::Moonshot.KimiK3ChatRequestVariant2 value) => new KimiK3ChatRequest((global::Moonshot.KimiK3ChatRequestVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.KimiK3ChatRequestVariant2?(KimiK3ChatRequest @this) => @this.KimiK3ChatRequestVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK3ChatRequest(global::Moonshot.KimiK3ChatRequestVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static KimiK3ChatRequest FromKimiK3ChatRequestVariant2(global::Moonshot.KimiK3ChatRequestVariant2? value) => new KimiK3ChatRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK3ChatRequest(
             global::Moonshot.ChatRequestCommon? common,
@@ -141,23 +141,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             KimiK3ChatRequestVariant2 as object ??
-            Common as object 
+            Common as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Common?.ToString() ??
-            KimiK3ChatRequestVariant2?.ToString() 
+            KimiK3ChatRequestVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Moonshot.ChatRequestCommon, TResult>? common = null,
@@ -190,7 +190,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Moonshot.ChatRequestCommon>? common = null,
@@ -214,7 +214,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Moonshot.ChatRequestCommon>? common = null,
@@ -237,7 +237,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(KimiK3ChatRequest other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.ChatRequestCommon?>.Default.Equals(Common, other.Common) &&
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK3ChatRequestVariant2?>.Default.Equals(KimiK3ChatRequestVariant2, other.KimiK3ChatRequestVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK3ChatRequestVariant2?>.Default.Equals(KimiK3ChatRequestVariant2, other.KimiK3ChatRequestVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(KimiK3ChatRequest obj1, KimiK3ChatRequest obj2)
         {
@@ -277,7 +277,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(KimiK3ChatRequest obj1, KimiK3ChatRequest obj2)
         {
@@ -285,7 +285,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

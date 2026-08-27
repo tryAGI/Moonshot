@@ -9,7 +9,7 @@ namespace Moonshot
     public enum KimiK3DynamicToolMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         System,
     }

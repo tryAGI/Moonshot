@@ -10,51 +10,51 @@ namespace Moonshot
     public enum EstimateTokenRequestModel
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KimiK25,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KimiK26,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KimiK27Code,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KimiK27CodeHighspeed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         KimiK3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV1128k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV1128kVisionPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV132k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV132kVisionPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV18k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV18kVisionPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV1Auto,
     }

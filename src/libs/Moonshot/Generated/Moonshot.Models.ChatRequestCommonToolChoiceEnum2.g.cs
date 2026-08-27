@@ -9,14 +9,14 @@ namespace Moonshot
     public sealed partial class ChatRequestCommonToolChoiceEnum2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Moonshot.JsonConverters.ChatRequestCommonToolChoiceEnumTypeJsonConverter))]
         public global::Moonshot.ChatRequestCommonToolChoiceEnumType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("function")]
         [global::System.Text.Json.Serialization.JsonRequired]

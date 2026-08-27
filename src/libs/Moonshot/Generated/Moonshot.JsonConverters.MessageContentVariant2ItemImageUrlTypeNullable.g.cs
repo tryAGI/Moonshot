@@ -20,7 +20,7 @@ namespace Moonshot.JsonConverters
                     {
                         return global::Moonshot.MessageContentVariant2ItemImageUrlTypeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

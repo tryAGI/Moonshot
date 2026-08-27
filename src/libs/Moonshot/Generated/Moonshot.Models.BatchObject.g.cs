@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BatchObject
     {
@@ -115,7 +115,7 @@ namespace Moonshot
         public int? CancelledAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_counts")]
         [global::System.Text.Json.Serialization.JsonRequired]

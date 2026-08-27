@@ -10,31 +10,31 @@ namespace Moonshot
     public enum MoonshotV1ChatRequestVariant2Model
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV1128k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV1128kVisionPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV132k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV132kVisionPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV18k,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV18kVisionPreview,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MoonshotV1Auto,
     }
