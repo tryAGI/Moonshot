@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ChatCompletionResponse
     {
@@ -42,7 +42,7 @@ namespace Moonshot
         public global::System.Collections.Generic.IList<global::Moonshot.ChatCompletionResponseChoice>? Choices { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
         public global::Moonshot.ChatCompletionResponseUsage? Usage { get; set; }

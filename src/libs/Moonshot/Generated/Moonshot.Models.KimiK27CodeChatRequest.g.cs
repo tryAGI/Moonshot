@@ -5,12 +5,12 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct KimiK27CodeChatRequest : global::System.IEquatable<KimiK27CodeChatRequest>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.ChatRequestBase? Base { get; init; }
@@ -19,7 +19,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Base))]
@@ -27,7 +27,7 @@ namespace Moonshot
         public bool IsBase => Base != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBase(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.ChatRequestBase PickBase() => IsBase
             ? Base!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Base' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK27CodeChatRequestVariant2? KimiK27CodeChatRequestVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KimiK27CodeChatRequestVariant2))]
@@ -64,7 +64,7 @@ namespace Moonshot
         public bool IsKimiK27CodeChatRequestVariant2 => KimiK27CodeChatRequestVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickKimiK27CodeChatRequestVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.KimiK27CodeChatRequestVariant2 PickKimiK27CodeChatRequestVariant2() => IsKimiK27CodeChatRequestVariant2
             ? KimiK27CodeChatRequestVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK27CodeChatRequestVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator KimiK27CodeChatRequest(global::Moonshot.ChatRequestBase value) => new KimiK27CodeChatRequest((global::Moonshot.ChatRequestBase?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.ChatRequestBase?(KimiK27CodeChatRequest @this) => @this.Base;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK27CodeChatRequest(global::Moonshot.ChatRequestBase? value)
         {
@@ -101,22 +101,22 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static KimiK27CodeChatRequest FromBase(global::Moonshot.ChatRequestBase? value) => new KimiK27CodeChatRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator KimiK27CodeChatRequest(global::Moonshot.KimiK27CodeChatRequestVariant2 value) => new KimiK27CodeChatRequest((global::Moonshot.KimiK27CodeChatRequestVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.KimiK27CodeChatRequestVariant2?(KimiK27CodeChatRequest @this) => @this.KimiK27CodeChatRequestVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK27CodeChatRequest(global::Moonshot.KimiK27CodeChatRequestVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static KimiK27CodeChatRequest FromKimiK27CodeChatRequestVariant2(global::Moonshot.KimiK27CodeChatRequestVariant2? value) => new KimiK27CodeChatRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK27CodeChatRequest(
             global::Moonshot.ChatRequestBase? @base,
@@ -141,23 +141,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             KimiK27CodeChatRequestVariant2 as object ??
-            Base as object 
+            Base as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Base?.ToString() ??
-            KimiK27CodeChatRequestVariant2?.ToString() 
+            KimiK27CodeChatRequestVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Moonshot.ChatRequestBase, TResult>? @base = null,
@@ -190,7 +190,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Moonshot.ChatRequestBase>? @base = null,
@@ -214,7 +214,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Moonshot.ChatRequestBase>? @base = null,
@@ -237,7 +237,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(KimiK27CodeChatRequest other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.ChatRequestBase?>.Default.Equals(Base, other.Base) &&
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK27CodeChatRequestVariant2?>.Default.Equals(KimiK27CodeChatRequestVariant2, other.KimiK27CodeChatRequestVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK27CodeChatRequestVariant2?>.Default.Equals(KimiK27CodeChatRequestVariant2, other.KimiK27CodeChatRequestVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(KimiK27CodeChatRequest obj1, KimiK27CodeChatRequest obj2)
         {
@@ -277,7 +277,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(KimiK27CodeChatRequest obj1, KimiK27CodeChatRequest obj2)
         {
@@ -285,7 +285,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

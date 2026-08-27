@@ -10,7 +10,7 @@ namespace Moonshot
     public readonly partial struct KimiK3Message : global::System.IEquatable<KimiK3Message>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.Message? StandardMessage { get; init; }
@@ -19,7 +19,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(StandardMessage))]
@@ -27,7 +27,7 @@ namespace Moonshot
         public bool IsStandardMessage => StandardMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickStandardMessage(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.Message PickStandardMessage() => IsStandardMessage
             ? StandardMessage!
@@ -56,7 +56,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DynamicToolMessage))]
@@ -64,7 +64,7 @@ namespace Moonshot
         public bool IsDynamicToolMessage => DynamicToolMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickDynamicToolMessage(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.KimiK3DynamicToolMessage PickDynamicToolMessage() => IsDynamicToolMessage
             ? DynamicToolMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'DynamicToolMessage' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator KimiK3Message(global::Moonshot.Message value) => new KimiK3Message((global::Moonshot.Message?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.Message?(KimiK3Message @this) => @this.StandardMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK3Message(global::Moonshot.Message? value)
         {
@@ -101,22 +101,22 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static KimiK3Message FromStandardMessage(global::Moonshot.Message? value) => new KimiK3Message(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator KimiK3Message(global::Moonshot.KimiK3DynamicToolMessage value) => new KimiK3Message((global::Moonshot.KimiK3DynamicToolMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.KimiK3DynamicToolMessage?(KimiK3Message @this) => @this.DynamicToolMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK3Message(global::Moonshot.KimiK3DynamicToolMessage? value)
         {
@@ -124,12 +124,12 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static KimiK3Message FromDynamicToolMessage(global::Moonshot.KimiK3DynamicToolMessage? value) => new KimiK3Message(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KimiK3Message(
             global::Moonshot.Message? standardMessage,
@@ -141,23 +141,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             DynamicToolMessage as object ??
-            StandardMessage as object 
+            StandardMessage as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             StandardMessage?.ToString() ??
-            DynamicToolMessage?.ToString() 
+            DynamicToolMessage?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Moonshot.Message, TResult>? standardMessage = null,
@@ -190,7 +190,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Moonshot.Message>? standardMessage = null,
@@ -214,7 +214,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Moonshot.Message>? standardMessage = null,
@@ -237,7 +237,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(KimiK3Message other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.Message?>.Default.Equals(StandardMessage, other.StandardMessage) &&
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK3DynamicToolMessage?>.Default.Equals(DynamicToolMessage, other.DynamicToolMessage) 
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK3DynamicToolMessage?>.Default.Equals(DynamicToolMessage, other.DynamicToolMessage)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(KimiK3Message obj1, KimiK3Message obj2)
         {
@@ -277,7 +277,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(KimiK3Message obj1, KimiK3Message obj2)
         {
@@ -285,7 +285,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

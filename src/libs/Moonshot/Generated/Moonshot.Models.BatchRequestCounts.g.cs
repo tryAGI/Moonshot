@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BatchRequestCounts
     {

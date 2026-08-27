@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetModelsResponse
     {
@@ -16,7 +16,7 @@ namespace Moonshot
         public string? Object { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         public global::System.Collections.Generic.IList<global::Moonshot.GetModelsResponseDataItem>? Data { get; set; }

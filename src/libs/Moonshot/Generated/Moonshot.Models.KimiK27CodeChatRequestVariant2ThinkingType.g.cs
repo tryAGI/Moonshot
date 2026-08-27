@@ -9,7 +9,7 @@ namespace Moonshot
     public enum KimiK27CodeChatRequestVariant2ThinkingType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Enabled,
     }

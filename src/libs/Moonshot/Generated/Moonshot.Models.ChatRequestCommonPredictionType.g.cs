@@ -9,7 +9,7 @@ namespace Moonshot
     public enum ChatRequestCommonPredictionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Content,
     }

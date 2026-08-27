@@ -4,12 +4,12 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MessageContentVariant2ItemImageUrlType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageUrl,
     }

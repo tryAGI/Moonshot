@@ -10,15 +10,15 @@ namespace Moonshot
     public enum KimiK3ChatRequestVariant2ReasoningEffort
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         High,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Low,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Max,
     }

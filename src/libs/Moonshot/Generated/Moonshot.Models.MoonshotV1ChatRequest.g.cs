@@ -5,12 +5,12 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct MoonshotV1ChatRequest : global::System.IEquatable<MoonshotV1ChatRequest>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.ChatRequestBase? Base { get; init; }
@@ -19,7 +19,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Base))]
@@ -27,7 +27,7 @@ namespace Moonshot
         public bool IsBase => Base != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickBase(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.ChatRequestBase PickBase() => IsBase
             ? Base!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Base' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.MoonshotV1ChatRequestVariant2? MoonshotV1ChatRequestVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Moonshot
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MoonshotV1ChatRequestVariant2))]
@@ -64,7 +64,7 @@ namespace Moonshot
         public bool IsMoonshotV1ChatRequestVariant2 => MoonshotV1ChatRequestVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMoonshotV1ChatRequestVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Moonshot.MoonshotV1ChatRequestVariant2 PickMoonshotV1ChatRequestVariant2() => IsMoonshotV1ChatRequestVariant2
             ? MoonshotV1ChatRequestVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'MoonshotV1ChatRequestVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MoonshotV1ChatRequest(global::Moonshot.ChatRequestBase value) => new MoonshotV1ChatRequest((global::Moonshot.ChatRequestBase?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.ChatRequestBase?(MoonshotV1ChatRequest @this) => @this.Base;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MoonshotV1ChatRequest(global::Moonshot.ChatRequestBase? value)
         {
@@ -101,22 +101,22 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MoonshotV1ChatRequest FromBase(global::Moonshot.ChatRequestBase? value) => new MoonshotV1ChatRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MoonshotV1ChatRequest(global::Moonshot.MoonshotV1ChatRequestVariant2 value) => new MoonshotV1ChatRequest((global::Moonshot.MoonshotV1ChatRequestVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Moonshot.MoonshotV1ChatRequestVariant2?(MoonshotV1ChatRequest @this) => @this.MoonshotV1ChatRequestVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MoonshotV1ChatRequest(global::Moonshot.MoonshotV1ChatRequestVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MoonshotV1ChatRequest FromMoonshotV1ChatRequestVariant2(global::Moonshot.MoonshotV1ChatRequestVariant2? value) => new MoonshotV1ChatRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MoonshotV1ChatRequest(
             global::Moonshot.ChatRequestBase? @base,
@@ -141,23 +141,23 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             MoonshotV1ChatRequestVariant2 as object ??
-            Base as object 
+            Base as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Base?.ToString() ??
-            MoonshotV1ChatRequestVariant2?.ToString() 
+            MoonshotV1ChatRequestVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Moonshot.ChatRequestBase, TResult>? @base = null,
@@ -190,7 +190,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Moonshot.ChatRequestBase>? @base = null,
@@ -214,7 +214,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Moonshot.ChatRequestBase>? @base = null,
@@ -237,7 +237,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(MoonshotV1ChatRequest other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.ChatRequestBase?>.Default.Equals(Base, other.Base) &&
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.MoonshotV1ChatRequestVariant2?>.Default.Equals(MoonshotV1ChatRequestVariant2, other.MoonshotV1ChatRequestVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.MoonshotV1ChatRequestVariant2?>.Default.Equals(MoonshotV1ChatRequestVariant2, other.MoonshotV1ChatRequestVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(MoonshotV1ChatRequest obj1, MoonshotV1ChatRequest obj2)
         {
@@ -277,7 +277,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(MoonshotV1ChatRequest obj1, MoonshotV1ChatRequest obj2)
         {
@@ -285,7 +285,7 @@ namespace Moonshot
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

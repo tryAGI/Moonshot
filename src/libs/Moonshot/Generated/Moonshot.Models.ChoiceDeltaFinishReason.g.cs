@@ -9,15 +9,15 @@ namespace Moonshot
     public enum ChoiceDeltaFinishReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Length,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stop,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCalls,
     }

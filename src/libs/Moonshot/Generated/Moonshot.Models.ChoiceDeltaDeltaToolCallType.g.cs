@@ -4,12 +4,12 @@
 namespace Moonshot
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ChoiceDeltaDeltaToolCallType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Function,
     }
