@@ -68,6 +68,11 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
+        public MessagesClient Messages { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public ModelsClient Models { get; }
 
         /// <summary>

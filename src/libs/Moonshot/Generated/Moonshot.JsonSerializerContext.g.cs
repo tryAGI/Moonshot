@@ -149,6 +149,150 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.BatchObjectStatusNullableJsonConverter),
 
+            typeof(global::Moonshot.JsonConverters.MessagesTextBlockParamTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesTextBlockParamTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamRoleJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamRoleNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemTextTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemTextTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemImageTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemImageTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemImageSourceTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemImageSourceTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemImageSourceMediaTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemImageSourceMediaTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemThinkingTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemThinkingTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolUseTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolUseTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemTextTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemTextTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceMediaTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceMediaTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesToolTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesToolTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesToolChoiceTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesToolChoiceTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestModelJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestModelNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestOutputConfigEffortJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestOutputConfigEffortNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestOutputConfigFormatTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestOutputConfigFormatTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseRoleJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseRoleNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseContentItemThinkingTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseContentItemThinkingTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseContentItemTextTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseContentItemTextTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseContentItemToolUseTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseContentItemToolUseTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseStopReasonJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesResponseStopReasonNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageStartTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageStartTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartContentBlockThinkingTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartContentBlockThinkingTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartContentBlockTextTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartContentBlockTextTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartContentBlockToolUseTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStartContentBlockToolUseTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockDeltaTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockDeltaTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockDeltaDeltaTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockDeltaDeltaTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStopTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventContentBlockStopTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageDeltaTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageDeltaTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageDeltaDeltaStopReasonJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageDeltaDeltaStopReasonNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageStopTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventMessageStopTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesErrorResponseTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesErrorResponseTypeNullableJsonConverter),
+
             typeof(global::Moonshot.JsonConverters.CreateFilesRequestPurposeJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.CreateFilesRequestPurposeNullableJsonConverter),
@@ -168,6 +312,8 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.KimiK26ChatRequestJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.KimiK27CodeChatRequestJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesStreamEventJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.CreateChatCompletionsRequestJsonConverter),
 
@@ -190,6 +336,20 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
             typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>>>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinking, global::Moonshot.MessagesStreamEventContentBlockStartContentBlockText, global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUse>),
 
             typeof(global::Moonshot.JsonConverters.UnixTimestampJsonConverter),
         })]
@@ -320,6 +480,94 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.BatchObject>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ErrorResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ErrorResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesTextBlockParam))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesTextBlockParamType), TypeInfoPropertyName = "MessagesTextBlockParamType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParam))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamRole), TypeInfoPropertyName = "MessagesMessageParamRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_862ddc3e9f8653a7")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_f48f112b6bf07113")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_156e6107fef75c78")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemText))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemTextType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemTextType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemImage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemImageType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemImageType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemImageSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemImageSourceType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemImageSourceType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemImageSourceMediaType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemImageSourceMediaType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemThinking))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemThinkingType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemThinkingType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolUseType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolUseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage_5a79a47930101aac")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage_fcf2e06987e5da8f")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage_eb777cec0c628ee8")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemTextType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemTextType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceMediaType), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceMediaType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesTool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesToolType), TypeInfoPropertyName = "MessagesToolType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesToolChoice))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesToolChoiceType), TypeInfoPropertyName = "MessagesToolChoiceType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestModel), TypeInfoPropertyName = "MessagesRequestModel2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>), TypeInfoPropertyName = "OneOfStringIListMessagesTextBlockParam2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestMetadata))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigEffort), TypeInfoPropertyName = "MessagesRequestOutputConfigEffort2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigFormat))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigFormatType), TypeInfoPropertyName = "MessagesRequestOutputConfigFormatType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseType), TypeInfoPropertyName = "MessagesResponseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseRole), TypeInfoPropertyName = "MessagesResponseRole2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>), TypeInfoPropertyName = "OneOfMessagesResponseContentItemThinkingMessagesResponseContentItemTextMessagesResponseContentItemToolUse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemThinking))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemThinkingType), TypeInfoPropertyName = "MessagesResponseContentItemThinkingType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemText))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemTextType), TypeInfoPropertyName = "MessagesResponseContentItemTextType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemToolUse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemToolUseType), TypeInfoPropertyName = "MessagesResponseContentItemToolUseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseStopReason), TypeInfoPropertyName = "MessagesResponseStopReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsageOutputTokensDetails))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEvent), TypeInfoPropertyName = "MessagesStreamEvent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStart))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStartType), TypeInfoPropertyName = "MessagesStreamEventMessageStartType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStart))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStartType), TypeInfoPropertyName = "MessagesStreamEventContentBlockStartType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinking, global::Moonshot.MessagesStreamEventContentBlockStartContentBlockText, global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUse>), TypeInfoPropertyName = "MessagesStreamEventContentBlockStartContentBlockToolUse_383da0addf62373f")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinking))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinkingType), TypeInfoPropertyName = "MessagesStreamEventContentBlockStartContentBlockThinkingType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStartContentBlockText))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStartContentBlockTextType), TypeInfoPropertyName = "MessagesStreamEventContentBlockStartContentBlockTextType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUseType), TypeInfoPropertyName = "MessagesStreamEventContentBlockStartContentBlockToolUseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockDelta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockDeltaType), TypeInfoPropertyName = "MessagesStreamEventContentBlockDeltaType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockDeltaDelta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockDeltaDeltaType), TypeInfoPropertyName = "MessagesStreamEventContentBlockDeltaDeltaType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStop))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventContentBlockStopType), TypeInfoPropertyName = "MessagesStreamEventContentBlockStopType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDelta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaType), TypeInfoPropertyName = "MessagesStreamEventMessageDeltaType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaDelta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaDeltaStopReason), TypeInfoPropertyName = "MessagesStreamEventMessageDeltaDeltaStopReason2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsageOutputTokensDetails))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStop))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStopType), TypeInfoPropertyName = "MessagesStreamEventMessageStopType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesErrorResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesErrorResponseType), TypeInfoPropertyName = "MessagesErrorResponseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesErrorResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateFilesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.CreateFilesRequestPurpose), TypeInfoPropertyName = "CreateFilesRequestPurpose2")]
@@ -330,6 +578,11 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.GetModelsResponseDataItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.GetModelsResponseDataItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessageContentVariant2ItemText, global::Moonshot.MessageContentVariant2ItemImageUrl, global::Moonshot.MessageContentVariant2ItemVideoUrl>>>?), TypeInfoPropertyName = "MessageContentVariant2ItemVideoUrl_5bae655494501c49")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>>?), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_35e0ee76ebb01d77")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>?), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_58ffa822d68bcf8c")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>>>?), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage_7745a1b79703f731")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>?), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage_b6bd440034c6bacf")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinking, global::Moonshot.MessagesStreamEventContentBlockStartContentBlockText, global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUse>?), TypeInfoPropertyName = "MessagesStreamEventContentBlockStartContentBlockToolUse_8b2c4e8fbdc60be7")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessageContentVariant2ItemText, global::Moonshot.MessageContentVariant2ItemImageUrl, global::Moonshot.MessageContentVariant2ItemVideoUrl>>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessageContentVariant2ItemText, global::Moonshot.MessageContentVariant2ItemImageUrl, global::Moonshot.MessageContentVariant2ItemVideoUrl>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ToolDefinition>))]
@@ -345,6 +598,15 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ChoiceDeltaDeltaToolCall>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.FileObject>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.BatchObject>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_26a2d5cd390b2230")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_25d6ad333667e8cb")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage_3d221b39a2761bdb")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage_7e9f2e9f2b2325b7")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.MessagesMessageParam>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.List<global::Moonshot.MessagesTextBlockParam>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.MessagesTextBlockParam>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.MessagesTool>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.GetModelsResponseDataItem>))]
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
