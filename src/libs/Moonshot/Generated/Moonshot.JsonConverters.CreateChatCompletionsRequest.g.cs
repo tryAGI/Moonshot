@@ -42,20 +42,6 @@ namespace Moonshot.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.KimiK26ChatRequest)}");
                 kimiK26 = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            global::Moonshot.KimiK25ChatRequest? kimiK25 = default;
-            if (discriminator?.Model == global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel.KimiK25)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK25ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK25ChatRequest> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.KimiK25ChatRequest)}");
-                kimiK25 = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
-            }
-            global::Moonshot.MoonshotV1ChatRequest? moonshotV18k = default;
-            if (discriminator?.Model == global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel.MoonshotV18k)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MoonshotV1ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MoonshotV1ChatRequest> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.MoonshotV1ChatRequest)}");
-                moonshotV18k = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
-            }
 
             var __value = new global::Moonshot.CreateChatCompletionsRequest(
                 discriminator?.Model,
@@ -63,11 +49,7 @@ namespace Moonshot.JsonConverters
 
                 kimiK27Code,
 
-                kimiK26,
-
-                kimiK25,
-
-                moonshotV18k
+                kimiK26
                 );
 
             return __value;
@@ -99,18 +81,6 @@ namespace Moonshot.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK26ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK26ChatRequest> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK26ChatRequest).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK26!.Value, typeInfo);
-            }
-            else if (value.IsKimiK25)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK25ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK25ChatRequest> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK25ChatRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK25!.Value, typeInfo);
-            }
-            else if (value.IsMoonshotV18k)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MoonshotV1ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MoonshotV1ChatRequest> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.MoonshotV1ChatRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MoonshotV18k!.Value, typeInfo);
             }
         }
     }

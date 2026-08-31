@@ -12,10 +12,6 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        KimiK25,
-        /// <summary>
-        ///
-        /// </summary>
         KimiK26,
         /// <summary>
         ///
@@ -29,34 +25,6 @@ namespace Moonshot
         ///
         /// </summary>
         KimiK3,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV1128k,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV1128kVisionPreview,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV132k,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV132kVisionPreview,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV18k,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV18kVisionPreview,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV1Auto,
     }
 
     /// <summary>
@@ -71,18 +39,10 @@ namespace Moonshot
         {
             return value switch
             {
-                EstimateTokenRequestModel.KimiK25 => "kimi-k2.5",
                 EstimateTokenRequestModel.KimiK26 => "kimi-k2.6",
                 EstimateTokenRequestModel.KimiK27Code => "kimi-k2.7-code",
                 EstimateTokenRequestModel.KimiK27CodeHighspeed => "kimi-k2.7-code-highspeed",
                 EstimateTokenRequestModel.KimiK3 => "kimi-k3",
-                EstimateTokenRequestModel.MoonshotV1128k => "moonshot-v1-128k",
-                EstimateTokenRequestModel.MoonshotV1128kVisionPreview => "moonshot-v1-128k-vision-preview",
-                EstimateTokenRequestModel.MoonshotV132k => "moonshot-v1-32k",
-                EstimateTokenRequestModel.MoonshotV132kVisionPreview => "moonshot-v1-32k-vision-preview",
-                EstimateTokenRequestModel.MoonshotV18k => "moonshot-v1-8k",
-                EstimateTokenRequestModel.MoonshotV18kVisionPreview => "moonshot-v1-8k-vision-preview",
-                EstimateTokenRequestModel.MoonshotV1Auto => "moonshot-v1-auto",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -93,18 +53,10 @@ namespace Moonshot
         {
             return value switch
             {
-                "kimi-k2.5" => EstimateTokenRequestModel.KimiK25,
                 "kimi-k2.6" => EstimateTokenRequestModel.KimiK26,
                 "kimi-k2.7-code" => EstimateTokenRequestModel.KimiK27Code,
                 "kimi-k2.7-code-highspeed" => EstimateTokenRequestModel.KimiK27CodeHighspeed,
                 "kimi-k3" => EstimateTokenRequestModel.KimiK3,
-                "moonshot-v1-128k" => EstimateTokenRequestModel.MoonshotV1128k,
-                "moonshot-v1-128k-vision-preview" => EstimateTokenRequestModel.MoonshotV1128kVisionPreview,
-                "moonshot-v1-32k" => EstimateTokenRequestModel.MoonshotV132k,
-                "moonshot-v1-32k-vision-preview" => EstimateTokenRequestModel.MoonshotV132kVisionPreview,
-                "moonshot-v1-8k" => EstimateTokenRequestModel.MoonshotV18k,
-                "moonshot-v1-8k-vision-preview" => EstimateTokenRequestModel.MoonshotV18kVisionPreview,
-                "moonshot-v1-auto" => EstimateTokenRequestModel.MoonshotV1Auto,
                 _ => null,
             };
         }
