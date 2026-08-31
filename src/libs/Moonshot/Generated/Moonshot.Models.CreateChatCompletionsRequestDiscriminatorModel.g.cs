@@ -11,10 +11,6 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        KimiK25,
-        /// <summary>
-        ///
-        /// </summary>
         KimiK26,
         /// <summary>
         ///
@@ -28,34 +24,6 @@ namespace Moonshot
         ///
         /// </summary>
         KimiK3,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV1128k,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV1128kVisionPreview,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV132k,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV132kVisionPreview,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV18k,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV18kVisionPreview,
-        /// <summary>
-        ///
-        /// </summary>
-        MoonshotV1Auto,
     }
 
     /// <summary>
@@ -70,18 +38,10 @@ namespace Moonshot
         {
             return value switch
             {
-                CreateChatCompletionsRequestDiscriminatorModel.KimiK25 => "kimi-k2.5",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK26 => "kimi-k2.6",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code => "kimi-k2.7-code",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK27CodeHighspeed => "kimi-k2.7-code-highspeed",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK3 => "kimi-k3",
-                CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128k => "moonshot-v1-128k",
-                CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128kVisionPreview => "moonshot-v1-128k-vision-preview",
-                CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132k => "moonshot-v1-32k",
-                CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132kVisionPreview => "moonshot-v1-32k-vision-preview",
-                CreateChatCompletionsRequestDiscriminatorModel.MoonshotV18k => "moonshot-v1-8k",
-                CreateChatCompletionsRequestDiscriminatorModel.MoonshotV18kVisionPreview => "moonshot-v1-8k-vision-preview",
-                CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1Auto => "moonshot-v1-auto",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -92,18 +52,10 @@ namespace Moonshot
         {
             return value switch
             {
-                "kimi-k2.5" => CreateChatCompletionsRequestDiscriminatorModel.KimiK25,
                 "kimi-k2.6" => CreateChatCompletionsRequestDiscriminatorModel.KimiK26,
                 "kimi-k2.7-code" => CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code,
                 "kimi-k2.7-code-highspeed" => CreateChatCompletionsRequestDiscriminatorModel.KimiK27CodeHighspeed,
                 "kimi-k3" => CreateChatCompletionsRequestDiscriminatorModel.KimiK3,
-                "moonshot-v1-128k" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128k,
-                "moonshot-v1-128k-vision-preview" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1128kVisionPreview,
-                "moonshot-v1-32k" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132k,
-                "moonshot-v1-32k-vision-preview" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV132kVisionPreview,
-                "moonshot-v1-8k" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV18k,
-                "moonshot-v1-8k-vision-preview" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV18kVisionPreview,
-                "moonshot-v1-auto" => CreateChatCompletionsRequestDiscriminatorModel.MoonshotV1Auto,
                 _ => null,
             };
         }

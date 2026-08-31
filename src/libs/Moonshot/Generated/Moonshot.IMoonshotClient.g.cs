@@ -78,6 +78,11 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
+        public ResponsesClient Responses { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public UtilitiesClient Utilities { get; }
 
     }

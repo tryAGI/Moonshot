@@ -104,6 +104,15 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
+        public ResponsesClient Responses => new ResponsesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
+        ///
+        /// </summary>
         public UtilitiesClient Utilities => new UtilitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,

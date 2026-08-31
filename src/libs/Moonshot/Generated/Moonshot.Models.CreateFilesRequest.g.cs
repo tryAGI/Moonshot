@@ -23,7 +23,7 @@ namespace Moonshot
         public required string Filename { get; set; }
 
         /// <summary>
-        /// Specifies how the uploaded file will be processed. file-extract: extract file contents; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
+        /// Specifies how the uploaded file will be processed. file-extract: extract content from text-based files (such as pdf, doc, txt); images are not supported; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("purpose")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Moonshot.JsonConverters.CreateFilesRequestPurposeJsonConverter))]
@@ -46,7 +46,7 @@ namespace Moonshot
         /// The file to upload
         /// </param>
         /// <param name="purpose">
-        /// Specifies how the uploaded file will be processed. file-extract: extract file contents; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
+        /// Specifies how the uploaded file will be processed. file-extract: extract content from text-based files (such as pdf, doc, txt); images are not supported; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

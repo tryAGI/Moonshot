@@ -124,80 +124,6 @@ namespace Moonshot
         public global::Moonshot.KimiK26ChatRequest PickKimiK26() => IsKimiK26
             ? KimiK26!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK26' but the value was {ToString()}.");
-
-        /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Moonshot.KimiK25ChatRequest? KimiK25 { get; init; }
-#else
-        public global::Moonshot.KimiK25ChatRequest? KimiK25 { get; }
-#endif
-
-        /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(KimiK25))]
-#endif
-        public bool IsKimiK25 => KimiK25 != null;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public bool TryPickKimiK25(
-#if NET6_0_OR_GREATER
-            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
-#endif
-            out global::Moonshot.KimiK25ChatRequest? value)
-        {
-            value = KimiK25;
-            return IsKimiK25;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public global::Moonshot.KimiK25ChatRequest PickKimiK25() => IsKimiK25
-            ? KimiK25!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK25' but the value was {ToString()}.");
-
-        /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Moonshot.MoonshotV1ChatRequest? MoonshotV18k { get; init; }
-#else
-        public global::Moonshot.MoonshotV1ChatRequest? MoonshotV18k { get; }
-#endif
-
-        /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MoonshotV18k))]
-#endif
-        public bool IsMoonshotV18k => MoonshotV18k != null;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public bool TryPickMoonshotV18k(
-#if NET6_0_OR_GREATER
-            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
-#endif
-            out global::Moonshot.MoonshotV1ChatRequest? value)
-        {
-            value = MoonshotV18k;
-            return IsMoonshotV18k;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public global::Moonshot.MoonshotV1ChatRequest PickMoonshotV18k() => IsMoonshotV18k
-            ? MoonshotV18k!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'MoonshotV18k' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
@@ -270,59 +196,11 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator CreateChatCompletionsRequest(global::Moonshot.KimiK25ChatRequest value) => new CreateChatCompletionsRequest((global::Moonshot.KimiK25ChatRequest?)value);
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static implicit operator global::Moonshot.KimiK25ChatRequest?(CreateChatCompletionsRequest @this) => @this.KimiK25;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public CreateChatCompletionsRequest(global::Moonshot.KimiK25ChatRequest? value)
-        {
-            KimiK25 = value;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static CreateChatCompletionsRequest FromKimiK25(global::Moonshot.KimiK25ChatRequest? value) => new CreateChatCompletionsRequest(value);
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static implicit operator CreateChatCompletionsRequest(global::Moonshot.MoonshotV1ChatRequest value) => new CreateChatCompletionsRequest((global::Moonshot.MoonshotV1ChatRequest?)value);
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static implicit operator global::Moonshot.MoonshotV1ChatRequest?(CreateChatCompletionsRequest @this) => @this.MoonshotV18k;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public CreateChatCompletionsRequest(global::Moonshot.MoonshotV1ChatRequest? value)
-        {
-            MoonshotV18k = value;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static CreateChatCompletionsRequest FromMoonshotV18k(global::Moonshot.MoonshotV1ChatRequest? value) => new CreateChatCompletionsRequest(value);
-
-        /// <summary>
-        ///
-        /// </summary>
         public CreateChatCompletionsRequest(
             global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel? model,
             global::Moonshot.KimiK3ChatRequest? kimiK3,
             global::Moonshot.KimiK27CodeChatRequest? kimiK27Code,
-            global::Moonshot.KimiK26ChatRequest? kimiK26,
-            global::Moonshot.KimiK25ChatRequest? kimiK25,
-            global::Moonshot.MoonshotV1ChatRequest? moonshotV18k
+            global::Moonshot.KimiK26ChatRequest? kimiK26
             )
         {
             Model = model;
@@ -330,16 +208,12 @@ namespace Moonshot
             KimiK3 = kimiK3;
             KimiK27Code = kimiK27Code;
             KimiK26 = kimiK26;
-            KimiK25 = kimiK25;
-            MoonshotV18k = moonshotV18k;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            MoonshotV18k as object ??
-            KimiK25 as object ??
             KimiK26 as object ??
             KimiK27Code as object ??
             KimiK3 as object
@@ -351,9 +225,7 @@ namespace Moonshot
         public override string? ToString() =>
             KimiK3?.ToString() ??
             KimiK27Code?.ToString() ??
-            KimiK26?.ToString() ??
-            KimiK25?.ToString() ??
-            MoonshotV18k?.ToString()
+            KimiK26?.ToString()
             ;
 
         /// <summary>
@@ -361,7 +233,7 @@ namespace Moonshot
         /// </summary>
         public bool Validate()
         {
-            return IsKimiK3 && !IsKimiK27Code && !IsKimiK26 && !IsKimiK25 && !IsMoonshotV18k || !IsKimiK3 && IsKimiK27Code && !IsKimiK26 && !IsKimiK25 && !IsMoonshotV18k || !IsKimiK3 && !IsKimiK27Code && IsKimiK26 && !IsKimiK25 && !IsMoonshotV18k || !IsKimiK3 && !IsKimiK27Code && !IsKimiK26 && IsKimiK25 && !IsMoonshotV18k || !IsKimiK3 && !IsKimiK27Code && !IsKimiK26 && !IsKimiK25 && IsMoonshotV18k;
+            return IsKimiK3 && !IsKimiK27Code && !IsKimiK26 || !IsKimiK3 && IsKimiK27Code && !IsKimiK26 || !IsKimiK3 && !IsKimiK27Code && IsKimiK26;
         }
 
         /// <summary>
@@ -371,8 +243,6 @@ namespace Moonshot
             global::System.Func<global::Moonshot.KimiK3ChatRequest?, TResult>? kimiK3 = null,
             global::System.Func<global::Moonshot.KimiK27CodeChatRequest?, TResult>? kimiK27Code = null,
             global::System.Func<global::Moonshot.KimiK26ChatRequest?, TResult>? kimiK26 = null,
-            global::System.Func<global::Moonshot.KimiK25ChatRequest?, TResult>? kimiK25 = null,
-            global::System.Func<global::Moonshot.MoonshotV1ChatRequest?, TResult>? moonshotV18k = null,
             bool validate = true)
         {
             if (validate)
@@ -392,14 +262,6 @@ namespace Moonshot
             {
                 return kimiK26(KimiK26!);
             }
-            else if (IsKimiK25 && kimiK25 != null)
-            {
-                return kimiK25(KimiK25!);
-            }
-            else if (IsMoonshotV18k && moonshotV18k != null)
-            {
-                return moonshotV18k(MoonshotV18k!);
-            }
 
             return default(TResult);
         }
@@ -413,10 +275,6 @@ namespace Moonshot
             global::System.Action<global::Moonshot.KimiK27CodeChatRequest?>? kimiK27Code = null,
 
             global::System.Action<global::Moonshot.KimiK26ChatRequest?>? kimiK26 = null,
-
-            global::System.Action<global::Moonshot.KimiK25ChatRequest?>? kimiK25 = null,
-
-            global::System.Action<global::Moonshot.MoonshotV1ChatRequest?>? moonshotV18k = null,
             bool validate = true)
         {
             if (validate)
@@ -435,14 +293,6 @@ namespace Moonshot
             else if (IsKimiK26)
             {
                 kimiK26?.Invoke(KimiK26!);
-            }
-            else if (IsKimiK25)
-            {
-                kimiK25?.Invoke(KimiK25!);
-            }
-            else if (IsMoonshotV18k)
-            {
-                moonshotV18k?.Invoke(MoonshotV18k!);
             }
         }
 
@@ -453,8 +303,6 @@ namespace Moonshot
             global::System.Action<global::Moonshot.KimiK3ChatRequest?>? kimiK3 = null,
             global::System.Action<global::Moonshot.KimiK27CodeChatRequest?>? kimiK27Code = null,
             global::System.Action<global::Moonshot.KimiK26ChatRequest?>? kimiK26 = null,
-            global::System.Action<global::Moonshot.KimiK25ChatRequest?>? kimiK25 = null,
-            global::System.Action<global::Moonshot.MoonshotV1ChatRequest?>? moonshotV18k = null,
             bool validate = true)
         {
             if (validate)
@@ -473,14 +321,6 @@ namespace Moonshot
             else if (IsKimiK26)
             {
                 kimiK26?.Invoke(KimiK26!);
-            }
-            else if (IsKimiK25)
-            {
-                kimiK25?.Invoke(KimiK25!);
-            }
-            else if (IsMoonshotV18k)
-            {
-                moonshotV18k?.Invoke(MoonshotV18k!);
             }
         }
 
@@ -497,10 +337,6 @@ namespace Moonshot
                 typeof(global::Moonshot.KimiK27CodeChatRequest),
                 KimiK26,
                 typeof(global::Moonshot.KimiK26ChatRequest),
-                KimiK25,
-                typeof(global::Moonshot.KimiK25ChatRequest),
-                MoonshotV18k,
-                typeof(global::Moonshot.MoonshotV1ChatRequest),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -519,9 +355,7 @@ namespace Moonshot
             return
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK3ChatRequest?>.Default.Equals(KimiK3, other.KimiK3) &&
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK27CodeChatRequest?>.Default.Equals(KimiK27Code, other.KimiK27Code) &&
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK26ChatRequest?>.Default.Equals(KimiK26, other.KimiK26) &&
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK25ChatRequest?>.Default.Equals(KimiK25, other.KimiK25) &&
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.MoonshotV1ChatRequest?>.Default.Equals(MoonshotV18k, other.MoonshotV18k)
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK26ChatRequest?>.Default.Equals(KimiK26, other.KimiK26)
                 ;
         }
 

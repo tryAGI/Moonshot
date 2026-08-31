@@ -4,24 +4,24 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Purpose used when uploading the file. file-extract: extract file contents; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
+    /// Purpose used when uploading the file. file-extract: extract content from text-based files (such as pdf, doc, txt); images are not supported; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
     /// </summary>
     public enum FileObjectPurpose
     {
         /// <summary>
-        /// extract file contents; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
+        /// extract content from text-based files (such as pdf, doc, txt); images are not supported; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
         /// </summary>
         Batch,
         /// <summary>
-        /// extract file contents; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
+        /// extract content from text-based files (such as pdf, doc, txt); images are not supported; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
         /// </summary>
         FileExtract,
         /// <summary>
-        /// extract file contents; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
+        /// extract content from text-based files (such as pdf, doc, txt); images are not supported; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
         /// </summary>
         Image,
         /// <summary>
-        /// extract file contents; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
+        /// extract content from text-based files (such as pdf, doc, txt); images are not supported; image: upload images for vision understanding; video: upload videos for video understanding; batch: upload JSONL files for batch processing
         /// </summary>
         Video,
     }
