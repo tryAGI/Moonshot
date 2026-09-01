@@ -769,7 +769,7 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.FileObject? Type184 { get; set; }
+        public global::Moonshot.SignatureVerifyRequest? Type184 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -777,419 +777,427 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.FileObjectPurpose? Type186 { get; set; }
+        public global::Moonshot.SignatureVerifyResponse? Type186 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.FileListResponse? Type187 { get; set; }
+        public global::Moonshot.FileObject? Type187 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.FileObject>? Type188 { get; set; }
+        public global::Moonshot.FileObjectPurpose? Type188 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.FileDeleteResponse? Type189 { get; set; }
+        public global::Moonshot.FileListResponse? Type189 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.BatchCreateRequest? Type190 { get; set; }
+        public global::System.Collections.Generic.IList<global::Moonshot.FileObject>? Type190 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.BatchCreateRequestEndpoint? Type191 { get; set; }
+        public global::Moonshot.FileDeleteResponse? Type191 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, string>? Type192 { get; set; }
+        public global::Moonshot.BatchCreateRequest? Type192 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.BatchRequestCounts? Type193 { get; set; }
+        public global::Moonshot.BatchCreateRequestEndpoint? Type193 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.BatchObject? Type194 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, string>? Type194 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.BatchObjectStatus? Type195 { get; set; }
+        public global::Moonshot.BatchRequestCounts? Type195 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.BatchListResponse? Type196 { get; set; }
+        public global::Moonshot.BatchObject? Type196 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.BatchObject>? Type197 { get; set; }
+        public global::Moonshot.BatchObjectStatus? Type197 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ErrorResponse? Type198 { get; set; }
+        public global::Moonshot.BatchListResponse? Type198 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ErrorResponseError? Type199 { get; set; }
+        public global::System.Collections.Generic.IList<global::Moonshot.BatchObject>? Type199 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesTextBlockParam? Type200 { get; set; }
+        public global::Moonshot.ErrorResponse? Type200 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesTextBlockParamType? Type201 { get; set; }
+        public global::Moonshot.ErrorResponseError? Type201 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParam? Type202 { get; set; }
+        public global::Moonshot.MessagesTextBlockParam? Type202 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamRole? Type203 { get; set; }
+        public global::Moonshot.MessagesTextBlockParamType? Type203 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemText? Type204 { get; set; }
+        public global::Moonshot.MessagesMessageParam? Type204 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemTextType? Type205 { get; set; }
+        public global::Moonshot.MessagesMessageParamRole? Type205 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemImage? Type206 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemText? Type206 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageType? Type207 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemTextType? Type207 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageSource? Type208 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemImage? Type208 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageSourceType? Type209 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageType? Type209 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageSourceMediaType? Type210 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageSource? Type210 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemThinking? Type211 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageSourceType? Type211 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemThinkingType? Type212 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemImageSourceMediaType? Type212 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse? Type213 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemThinking? Type213 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolUseType? Type214 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemThinkingType? Type214 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult? Type215 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse? Type215 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultType? Type216 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolUseType? Type216 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText? Type217 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult? Type217 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemTextType? Type218 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultType? Type218 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage? Type219 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemText? Type219 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageType? Type220 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemTextType? Type220 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSource? Type221 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImage? Type221 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceType? Type222 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageType? Type222 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceMediaType? Type223 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSource? Type223 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesTool? Type224 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceType? Type224 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesToolType? Type225 { get; set; }
+        public global::Moonshot.MessagesMessageParamContentVariant2ItemToolResultContentVariant2ItemImageSourceMediaType? Type225 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesToolChoice? Type226 { get; set; }
+        public global::Moonshot.MessagesTool? Type226 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesToolChoiceType? Type227 { get; set; }
+        public global::Moonshot.MessagesToolType? Type227 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesRequest? Type228 { get; set; }
+        public global::Moonshot.MessagesToolChoice? Type228 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesRequestModel? Type229 { get; set; }
+        public global::Moonshot.MessagesToolChoiceType? Type229 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam>? Type230 { get; set; }
+        public global::Moonshot.MessagesRequest? Type230 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>? Type231 { get; set; }
+        public global::Moonshot.MessagesRequestModel? Type231 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>? Type232 { get; set; }
+        public global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam>? Type232 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>? Type233 { get; set; }
+        public global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>? Type233 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesRequestMetadata? Type234 { get; set; }
+        public global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>? Type234 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesRequestOutputConfig? Type235 { get; set; }
+        public global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>? Type235 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesRequestOutputConfigEffort? Type236 { get; set; }
+        public global::Moonshot.MessagesRequestMetadata? Type236 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesRequestOutputConfigFormat? Type237 { get; set; }
+        public global::Moonshot.MessagesRequestOutputConfig? Type237 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesRequestOutputConfigFormatType? Type238 { get; set; }
+        public global::Moonshot.MessagesRequestOutputConfigEffort? Type238 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponse? Type239 { get; set; }
+        public global::Moonshot.MessagesRequestOutputConfigFormat? Type239 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseType? Type240 { get; set; }
+        public global::Moonshot.MessagesRequestOutputConfigFormatType? Type240 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseRole? Type241 { get; set; }
+        public global::Moonshot.MessagesResponse? Type241 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>>? Type242 { get; set; }
+        public global::Moonshot.MessagesResponseType? Type242 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.OneOf<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>? Type243 { get; set; }
+        public global::Moonshot.MessagesResponseRole? Type243 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseContentItemThinking? Type244 { get; set; }
+        public global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>>? Type244 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseContentItemThinkingType? Type245 { get; set; }
+        public global::Moonshot.OneOf<global::Moonshot.MessagesResponseContentItemThinking, global::Moonshot.MessagesResponseContentItemText, global::Moonshot.MessagesResponseContentItemToolUse>? Type245 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseContentItemText? Type246 { get; set; }
+        public global::Moonshot.MessagesResponseContentItemThinking? Type246 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseContentItemTextType? Type247 { get; set; }
+        public global::Moonshot.MessagesResponseContentItemThinkingType? Type247 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseContentItemToolUse? Type248 { get; set; }
+        public global::Moonshot.MessagesResponseContentItemText? Type248 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseContentItemToolUseType? Type249 { get; set; }
+        public global::Moonshot.MessagesResponseContentItemTextType? Type249 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseStopReason? Type250 { get; set; }
+        public global::Moonshot.MessagesResponseContentItemToolUse? Type250 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseUsage? Type251 { get; set; }
+        public global::Moonshot.MessagesResponseContentItemToolUseType? Type251 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesResponseUsageOutputTokensDetails? Type252 { get; set; }
+        public global::Moonshot.MessagesResponseStopReason? Type252 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEvent? Type253 { get; set; }
+        public global::Moonshot.MessagesResponseUsage? Type253 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageStart? Type254 { get; set; }
+        public global::Moonshot.MessagesResponseUsageOutputTokensDetails? Type254 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageStartType? Type255 { get; set; }
+        public global::Moonshot.MessagesStreamEvent? Type255 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStart? Type256 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageStart? Type256 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStartType? Type257 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageStartType? Type257 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinking? Type258 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStart? Type258 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinkingType? Type259 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStartType? Type259 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockText? Type260 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinking? Type260 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockTextType? Type261 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockThinkingType? Type261 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUse? Type262 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockText? Type262 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUseType? Type263 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockTextType? Type263 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockDelta? Type264 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUse? Type264 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockDeltaType? Type265 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStartContentBlockToolUseType? Type265 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockDeltaDelta? Type266 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockDelta? Type266 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockDeltaDeltaType? Type267 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockDeltaType? Type267 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStop? Type268 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockDeltaDelta? Type268 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStopType? Type269 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockDeltaDeltaType? Type269 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageDelta? Type270 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStop? Type270 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageDeltaType? Type271 { get; set; }
+        public global::Moonshot.MessagesStreamEventContentBlockStopType? Type271 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageDeltaDelta? Type272 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageDelta? Type272 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageDeltaDeltaStopReason? Type273 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageDeltaType? Type273 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageDeltaUsage? Type274 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageDeltaDelta? Type274 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageDeltaUsageOutputTokensDetails? Type275 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageDeltaDeltaStopReason? Type275 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageStop? Type276 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageDeltaUsage? Type276 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageStopType? Type277 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageDeltaUsageOutputTokensDetails? Type277 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesErrorResponse? Type278 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageStop? Type278 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesErrorResponseType? Type279 { get; set; }
+        public global::Moonshot.MessagesStreamEventMessageStopType? Type279 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesErrorResponseError? Type280 { get; set; }
+        public global::Moonshot.MessagesErrorResponse? Type280 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.CreateFilesRequest? Type281 { get; set; }
+        public global::Moonshot.MessagesErrorResponseType? Type281 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public byte[]? Type282 { get; set; }
+        public global::Moonshot.MessagesErrorResponseError? Type282 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.CreateFilesRequestPurpose? Type283 { get; set; }
+        public global::Moonshot.CreateFilesRequest? Type283 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.CreateChatCompletionsRequest? Type284 { get; set; }
+        public byte[]? Type284 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.CreateChatCompletionsRequestDiscriminator? Type285 { get; set; }
+        public global::Moonshot.CreateFilesRequestPurpose? Type285 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel? Type286 { get; set; }
+        public global::Moonshot.CreateChatCompletionsRequest? Type286 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.GetModelsResponse? Type287 { get; set; }
+        public global::Moonshot.CreateChatCompletionsRequestDiscriminator? Type287 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Moonshot.GetModelsResponseDataItem>? Type288 { get; set; }
+        public global::Moonshot.CreateChatCompletionsRequestDiscriminatorModel? Type288 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.GetModelsResponseDataItem? Type289 { get; set; }
+        public global::Moonshot.GetModelsResponse? Type289 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Moonshot.GetModelsResponseDataItem>? Type290 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Moonshot.GetModelsResponseDataItem? Type291 { get; set; }
 
         /// <summary>
         ///

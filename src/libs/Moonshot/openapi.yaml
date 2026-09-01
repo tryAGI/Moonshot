@@ -2055,6 +2055,55 @@
 					"data"
 				]
 			},
+			"SignatureVerifyRequest": {
+				"type": "object",
+				"properties": {
+					"nonce": {
+						"type": "string",
+						"description": "The nonce sent in the `X-Msh-Request-Nonce` request header of the model call, exactly as sent.",
+						"minLength": 1,
+						"example": "7d929748-0ae6-41c2-ab5d-a186498ad721"
+					},
+					"timestamp": {
+						"type": "integer",
+						"format": "int64",
+						"description": "The Unix millisecond timestamp returned in the `Msh-Request-Timestamp` response header of the model call.",
+						"minimum": 1,
+						"example": 1786338000123
+					},
+					"model": {
+						"type": "string",
+						"description": "The `model` value from the request body of the model call, exactly as sent.",
+						"minLength": 1,
+						"example": "kimi-k2.7-code"
+					},
+					"signature": {
+						"type": "string",
+						"description": "The signature token returned in the `Msh-Request-Signature` response header of the model call.",
+						"minLength": 1,
+						"example": "reqsigv1_<opaque-token>"
+					}
+				},
+				"required": [
+					"nonce",
+					"timestamp",
+					"model",
+					"signature"
+				]
+			},
+			"SignatureVerifyResponse": {
+				"type": "object",
+				"properties": {
+					"valid": {
+						"type": "boolean",
+						"description": "Whether the signature is valid. `true` means the signature was issued by the Kimi API and matches the submitted nonce, timestamp, and model exactly; otherwise `false`.",
+						"example": true
+					}
+				},
+				"required": [
+					"valid"
+				]
+			},
 			"FileObject": {
 				"type": "object",
 				"properties": {
@@ -3775,6 +3824,19 @@
 						"bearerAuth": []
 					}
 				],
+				"parameters": [
+					{
+						"name": "X-Msh-Request-Nonce",
+						"in": "header",
+						"required": false,
+						"description": "A client-generated random nonce (a UUID v4 is recommended). Sending it enables Request Signature: the Kimi API returns `Msh-Request-Timestamp` and `Msh-Request-Signature` in the response headers, which can later be used to prove that the request was handled by the Kimi API. Exactly one non-empty header value is allowed; if the value is invalid, the request proceeds normally but the headers above are not returned. See [Verify Request Signature](/api/signatures-verify).",
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"example": "7d929748-0ae6-41c2-ab5d-a186498ad721"
+						}
+					}
+				],
 				"requestBody": {
 					"required": true,
 					"content": {
@@ -3807,6 +3869,23 @@
 				"responses": {
 					"200": {
 						"description": "Chat completion response",
+						"headers": {
+							"Msh-Request-Timestamp": {
+								"description": "Unix timestamp in milliseconds at which the Kimi API accepted this request. Only returned when the request carries a valid `X-Msh-Request-Nonce`.",
+								"schema": {
+									"type": "integer",
+									"format": "int64",
+									"example": 1786338000123
+								}
+							},
+							"Msh-Request-Signature": {
+								"description": "Signature token prefixed with `reqsigv1_`, issued by the Kimi API over the nonce, timestamp, and the request's `model`; verify it with `POST /v1/signatures/verify`. Only returned when the request carries a valid `X-Msh-Request-Nonce`.",
+								"schema": {
+									"type": "string",
+									"example": "reqsigv1_<opaque-token>"
+								}
+							}
+						},
 						"content": {
 							"application/json": {
 								"schema": {
@@ -3865,6 +3944,19 @@
 						"bearerAuth": []
 					}
 				],
+				"parameters": [
+					{
+						"name": "X-Msh-Request-Nonce",
+						"in": "header",
+						"required": false,
+						"description": "A client-generated random nonce (a UUID v4 is recommended). Sending it enables Request Signature: the Kimi API returns `Msh-Request-Timestamp` and `Msh-Request-Signature` in the response headers, which can later be used to prove that the request was handled by the Kimi API. Exactly one non-empty header value is allowed; if the value is invalid, the request proceeds normally but the headers above are not returned. See [Verify Request Signature](/api/signatures-verify).",
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"example": "7d929748-0ae6-41c2-ab5d-a186498ad721"
+						}
+					}
+				],
 				"requestBody": {
 					"required": true,
 					"content": {
@@ -3878,6 +3970,23 @@
 				"responses": {
 					"200": {
 						"description": "The response was created",
+						"headers": {
+							"Msh-Request-Timestamp": {
+								"description": "Unix timestamp in milliseconds at which the Kimi API accepted this request. Only returned when the request carries a valid `X-Msh-Request-Nonce`.",
+								"schema": {
+									"type": "integer",
+									"format": "int64",
+									"example": 1786338000123
+								}
+							},
+							"Msh-Request-Signature": {
+								"description": "Signature token prefixed with `reqsigv1_`, issued by the Kimi API over the nonce, timestamp, and the request's `model`; verify it with `POST /v1/signatures/verify`. Only returned when the request carries a valid `X-Msh-Request-Nonce`.",
+								"schema": {
+									"type": "string",
+									"example": "reqsigv1_<opaque-token>"
+								}
+							}
+						},
 						"content": {
 							"application/json": {
 								"schema": {
@@ -3956,6 +4065,19 @@
 						"bearerAuth": []
 					}
 				],
+				"parameters": [
+					{
+						"name": "X-Msh-Request-Nonce",
+						"in": "header",
+						"required": false,
+						"description": "A client-generated random nonce (a UUID v4 is recommended). Sending it enables Request Signature: the Kimi API returns `Msh-Request-Timestamp` and `Msh-Request-Signature` in the response headers, which can later be used to prove that the request was handled by the Kimi API. Exactly one non-empty header value is allowed; if the value is invalid, the request proceeds normally but the headers above are not returned. See [Verify Request Signature](/api/signatures-verify).",
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"example": "7d929748-0ae6-41c2-ab5d-a186498ad721"
+						}
+					}
+				],
 				"requestBody": {
 					"required": true,
 					"content": {
@@ -3969,6 +4091,23 @@
 				"responses": {
 					"200": {
 						"description": "Message response",
+						"headers": {
+							"Msh-Request-Timestamp": {
+								"description": "Unix timestamp in milliseconds at which the Kimi API accepted this request. Only returned when the request carries a valid `X-Msh-Request-Nonce`.",
+								"schema": {
+									"type": "integer",
+									"format": "int64",
+									"example": 1786338000123
+								}
+							},
+							"Msh-Request-Signature": {
+								"description": "Signature token prefixed with `reqsigv1_`, issued by the Kimi API over the nonce, timestamp, and the request's `model`; verify it with `POST /v1/signatures/verify`. Only returned when the request carries a valid `X-Msh-Request-Nonce`.",
+								"schema": {
+									"type": "string",
+									"example": "reqsigv1_<opaque-token>"
+								}
+							}
+						},
 						"content": {
 							"application/json": {
 								"schema": {
@@ -4060,6 +4199,91 @@
 					},
 					"401": {
 						"description": "Unauthorized - Invalid or missing API key",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Server error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v1/signatures/verify": {
+			"post": {
+				"summary": "Verify Request Signature",
+				"description": "Verifies a request signature returned in the response headers of the Chat Completions, Responses, or Messages API, proving that the request was handled by the Kimi API for the specified model rather than routed elsewhere. Submit the nonce used in the call, the timestamp from the response headers, the request's model, and the signature; the endpoint returns `valid: true` when the signature matches these three attributes exactly, and `valid: false` otherwise.",
+				"tags": [
+					"Utilities"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SignatureVerifyRequest"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Verification result",
+						"headers": {
+							"Cache-Control": {
+								"description": "Always `no-store`; verification results must not be cached.",
+								"schema": {
+									"type": "string",
+									"example": "no-store"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SignatureVerifyResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request - Invalid parameters or missing required fields",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized - Invalid or missing API key",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"429": {
+						"description": "Rate limited",
 						"content": {
 							"application/json": {
 								"schema": {

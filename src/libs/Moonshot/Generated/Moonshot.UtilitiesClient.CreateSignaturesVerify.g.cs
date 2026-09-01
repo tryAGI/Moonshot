@@ -3,11 +3,11 @@
 
 namespace Moonshot
 {
-    public partial class MessagesClient
+    public partial class UtilitiesClient
     {
 
 
-        private static readonly global::Moonshot.EndPointSecurityRequirement s_CreateAnthropicV1MessagesSecurityRequirement0 =
+        private static readonly global::Moonshot.EndPointSecurityRequirement s_CreateSignaturesVerifySecurityRequirement0 =
             new global::Moonshot.EndPointSecurityRequirement
             {
                 Authorizations = new global::Moonshot.EndPointAuthorizationRequirement[]
@@ -21,50 +21,43 @@ namespace Moonshot
                     },
                 },
             };
-        private static readonly global::Moonshot.EndPointSecurityRequirement[] s_CreateAnthropicV1MessagesSecurityRequirements =
+        private static readonly global::Moonshot.EndPointSecurityRequirement[] s_CreateSignaturesVerifySecurityRequirements =
             new global::Moonshot.EndPointSecurityRequirement[]
-            {                s_CreateAnthropicV1MessagesSecurityRequirement0,
+            {                s_CreateSignaturesVerifySecurityRequirement0,
             };
-        partial void PrepareCreateAnthropicV1MessagesArguments(
+        partial void PrepareCreateSignaturesVerifyArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? xMshRequestNonce,
-            global::Moonshot.MessagesRequest request);
-        partial void PrepareCreateAnthropicV1MessagesRequest(
+            global::Moonshot.SignatureVerifyRequest request);
+        partial void PrepareCreateSignaturesVerifyRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? xMshRequestNonce,
-            global::Moonshot.MessagesRequest request);
-        partial void ProcessCreateAnthropicV1MessagesResponse(
+            global::Moonshot.SignatureVerifyRequest request);
+        partial void ProcessCreateSignaturesVerifyResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateAnthropicV1MessagesResponseContent(
+        partial void ProcessCreateSignaturesVerifyResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Messages API<br/>
-        /// Call Kimi models with an Anthropic Messages API compatible format, supporting streaming, tool use, image input, thinking, and structured output.
+        /// Verify Request Signature<br/>
+        /// Verifies a request signature returned in the response headers of the Chat Completions, Responses, or Messages API, proving that the request was handled by the Kimi API for the specified model rather than routed elsewhere. Submit the nonce used in the call, the timestamp from the response headers, the request's model, and the signature; the endpoint returns `valid: true` when the signature matches these three attributes exactly, and `valid: false` otherwise.
         /// </summary>
-        /// <param name="xMshRequestNonce">
-        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
-        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Moonshot.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Moonshot.MessagesResponse> CreateAnthropicV1MessagesAsync(
+        public async global::System.Threading.Tasks.Task<global::Moonshot.SignatureVerifyResponse> CreateSignaturesVerifyAsync(
 
-            global::Moonshot.MessagesRequest request,
-            string? xMshRequestNonce = default,
+            global::Moonshot.SignatureVerifyRequest request,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateAnthropicV1MessagesAsResponseAsync(
+            var __response = await CreateSignaturesVerifyAsResponseAsync(
 
                 request: request,
-                xMshRequestNonce: xMshRequestNonce,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -72,50 +65,32 @@ namespace Moonshot
             return __response.Body;
         }
         /// <summary>
-        /// Messages API<br/>
-        /// Call Kimi models with an Anthropic Messages API compatible format, supporting streaming, tool use, image input, thinking, and structured output.
+        /// Verify Request Signature<br/>
+        /// Verifies a request signature returned in the response headers of the Chat Completions, Responses, or Messages API, proving that the request was handled by the Kimi API for the specified model rather than routed elsewhere. Submit the nonce used in the call, the timestamp from the response headers, the request's model, and the signature; the endpoint returns `valid: true` when the signature matches these three attributes exactly, and `valid: false` otherwise.
         /// </summary>
-        /// <param name="xMshRequestNonce">
-        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
-        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Moonshot.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.MessagesResponse>> CreateAnthropicV1MessagesAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.SignatureVerifyResponse>> CreateSignaturesVerifyAsResponseAsync(
 
-            global::Moonshot.MessagesRequest request,
-            string? xMshRequestNonce = default,
+            global::Moonshot.SignatureVerifyRequest request,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
-            request = new global::Moonshot.MessagesRequest
-            {
-                Model = request.Model,
-                Messages = request.Messages,
-                MaxTokens = request.MaxTokens,
-                System = request.System,
-                Stream = false,
-                StopSequences = request.StopSequences,
-                Tools = request.Tools,
-                ToolChoice = request.ToolChoice,
-                Metadata = request.Metadata,
-                OutputConfig = request.OutputConfig,
-            };
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateAnthropicV1MessagesArguments(
+            PrepareCreateSignaturesVerifyArguments(
                 httpClient: HttpClient,
-                xMshRequestNonce: ref xMshRequestNonce,
                 request: request);
 
 
             var __authorizations = global::Moonshot.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateAnthropicV1MessagesSecurityRequirements,
-                operationName: "CreateAnthropicV1MessagesAsync");
+                securityRequirements: s_CreateSignaturesVerifySecurityRequirements,
+                operationName: "CreateSignaturesVerifyAsync");
 
             using var __timeoutCancellationTokenSource = global::Moonshot.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -129,13 +104,13 @@ namespace Moonshot
             var __maxAttempts = global::Moonshot.AutoSDKRequestOptionsSupport.GetMaxAttempts(
                 clientOptions: Options,
                 requestOptions: requestOptions,
-                supportsRetry: false);
+                supportsRetry: true);
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
 
                             var __pathBuilder = new global::Moonshot.PathBuilder(
-                                path: "/anthropic/v1/messages",
+                                path: "/v1/signatures/verify",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Moonshot.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -149,10 +124,6 @@ namespace Moonshot
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
                 __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
-
-                __httpRequest.Headers.TryAddWithoutValidation(
-                    "Accept",
-                    "application/json");
 
             foreach (var __authorization in __authorizations)
             {
@@ -170,12 +141,6 @@ namespace Moonshot
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-
-            if (xMshRequestNonce != default)
-            {
-                __httpRequest.Headers.TryAddWithoutValidation("X-Msh-Request-Nonce", xMshRequestNonce.ToString());
-            }
-
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -190,10 +155,9 @@ namespace Moonshot
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateAnthropicV1MessagesRequest(
+                PrepareCreateSignaturesVerifyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    xMshRequestNonce: xMshRequestNonce,
                     request: request);
 
                 global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
@@ -213,9 +177,9 @@ namespace Moonshot
                     await global::Moonshot.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAnthropicV1Messages",
-                                methodName: "CreateAnthropicV1MessagesAsync",
-                                pathTemplate: "\"/anthropic/v1/messages\"",
+                                operationId: "createSignaturesVerify",
+                                methodName: "CreateSignaturesVerifyAsync",
+                                pathTemplate: "\"/v1/signatures/verify\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -247,9 +211,9 @@ namespace Moonshot
                         await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAnthropicV1Messages",
-                                methodName: "CreateAnthropicV1MessagesAsync",
-                                pathTemplate: "\"/anthropic/v1/messages\"",
+                                operationId: "createSignaturesVerify",
+                                methodName: "CreateSignaturesVerifyAsync",
+                                pathTemplate: "\"/v1/signatures/verify\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -288,9 +252,9 @@ namespace Moonshot
                         await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAnthropicV1Messages",
-                                methodName: "CreateAnthropicV1MessagesAsync",
-                                pathTemplate: "\"/anthropic/v1/messages\"",
+                                operationId: "createSignaturesVerify",
+                                methodName: "CreateSignaturesVerifyAsync",
+                                pathTemplate: "\"/v1/signatures/verify\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -328,7 +292,7 @@ namespace Moonshot
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateAnthropicV1MessagesResponse(
+                ProcessCreateSignaturesVerifyResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -336,9 +300,9 @@ namespace Moonshot
                     await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAnthropicV1Messages",
-                                methodName: "CreateAnthropicV1MessagesAsync",
-                                pathTemplate: "\"/anthropic/v1/messages\"",
+                                operationId: "createSignaturesVerify",
+                                methodName: "CreateSignaturesVerifyAsync",
+                                pathTemplate: "\"/v1/signatures/verify\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -358,9 +322,9 @@ namespace Moonshot
                     await global::Moonshot.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Moonshot.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createAnthropicV1Messages",
-                                methodName: "CreateAnthropicV1MessagesAsync",
-                                pathTemplate: "\"/anthropic/v1/messages\"",
+                                operationId: "createSignaturesVerify",
+                                methodName: "CreateSignaturesVerifyAsync",
+                                pathTemplate: "\"/v1/signatures/verify\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -375,24 +339,24 @@ namespace Moonshot
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Bad request - Invalid parameters
+                            // Bad request - Invalid parameters or missing required fields
                             if ((int)__response.StatusCode == 400)
                             {
                                 string? __content_400 = null;
                                 global::System.Exception? __exception_400 = null;
-                                global::Moonshot.MessagesErrorResponse? __value_400 = null;
+                                global::Moonshot.ErrorResponse? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Moonshot.MessagesErrorResponse.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Moonshot.ErrorResponse.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Moonshot.MessagesErrorResponse.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Moonshot.ErrorResponse.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -401,7 +365,7 @@ namespace Moonshot
                                 }
 
 
-                                throw global::Moonshot.ApiException<global::Moonshot.MessagesErrorResponse>.Create(
+                                throw global::Moonshot.ApiException<global::Moonshot.ErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
@@ -449,24 +413,61 @@ namespace Moonshot
                                         h => h.Key,
                                         h => h.Value));
                             }
+                            // Rate limited
+                            if ((int)__response.StatusCode == 429)
+                            {
+                                string? __content_429 = null;
+                                global::System.Exception? __exception_429 = null;
+                                global::Moonshot.ErrorResponse? __value_429 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_429 = global::Moonshot.ErrorResponse.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_429 = global::Moonshot.ErrorResponse.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_429 = __ex;
+                                }
+
+
+                                throw global::Moonshot.ApiException<global::Moonshot.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_429,
+                                    responseBody: __content_429,
+                                    responseObject: __value_429,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
                             // Server error
                             if ((int)__response.StatusCode == 500)
                             {
                                 string? __content_500 = null;
                                 global::System.Exception? __exception_500 = null;
-                                global::Moonshot.MessagesErrorResponse? __value_500 = null;
+                                global::Moonshot.ErrorResponse? __value_500 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_500 = global::Moonshot.MessagesErrorResponse.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Moonshot.ErrorResponse.FromJson(__content_500, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_500 = global::Moonshot.MessagesErrorResponse.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Moonshot.ErrorResponse.FromJson(__content_500, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -475,7 +476,7 @@ namespace Moonshot
                                 }
 
 
-                                throw global::Moonshot.ApiException<global::Moonshot.MessagesErrorResponse>.Create(
+                                throw global::Moonshot.ApiException<global::Moonshot.ErrorResponse>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
@@ -499,7 +500,7 @@ namespace Moonshot
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateAnthropicV1MessagesResponseContent(
+                                ProcessCreateSignaturesVerifyResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -508,9 +509,9 @@ namespace Moonshot
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Moonshot.MessagesResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Moonshot.SignatureVerifyResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.MessagesResponse>(
+                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.SignatureVerifyResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Moonshot.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -540,9 +541,9 @@ namespace Moonshot
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Moonshot.MessagesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Moonshot.SignatureVerifyResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.MessagesResponse>(
+                                    return new global::Moonshot.AutoSDKHttpResponse<global::Moonshot.SignatureVerifyResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Moonshot.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -583,71 +584,45 @@ namespace Moonshot
             }
         }
         /// <summary>
-        /// Messages API<br/>
-        /// Call Kimi models with an Anthropic Messages API compatible format, supporting streaming, tool use, image input, thinking, and structured output.
+        /// Verify Request Signature<br/>
+        /// Verifies a request signature returned in the response headers of the Chat Completions, Responses, or Messages API, proving that the request was handled by the Kimi API for the specified model rather than routed elsewhere. Submit the nonce used in the call, the timestamp from the response headers, the request's model, and the signature; the endpoint returns `valid: true` when the signature matches these three attributes exactly, and `valid: false` otherwise.
         /// </summary>
-        /// <param name="xMshRequestNonce">
+        /// <param name="nonce">
+        /// The nonce sent in the `X-Msh-Request-Nonce` request header of the model call, exactly as sent.<br/>
         /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
         /// </param>
+        /// <param name="timestamp">
+        /// The Unix millisecond timestamp returned in the `Msh-Request-Timestamp` response header of the model call.<br/>
+        /// Example: 1786338000123L
+        /// </param>
         /// <param name="model">
-        /// Model ID<br/>
-        /// Default Value: kimi-k3
+        /// The `model` value from the request body of the model call, exactly as sent.<br/>
+        /// Example: kimi-k2.7-code
         /// </param>
-        /// <param name="messages">
-        /// The conversation messages. If the last message is from the assistant, the model continues from that content (Partial Mode).
-        /// </param>
-        /// <param name="maxTokens">
-        /// Maximum number of tokens to generate, required. If the limit is reached before the model finishes, `stop_reason` is `max_tokens`.
-        /// </param>
-        /// <param name="system">
-        /// System prompt, either a string or an array of text blocks
-        /// </param>
-        /// <param name="stopSequences">
-        /// Stop sequences. Generation stops on an exact match; the matched sequence itself is not output. Up to 5 entries, each at most 32 bytes.
-        /// </param>
-        /// <param name="tools">
-        /// List of tools the model may call
-        /// </param>
-        /// <param name="toolChoice">
-        /// Controls whether the model calls tools. `auto` (default): the model decides; `any`: force a call to any tool; `none`: do not call tools.
-        /// </param>
-        /// <param name="metadata"></param>
-        /// <param name="outputConfig">
-        /// Output configuration: reasoning effort and structured output
+        /// <param name="signature">
+        /// The signature token returned in the `Msh-Request-Signature` response header of the model call.<br/>
+        /// Example: reqsigv1_&lt;opaque-token&gt;
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Moonshot.MessagesResponse> CreateAnthropicV1MessagesAsync(
-            global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam> messages,
-            int maxTokens,
-            string? xMshRequestNonce = default,
-            global::Moonshot.MessagesRequestModel model = global::Moonshot.MessagesRequestModel.KimiK3,
-            global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>? system = default,
-            global::System.Collections.Generic.IList<string>? stopSequences = default,
-            global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>? tools = default,
-            global::Moonshot.MessagesToolChoice? toolChoice = default,
-            global::Moonshot.MessagesRequestMetadata? metadata = default,
-            global::Moonshot.MessagesRequestOutputConfig? outputConfig = default,
+        public async global::System.Threading.Tasks.Task<global::Moonshot.SignatureVerifyResponse> CreateSignaturesVerifyAsync(
+            string nonce,
+            long timestamp,
+            string model,
+            string signature,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Moonshot.MessagesRequest
+            var __request = new global::Moonshot.SignatureVerifyRequest
             {
+                Nonce = nonce,
+                Timestamp = timestamp,
                 Model = model,
-                Messages = messages,
-                MaxTokens = maxTokens,
-                System = system,
-                Stream = false,
-                StopSequences = stopSequences,
-                Tools = tools,
-                ToolChoice = toolChoice,
-                Metadata = metadata,
-                OutputConfig = outputConfig,
+                Signature = signature,
             };
 
-            return await CreateAnthropicV1MessagesAsync(
-                xMshRequestNonce: xMshRequestNonce,
+            return await CreateSignaturesVerifyAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
