@@ -8,6 +8,9 @@ namespace Moonshot
         /// Create a model response<br/>
         /// Creates a model response. Provide text or image inputs to generate text or JSON outputs. Have the model call the function tools you define. When `stream` is `true`, the response is delivered as a stream of SSE events.
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -15,12 +18,16 @@ namespace Moonshot
         global::System.Threading.Tasks.Task<global::Moonshot.ResponsesResponse> CreateResponsesAsync(
 
             global::Moonshot.ResponsesRequest request,
+            string? xMshRequestNonce = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a model response<br/>
         /// Creates a model response. Provide text or image inputs to generate text or JSON outputs. Have the model call the function tools you define. When `stream` is `true`, the response is delivered as a stream of SSE events.
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -28,12 +35,16 @@ namespace Moonshot
         global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.ResponsesResponse>> CreateResponsesAsResponseAsync(
 
             global::Moonshot.ResponsesRequest request,
+            string? xMshRequestNonce = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a model response<br/>
         /// Creates a model response. Provide text or image inputs to generate text or JSON outputs. Have the model call the function tools you define. When `stream` is `true`, the response is delivered as a stream of SSE events.
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="model">
         /// ID of the model to use. This endpoint currently supports `kimi-k3`.<br/>
         /// Example: kimi-k3
@@ -71,6 +82,7 @@ namespace Moonshot
         global::System.Threading.Tasks.Task<global::Moonshot.ResponsesResponse> CreateResponsesAsync(
             string model,
             global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.ResponsesInputItem>> input,
+            string? xMshRequestNonce = default,
             string? instructions = default,
             int? maxOutputTokens = default,
             global::Moonshot.ResponsesRequestReasoning? reasoning = default,

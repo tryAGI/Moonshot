@@ -8,6 +8,9 @@ namespace Moonshot
         /// Messages API<br/>
         /// Call Kimi models with an Anthropic Messages API compatible format, supporting streaming, tool use, image input, thinking, and structured output.
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -15,12 +18,16 @@ namespace Moonshot
         global::System.Collections.Generic.IAsyncEnumerable<global::Moonshot.MessagesStreamEvent> CreateAnthropicV1MessagesAsStreamAsync(
 
             global::Moonshot.MessagesRequest request,
+            string? xMshRequestNonce = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Messages API<br/>
         /// Call Kimi models with an Anthropic Messages API compatible format, supporting streaming, tool use, image input, thinking, and structured output.
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="model">
         /// Model ID<br/>
         /// Default Value: kimi-k3
@@ -53,6 +60,7 @@ namespace Moonshot
         global::System.Collections.Generic.IAsyncEnumerable<global::Moonshot.MessagesStreamEvent> CreateAnthropicV1MessagesAsStreamAsync(
             global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam> messages,
             int maxTokens,
+            string? xMshRequestNonce = default,
             global::Moonshot.MessagesRequestModel model = global::Moonshot.MessagesRequestModel.KimiK3,
             global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>? system = default,
             global::System.Collections.Generic.IList<string>? stopSequences = default,

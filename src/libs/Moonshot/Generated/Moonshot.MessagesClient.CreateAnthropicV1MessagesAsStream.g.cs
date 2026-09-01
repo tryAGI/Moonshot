@@ -27,10 +27,12 @@ namespace Moonshot
             };
         partial void PrepareCreateAnthropicV1MessagesAsStreamArguments(
             global::System.Net.Http.HttpClient httpClient,
+            ref string? xMshRequestNonce,
             global::Moonshot.MessagesRequest request);
         partial void PrepareCreateAnthropicV1MessagesAsStreamRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string? xMshRequestNonce,
             global::Moonshot.MessagesRequest request);
         partial void ProcessCreateAnthropicV1MessagesAsStreamResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -40,6 +42,9 @@ namespace Moonshot
         /// Messages API<br/>
         /// Call Kimi models with an Anthropic Messages API compatible format, supporting streaming, tool use, image input, thinking, and structured output.
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -47,6 +52,7 @@ namespace Moonshot
         public async global::System.Collections.Generic.IAsyncEnumerable<global::Moonshot.MessagesStreamEvent> CreateAnthropicV1MessagesAsStreamAsync(
 
             global::Moonshot.MessagesRequest request,
+            string? xMshRequestNonce = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             [global::System.Runtime.CompilerServices.EnumeratorCancellation] global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -69,6 +75,7 @@ namespace Moonshot
                 client: HttpClient);
             PrepareCreateAnthropicV1MessagesAsStreamArguments(
                 httpClient: HttpClient,
+                xMshRequestNonce: ref xMshRequestNonce,
                 request: request);
 
 
@@ -130,6 +137,12 @@ namespace Moonshot
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+
+            if (xMshRequestNonce != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("X-Msh-Request-Nonce", xMshRequestNonce.ToString());
+            }
+
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -147,6 +160,7 @@ namespace Moonshot
                 PrepareCreateAnthropicV1MessagesAsStreamRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    xMshRequestNonce: xMshRequestNonce,
                     request: request);
 
                 global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
@@ -399,6 +413,9 @@ namespace Moonshot
         /// Messages API<br/>
         /// Call Kimi models with an Anthropic Messages API compatible format, supporting streaming, tool use, image input, thinking, and structured output.
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="model">
         /// Model ID<br/>
         /// Default Value: kimi-k3
@@ -431,6 +448,7 @@ namespace Moonshot
         public async global::System.Collections.Generic.IAsyncEnumerable<global::Moonshot.MessagesStreamEvent> CreateAnthropicV1MessagesAsStreamAsync(
             global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam> messages,
             int maxTokens,
+            string? xMshRequestNonce = default,
             global::Moonshot.MessagesRequestModel model = global::Moonshot.MessagesRequestModel.KimiK3,
             global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>? system = default,
             global::System.Collections.Generic.IList<string>? stopSequences = default,
@@ -456,6 +474,7 @@ namespace Moonshot
             };
 
             var __enumerable = CreateAnthropicV1MessagesAsStreamAsync(
+                xMshRequestNonce: xMshRequestNonce,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken);

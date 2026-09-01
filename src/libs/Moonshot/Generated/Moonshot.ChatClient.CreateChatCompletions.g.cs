@@ -27,10 +27,12 @@ namespace Moonshot
             };
         partial void PrepareCreateChatCompletionsArguments(
             global::System.Net.Http.HttpClient httpClient,
+            ref string? xMshRequestNonce,
             global::Moonshot.CreateChatCompletionsRequest request);
         partial void PrepareCreateChatCompletionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string? xMshRequestNonce,
             global::Moonshot.CreateChatCompletionsRequest request);
         partial void ProcessCreateChatCompletionsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -45,6 +47,9 @@ namespace Moonshot
         /// Create Chat Completion<br/>
         /// Creates a completion for the chat message. Supports standard chat, Partial Mode, and Tool Use (Function Calling).
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -52,12 +57,14 @@ namespace Moonshot
         public async global::System.Threading.Tasks.Task<global::Moonshot.ChatCompletionResponse> CreateChatCompletionsAsync(
 
             global::Moonshot.CreateChatCompletionsRequest request,
+            string? xMshRequestNonce = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await CreateChatCompletionsAsResponseAsync(
 
                 request: request,
+                xMshRequestNonce: xMshRequestNonce,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -68,6 +75,9 @@ namespace Moonshot
         /// Create Chat Completion<br/>
         /// Creates a completion for the chat message. Supports standard chat, Partial Mode, and Tool Use (Function Calling).
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -75,6 +85,7 @@ namespace Moonshot
         public async global::System.Threading.Tasks.Task<global::Moonshot.AutoSDKHttpResponse<global::Moonshot.ChatCompletionResponse>> CreateChatCompletionsAsResponseAsync(
 
             global::Moonshot.CreateChatCompletionsRequest request,
+            string? xMshRequestNonce = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -82,6 +93,7 @@ namespace Moonshot
                 client: HttpClient);
             PrepareCreateChatCompletionsArguments(
                 httpClient: HttpClient,
+                xMshRequestNonce: ref xMshRequestNonce,
                 request: request);
 
 
@@ -143,6 +155,12 @@ namespace Moonshot
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+
+            if (xMshRequestNonce != default)
+            {
+                __httpRequest.Headers.TryAddWithoutValidation("X-Msh-Request-Nonce", xMshRequestNonce.ToString());
+            }
+
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
@@ -160,6 +178,7 @@ namespace Moonshot
                 PrepareCreateChatCompletionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    xMshRequestNonce: xMshRequestNonce,
                     request: request);
 
                 global::Moonshot.AutoSDKHttpRequestOptions.StampAuthorizationOverride(__httpRequest);
@@ -552,10 +571,14 @@ namespace Moonshot
         /// Create Chat Completion<br/>
         /// Creates a completion for the chat message. Supports standard chat, Partial Mode, and Tool Use (Function Calling).
         /// </summary>
+        /// <param name="xMshRequestNonce">
+        /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Moonshot.ChatCompletionResponse> CreateChatCompletionsAsync(
+            string? xMshRequestNonce = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -564,6 +587,7 @@ namespace Moonshot
             };
 
             return await CreateChatCompletionsAsync(
+                xMshRequestNonce: xMshRequestNonce,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
