@@ -11,11 +11,19 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
+        Custom,
+        /// <summary>
+        ///
+        /// </summary>
         Function,
         /// <summary>
         ///
         /// </summary>
         Namespace,
+        /// <summary>
+        ///
+        /// </summary>
+        WebSearch,
     }
 
     /// <summary>
@@ -30,8 +38,10 @@ namespace Moonshot
         {
             return value switch
             {
+                ResponsesToolDiscriminatorType.Custom => "custom",
                 ResponsesToolDiscriminatorType.Function => "function",
                 ResponsesToolDiscriminatorType.Namespace => "namespace",
+                ResponsesToolDiscriminatorType.WebSearch => "web_search",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +52,10 @@ namespace Moonshot
         {
             return value switch
             {
+                "custom" => ResponsesToolDiscriminatorType.Custom,
                 "function" => ResponsesToolDiscriminatorType.Function,
                 "namespace" => ResponsesToolDiscriminatorType.Namespace,
+                "web_search" => ResponsesToolDiscriminatorType.WebSearch,
                 _ => null,
             };
         }

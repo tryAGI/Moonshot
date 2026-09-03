@@ -11,6 +11,10 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
+        CustomToolCall,
+        /// <summary>
+        ///
+        /// </summary>
         FunctionCall,
         /// <summary>
         ///
@@ -20,6 +24,10 @@ namespace Moonshot
         ///
         /// </summary>
         Reasoning,
+        /// <summary>
+        ///
+        /// </summary>
+        WebSearchCall,
     }
 
     /// <summary>
@@ -34,9 +42,11 @@ namespace Moonshot
         {
             return value switch
             {
+                ResponsesOutputItemDiscriminatorType.CustomToolCall => "custom_tool_call",
                 ResponsesOutputItemDiscriminatorType.FunctionCall => "function_call",
                 ResponsesOutputItemDiscriminatorType.Message => "message",
                 ResponsesOutputItemDiscriminatorType.Reasoning => "reasoning",
+                ResponsesOutputItemDiscriminatorType.WebSearchCall => "web_search_call",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +57,11 @@ namespace Moonshot
         {
             return value switch
             {
+                "custom_tool_call" => ResponsesOutputItemDiscriminatorType.CustomToolCall,
                 "function_call" => ResponsesOutputItemDiscriminatorType.FunctionCall,
                 "message" => ResponsesOutputItemDiscriminatorType.Message,
                 "reasoning" => ResponsesOutputItemDiscriminatorType.Reasoning,
+                "web_search_call" => ResponsesOutputItemDiscriminatorType.WebSearchCall,
                 _ => null,
             };
         }

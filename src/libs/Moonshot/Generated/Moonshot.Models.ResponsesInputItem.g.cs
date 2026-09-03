@@ -158,6 +158,117 @@ namespace Moonshot
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionCallOutput' but the value was {ToString()}.");
 
         /// <summary>
+        /// Replays a custom tool call.
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Moonshot.ResponsesCustomToolCallItem? CustomToolCall { get; init; }
+#else
+        public global::Moonshot.ResponsesCustomToolCallItem? CustomToolCall { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CustomToolCall))]
+#endif
+        public bool IsCustomToolCall => CustomToolCall != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickCustomToolCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.ResponsesCustomToolCallItem? value)
+        {
+            value = CustomToolCall;
+            return IsCustomToolCall;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Moonshot.ResponsesCustomToolCallItem PickCustomToolCall() => IsCustomToolCall
+            ? CustomToolCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CustomToolCall' but the value was {ToString()}.");
+
+        /// <summary>
+        /// Result of executing a custom tool call.
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Moonshot.ResponsesCustomToolCallOutputItem? CustomToolCallOutput { get; init; }
+#else
+        public global::Moonshot.ResponsesCustomToolCallOutputItem? CustomToolCallOutput { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CustomToolCallOutput))]
+#endif
+        public bool IsCustomToolCallOutput => CustomToolCallOutput != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickCustomToolCallOutput(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.ResponsesCustomToolCallOutputItem? value)
+        {
+            value = CustomToolCallOutput;
+            return IsCustomToolCallOutput;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Moonshot.ResponsesCustomToolCallOutputItem PickCustomToolCallOutput() => IsCustomToolCallOutput
+            ? CustomToolCallOutput!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CustomToolCallOutput' but the value was {ToString()}.");
+
+        /// <summary>
+        /// Replays a previous web search call. Kept for history only and ignored during conversion; the search results are already carried by the assistant message that follows.
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Moonshot.ResponsesWebSearchCallItem? WebSearchCall { get; init; }
+#else
+        public global::Moonshot.ResponsesWebSearchCallItem? WebSearchCall { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(WebSearchCall))]
+#endif
+        public bool IsWebSearchCall => WebSearchCall != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickWebSearchCall(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Moonshot.ResponsesWebSearchCallItem? value)
+        {
+            value = WebSearchCall;
+            return IsWebSearchCall;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Moonshot.ResponsesWebSearchCallItem PickWebSearchCall() => IsWebSearchCall
+            ? WebSearchCall!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearchCall' but the value was {ToString()}.");
+
+        /// <summary>
         /// Adds callable tools partway through a conversation, effective from the position of this item.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -288,6 +399,75 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
+        public static implicit operator ResponsesInputItem(global::Moonshot.ResponsesCustomToolCallItem value) => new ResponsesInputItem((global::Moonshot.ResponsesCustomToolCallItem?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator global::Moonshot.ResponsesCustomToolCallItem?(ResponsesInputItem @this) => @this.CustomToolCall;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public ResponsesInputItem(global::Moonshot.ResponsesCustomToolCallItem? value)
+        {
+            CustomToolCall = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static ResponsesInputItem FromCustomToolCall(global::Moonshot.ResponsesCustomToolCallItem? value) => new ResponsesInputItem(value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator ResponsesInputItem(global::Moonshot.ResponsesCustomToolCallOutputItem value) => new ResponsesInputItem((global::Moonshot.ResponsesCustomToolCallOutputItem?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator global::Moonshot.ResponsesCustomToolCallOutputItem?(ResponsesInputItem @this) => @this.CustomToolCallOutput;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public ResponsesInputItem(global::Moonshot.ResponsesCustomToolCallOutputItem? value)
+        {
+            CustomToolCallOutput = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static ResponsesInputItem FromCustomToolCallOutput(global::Moonshot.ResponsesCustomToolCallOutputItem? value) => new ResponsesInputItem(value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator ResponsesInputItem(global::Moonshot.ResponsesWebSearchCallItem value) => new ResponsesInputItem((global::Moonshot.ResponsesWebSearchCallItem?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator global::Moonshot.ResponsesWebSearchCallItem?(ResponsesInputItem @this) => @this.WebSearchCall;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public ResponsesInputItem(global::Moonshot.ResponsesWebSearchCallItem? value)
+        {
+            WebSearchCall = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static ResponsesInputItem FromWebSearchCall(global::Moonshot.ResponsesWebSearchCallItem? value) => new ResponsesInputItem(value);
+
+        /// <summary>
+        ///
+        /// </summary>
         public static implicit operator ResponsesInputItem(global::Moonshot.ResponsesAdditionalToolsItem value) => new ResponsesInputItem((global::Moonshot.ResponsesAdditionalToolsItem?)value);
 
         /// <summary>
@@ -316,6 +496,9 @@ namespace Moonshot
             global::Moonshot.ResponsesReasoningItem? reasoning,
             global::Moonshot.ResponsesFunctionCallItem? functionCall,
             global::Moonshot.ResponsesFunctionCallOutputItem? functionCallOutput,
+            global::Moonshot.ResponsesCustomToolCallItem? customToolCall,
+            global::Moonshot.ResponsesCustomToolCallOutputItem? customToolCallOutput,
+            global::Moonshot.ResponsesWebSearchCallItem? webSearchCall,
             global::Moonshot.ResponsesAdditionalToolsItem? additionalTools
             )
         {
@@ -323,6 +506,9 @@ namespace Moonshot
             Reasoning = reasoning;
             FunctionCall = functionCall;
             FunctionCallOutput = functionCallOutput;
+            CustomToolCall = customToolCall;
+            CustomToolCallOutput = customToolCallOutput;
+            WebSearchCall = webSearchCall;
             AdditionalTools = additionalTools;
         }
 
@@ -331,6 +517,9 @@ namespace Moonshot
         /// </summary>
         public object? Object =>
             AdditionalTools as object ??
+            WebSearchCall as object ??
+            CustomToolCallOutput as object ??
+            CustomToolCall as object ??
             FunctionCallOutput as object ??
             FunctionCall as object ??
             Reasoning as object ??
@@ -345,6 +534,9 @@ namespace Moonshot
             Reasoning?.ToString() ??
             FunctionCall?.ToString() ??
             FunctionCallOutput?.ToString() ??
+            CustomToolCall?.ToString() ??
+            CustomToolCallOutput?.ToString() ??
+            WebSearchCall?.ToString() ??
             AdditionalTools?.ToString()
             ;
 
@@ -353,7 +545,7 @@ namespace Moonshot
         /// </summary>
         public bool Validate()
         {
-            return IsMessage && !IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && !IsAdditionalTools || !IsMessage && IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && !IsAdditionalTools || !IsMessage && !IsReasoning && IsFunctionCall && !IsFunctionCallOutput && !IsAdditionalTools || !IsMessage && !IsReasoning && !IsFunctionCall && IsFunctionCallOutput && !IsAdditionalTools || !IsMessage && !IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && IsAdditionalTools;
+            return IsMessage && !IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && !IsCustomToolCall && !IsCustomToolCallOutput && !IsWebSearchCall && !IsAdditionalTools || !IsMessage && IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && !IsCustomToolCall && !IsCustomToolCallOutput && !IsWebSearchCall && !IsAdditionalTools || !IsMessage && !IsReasoning && IsFunctionCall && !IsFunctionCallOutput && !IsCustomToolCall && !IsCustomToolCallOutput && !IsWebSearchCall && !IsAdditionalTools || !IsMessage && !IsReasoning && !IsFunctionCall && IsFunctionCallOutput && !IsCustomToolCall && !IsCustomToolCallOutput && !IsWebSearchCall && !IsAdditionalTools || !IsMessage && !IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && IsCustomToolCall && !IsCustomToolCallOutput && !IsWebSearchCall && !IsAdditionalTools || !IsMessage && !IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && !IsCustomToolCall && IsCustomToolCallOutput && !IsWebSearchCall && !IsAdditionalTools || !IsMessage && !IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && !IsCustomToolCall && !IsCustomToolCallOutput && IsWebSearchCall && !IsAdditionalTools || !IsMessage && !IsReasoning && !IsFunctionCall && !IsFunctionCallOutput && !IsCustomToolCall && !IsCustomToolCallOutput && !IsWebSearchCall && IsAdditionalTools;
         }
 
         /// <summary>
@@ -364,6 +556,9 @@ namespace Moonshot
             global::System.Func<global::Moonshot.ResponsesReasoningItem, TResult>? reasoning = null,
             global::System.Func<global::Moonshot.ResponsesFunctionCallItem, TResult>? functionCall = null,
             global::System.Func<global::Moonshot.ResponsesFunctionCallOutputItem, TResult>? functionCallOutput = null,
+            global::System.Func<global::Moonshot.ResponsesCustomToolCallItem, TResult>? customToolCall = null,
+            global::System.Func<global::Moonshot.ResponsesCustomToolCallOutputItem, TResult>? customToolCallOutput = null,
+            global::System.Func<global::Moonshot.ResponsesWebSearchCallItem, TResult>? webSearchCall = null,
             global::System.Func<global::Moonshot.ResponsesAdditionalToolsItem, TResult>? additionalTools = null,
             bool validate = true)
         {
@@ -388,6 +583,18 @@ namespace Moonshot
             {
                 return functionCallOutput(FunctionCallOutput!);
             }
+            else if (IsCustomToolCall && customToolCall != null)
+            {
+                return customToolCall(CustomToolCall!);
+            }
+            else if (IsCustomToolCallOutput && customToolCallOutput != null)
+            {
+                return customToolCallOutput(CustomToolCallOutput!);
+            }
+            else if (IsWebSearchCall && webSearchCall != null)
+            {
+                return webSearchCall(WebSearchCall!);
+            }
             else if (IsAdditionalTools && additionalTools != null)
             {
                 return additionalTools(AdditionalTools!);
@@ -408,6 +615,12 @@ namespace Moonshot
 
             global::System.Action<global::Moonshot.ResponsesFunctionCallOutputItem>? functionCallOutput = null,
 
+            global::System.Action<global::Moonshot.ResponsesCustomToolCallItem>? customToolCall = null,
+
+            global::System.Action<global::Moonshot.ResponsesCustomToolCallOutputItem>? customToolCallOutput = null,
+
+            global::System.Action<global::Moonshot.ResponsesWebSearchCallItem>? webSearchCall = null,
+
             global::System.Action<global::Moonshot.ResponsesAdditionalToolsItem>? additionalTools = null,
             bool validate = true)
         {
@@ -431,6 +644,18 @@ namespace Moonshot
             else if (IsFunctionCallOutput)
             {
                 functionCallOutput?.Invoke(FunctionCallOutput!);
+            }
+            else if (IsCustomToolCall)
+            {
+                customToolCall?.Invoke(CustomToolCall!);
+            }
+            else if (IsCustomToolCallOutput)
+            {
+                customToolCallOutput?.Invoke(CustomToolCallOutput!);
+            }
+            else if (IsWebSearchCall)
+            {
+                webSearchCall?.Invoke(WebSearchCall!);
             }
             else if (IsAdditionalTools)
             {
@@ -446,6 +671,9 @@ namespace Moonshot
             global::System.Action<global::Moonshot.ResponsesReasoningItem>? reasoning = null,
             global::System.Action<global::Moonshot.ResponsesFunctionCallItem>? functionCall = null,
             global::System.Action<global::Moonshot.ResponsesFunctionCallOutputItem>? functionCallOutput = null,
+            global::System.Action<global::Moonshot.ResponsesCustomToolCallItem>? customToolCall = null,
+            global::System.Action<global::Moonshot.ResponsesCustomToolCallOutputItem>? customToolCallOutput = null,
+            global::System.Action<global::Moonshot.ResponsesWebSearchCallItem>? webSearchCall = null,
             global::System.Action<global::Moonshot.ResponsesAdditionalToolsItem>? additionalTools = null,
             bool validate = true)
         {
@@ -469,6 +697,18 @@ namespace Moonshot
             else if (IsFunctionCallOutput)
             {
                 functionCallOutput?.Invoke(FunctionCallOutput!);
+            }
+            else if (IsCustomToolCall)
+            {
+                customToolCall?.Invoke(CustomToolCall!);
+            }
+            else if (IsCustomToolCallOutput)
+            {
+                customToolCallOutput?.Invoke(CustomToolCallOutput!);
+            }
+            else if (IsWebSearchCall)
+            {
+                webSearchCall?.Invoke(WebSearchCall!);
             }
             else if (IsAdditionalTools)
             {
@@ -491,6 +731,12 @@ namespace Moonshot
                 typeof(global::Moonshot.ResponsesFunctionCallItem),
                 FunctionCallOutput,
                 typeof(global::Moonshot.ResponsesFunctionCallOutputItem),
+                CustomToolCall,
+                typeof(global::Moonshot.ResponsesCustomToolCallItem),
+                CustomToolCallOutput,
+                typeof(global::Moonshot.ResponsesCustomToolCallOutputItem),
+                WebSearchCall,
+                typeof(global::Moonshot.ResponsesWebSearchCallItem),
                 AdditionalTools,
                 typeof(global::Moonshot.ResponsesAdditionalToolsItem),
             };
@@ -513,6 +759,9 @@ namespace Moonshot
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.ResponsesReasoningItem?>.Default.Equals(Reasoning, other.Reasoning) &&
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.ResponsesFunctionCallItem?>.Default.Equals(FunctionCall, other.FunctionCall) &&
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.ResponsesFunctionCallOutputItem?>.Default.Equals(FunctionCallOutput, other.FunctionCallOutput) &&
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.ResponsesCustomToolCallItem?>.Default.Equals(CustomToolCall, other.CustomToolCall) &&
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.ResponsesCustomToolCallOutputItem?>.Default.Equals(CustomToolCallOutput, other.CustomToolCallOutput) &&
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.ResponsesWebSearchCallItem?>.Default.Equals(WebSearchCall, other.WebSearchCall) &&
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.ResponsesAdditionalToolsItem?>.Default.Equals(AdditionalTools, other.AdditionalTools)
                 ;
         }

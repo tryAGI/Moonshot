@@ -70,6 +70,12 @@ namespace Moonshot
         public global::Moonshot.ResponsesToolChoice? ToolChoice { get; set; }
 
         /// <summary>
+        /// Additional fields to return. Only effective when the `web_search` tool is used. `web_search_call.action.sources` returns the web pages the search hit; `web_search_call.results` returns image search results.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include")]
+        public global::System.Collections.Generic.IList<global::Moonshot.ResponsesRequestIncludeItem>? Include { get; set; }
+
+        /// <summary>
         /// Context cache identifier. Reusing the same value across a session improves cache hit rate.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt_cache_key")]
@@ -119,6 +125,9 @@ namespace Moonshot
         /// <param name="toolChoice">
         /// Controls tool-calling behavior. With `auto`, the model decides whether to call a tool.
         /// </param>
+        /// <param name="include">
+        /// Additional fields to return. Only effective when the `web_search` tool is used. `web_search_call.action.sources` returns the web pages the search hit; `web_search_call.results` returns image search results.
+        /// </param>
         /// <param name="promptCacheKey">
         /// Context cache identifier. Reusing the same value across a session improves cache hit rate.
         /// </param>
@@ -138,6 +147,7 @@ namespace Moonshot
             global::Moonshot.ResponsesRequestText? text,
             global::System.Collections.Generic.IList<global::Moonshot.ResponsesTool>? tools,
             global::Moonshot.ResponsesToolChoice? toolChoice,
+            global::System.Collections.Generic.IList<global::Moonshot.ResponsesRequestIncludeItem>? include,
             string? promptCacheKey,
             string? safetyIdentifier)
         {
@@ -150,6 +160,7 @@ namespace Moonshot
             this.Text = text;
             this.Tools = tools;
             this.ToolChoice = toolChoice;
+            this.Include = include;
             this.PromptCacheKey = promptCacheKey;
             this.SafetyIdentifier = safetyIdentifier;
         }

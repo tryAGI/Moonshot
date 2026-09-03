@@ -129,6 +129,10 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.ResponsesRequestTextFormatTypeNullableJsonConverter),
 
+            typeof(global::Moonshot.JsonConverters.ResponsesRequestIncludeItemJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesRequestIncludeItemNullableJsonConverter),
+
             typeof(global::Moonshot.JsonConverters.ResponsesMessageItemTypeJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesMessageItemTypeNullableJsonConverter),
@@ -173,6 +177,34 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.ResponsesFunctionCallOutputItemStatusNullableJsonConverter),
 
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallItemTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallItemTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallItemStatusJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallItemStatusNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallOutputItemTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallOutputItemTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallOutputItemStatusJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolCallOutputItemStatusNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchCallItemTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchCallItemTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchCallItemStatusJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchCallItemStatusNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchCallItemActionTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchCallItemActionTypeNullableJsonConverter),
+
             typeof(global::Moonshot.JsonConverters.ResponsesAdditionalToolsItemTypeJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesAdditionalToolsItemTypeNullableJsonConverter),
@@ -205,9 +237,33 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.ResponsesFunctionToolTypeNullableJsonConverter),
 
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolNameJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolNameNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolFormatTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolFormatTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolFormatSyntaxJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesCustomToolFormatSyntaxNullableJsonConverter),
+
             typeof(global::Moonshot.JsonConverters.ResponsesNamespaceToolTypeJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesNamespaceToolTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchToolTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchToolTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchToolSearchContentTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesWebSearchToolSearchContentTypeNullableJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesToolChoiceJsonConverter),
 
@@ -264,6 +320,34 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.ResponsesOutputFunctionCallItemStatusJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesOutputFunctionCallItemStatusNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputCustomToolCallItemTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputCustomToolCallItemTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputCustomToolCallItemStatusJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputCustomToolCallItemStatusNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemStatusJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemStatusNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemActionTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemActionTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemActionSourceTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemActionSourceTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemResultTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesOutputWebSearchCallItemResultTypeNullableJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesStreamEventTypeJsonConverter),
 
@@ -483,6 +567,10 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Moonshot.ResponsesInputContentPart>>),
 
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Moonshot.ResponsesInputContentPart>>),
+
+            typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.ResponsesFunctionTool, global::Moonshot.ResponsesCustomTool>),
+
             typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>>),
 
             typeof(global::Moonshot.JsonConverters.OneOfJsonConverter<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>),
@@ -608,10 +696,15 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ResponsesTool>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesTool), TypeInfoPropertyName = "ResponsesTool2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesToolChoice), TypeInfoPropertyName = "ResponsesToolChoice2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ResponsesRequestIncludeItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesRequestIncludeItem), TypeInfoPropertyName = "ResponsesRequestIncludeItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesMessageItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesReasoningItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionCallItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionCallOutputItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolCallItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolCallOutputItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchCallItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesAdditionalToolsItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesMessageItemType), TypeInfoPropertyName = "ResponsesMessageItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesMessageItemRole), TypeInfoPropertyName = "ResponsesMessageItemRole2")]
@@ -631,6 +724,14 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionCallItemStatus), TypeInfoPropertyName = "ResponsesFunctionCallItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionCallOutputItemType), TypeInfoPropertyName = "ResponsesFunctionCallOutputItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionCallOutputItemStatus), TypeInfoPropertyName = "ResponsesFunctionCallOutputItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolCallItemType), TypeInfoPropertyName = "ResponsesCustomToolCallItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolCallItemStatus), TypeInfoPropertyName = "ResponsesCustomToolCallItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolCallOutputItemType), TypeInfoPropertyName = "ResponsesCustomToolCallOutputItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolCallOutputItemStatus), TypeInfoPropertyName = "ResponsesCustomToolCallOutputItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchCallItemType), TypeInfoPropertyName = "ResponsesWebSearchCallItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchCallItemStatus), TypeInfoPropertyName = "ResponsesWebSearchCallItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchCallItemAction))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchCallItemActionType), TypeInfoPropertyName = "ResponsesWebSearchCallItemActionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesAdditionalToolsItemType), TypeInfoPropertyName = "ResponsesAdditionalToolsItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesAdditionalToolsItemRole), TypeInfoPropertyName = "ResponsesAdditionalToolsItemRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesInputContentPartInputText))]
@@ -641,12 +742,25 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesInputContentPartOutputText))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesInputContentPartOutputTextType), TypeInfoPropertyName = "ResponsesInputContentPartOutputTextType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionTool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomTool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesNamespaceTool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchTool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesToolDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesToolDiscriminatorType), TypeInfoPropertyName = "ResponsesToolDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionToolType), TypeInfoPropertyName = "ResponsesFunctionToolType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolType), TypeInfoPropertyName = "ResponsesCustomToolType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolName), TypeInfoPropertyName = "ResponsesCustomToolName2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolFormat))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolFormatType), TypeInfoPropertyName = "ResponsesCustomToolFormatType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesCustomToolFormatSyntax), TypeInfoPropertyName = "ResponsesCustomToolFormatSyntax2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesNamespaceToolType), TypeInfoPropertyName = "ResponsesNamespaceToolType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ResponsesFunctionTool>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.ResponsesFunctionTool, global::Moonshot.ResponsesCustomTool>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ResponsesFunctionTool, global::Moonshot.ResponsesCustomTool>), TypeInfoPropertyName = "OneOfResponsesFunctionToolResponsesCustomTool2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchToolType), TypeInfoPropertyName = "ResponsesWebSearchToolType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchToolFilters))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ResponsesWebSearchToolSearchContentType>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchToolSearchContentType), TypeInfoPropertyName = "ResponsesWebSearchToolSearchContentType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesWebSearchToolImageSettings))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponseObject), TypeInfoPropertyName = "ResponsesResponseObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponseStatus), TypeInfoPropertyName = "ResponsesResponseStatus2")]
@@ -660,6 +774,8 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputReasoningItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputMessageItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputFunctionCallItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputCustomToolCallItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputItemDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputItemDiscriminatorType), TypeInfoPropertyName = "ResponsesOutputItemDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputReasoningItemType), TypeInfoPropertyName = "ResponsesOutputReasoningItemType2")]
@@ -675,6 +791,18 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputMessageItemStatus), TypeInfoPropertyName = "ResponsesOutputMessageItemStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputFunctionCallItemType), TypeInfoPropertyName = "ResponsesOutputFunctionCallItemType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputFunctionCallItemStatus), TypeInfoPropertyName = "ResponsesOutputFunctionCallItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputCustomToolCallItemType), TypeInfoPropertyName = "ResponsesOutputCustomToolCallItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputCustomToolCallItemStatus), TypeInfoPropertyName = "ResponsesOutputCustomToolCallItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemType), TypeInfoPropertyName = "ResponsesOutputWebSearchCallItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemStatus), TypeInfoPropertyName = "ResponsesOutputWebSearchCallItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemAction))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemActionType), TypeInfoPropertyName = "ResponsesOutputWebSearchCallItemActionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ResponsesOutputWebSearchCallItemActionSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemActionSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemActionSourceType), TypeInfoPropertyName = "ResponsesOutputWebSearchCallItemActionSourceType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ResponsesOutputWebSearchCallItemResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputWebSearchCallItemResultType), TypeInfoPropertyName = "ResponsesOutputWebSearchCallItemResultType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesUsageInputTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesUsageOutputTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesStreamEvent))]
@@ -822,14 +950,18 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.List<global::Moonshot.ResponsesInputItem>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesInputItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesTool>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesRequestIncludeItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.List<global::Moonshot.ResponsesInputContentPart>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesInputContentPart>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesReasoningItemSummaryItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesReasoningItemContentItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesFunctionTool>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.ResponsesFunctionTool, global::Moonshot.ResponsesCustomTool>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesWebSearchToolSearchContentType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesOutputItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesOutputReasoningItemSummaryItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesOutputMessageItemContentItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesOutputWebSearchCallItemActionSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.ResponsesOutputWebSearchCallItemResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.FileObject>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Moonshot.BatchObject>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.List<global::Moonshot.OneOf<global::Moonshot.MessagesMessageParamContentVariant2ItemText, global::Moonshot.MessagesMessageParamContentVariant2ItemImage, global::Moonshot.MessagesMessageParamContentVariant2ItemThinking, global::Moonshot.MessagesMessageParamContentVariant2ItemToolUse, global::Moonshot.MessagesMessageParamContentVariant2ItemToolResult>>>), TypeInfoPropertyName = "MessagesMessageParamContentVariant2ItemToolResult_26a2d5cd390b2230")]
