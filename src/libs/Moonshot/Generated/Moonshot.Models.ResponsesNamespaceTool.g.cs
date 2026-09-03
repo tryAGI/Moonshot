@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Groups a set of function tools under a single namespace.
+    /// Groups a set of function or custom tools under one namespace.
     /// </summary>
     public sealed partial class ResponsesNamespaceTool
     {
@@ -34,7 +34,7 @@ namespace Moonshot
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tools")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Moonshot.ResponsesFunctionTool> Tools { get; set; }
+        public required global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.ResponsesFunctionTool, global::Moonshot.ResponsesCustomTool>> Tools { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -55,7 +55,7 @@ namespace Moonshot
         public ResponsesNamespaceTool(
             string name,
             string description,
-            global::System.Collections.Generic.IList<global::Moonshot.ResponsesFunctionTool> tools,
+            global::System.Collections.Generic.IList<global::Moonshot.OneOf<global::Moonshot.ResponsesFunctionTool, global::Moonshot.ResponsesCustomTool>> tools,
             global::Moonshot.ResponsesNamespaceToolType type)
         {
             this.Type = type;

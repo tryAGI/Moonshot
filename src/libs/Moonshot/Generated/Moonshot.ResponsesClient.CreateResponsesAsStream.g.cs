@@ -69,6 +69,7 @@ namespace Moonshot
                 Text = request.Text,
                 Tools = request.Tools,
                 ToolChoice = request.ToolChoice,
+                Include = request.Include,
                 PromptCacheKey = request.PromptCacheKey,
                 SafetyIdentifier = request.SafetyIdentifier,
             };
@@ -442,6 +443,9 @@ namespace Moonshot
         /// <param name="toolChoice">
         /// Controls tool-calling behavior. With `auto`, the model decides whether to call a tool.
         /// </param>
+        /// <param name="include">
+        /// Additional fields to return. Only effective when the `web_search` tool is used. `web_search_call.action.sources` returns the web pages the search hit; `web_search_call.results` returns image search results.
+        /// </param>
         /// <param name="promptCacheKey">
         /// Context cache identifier. Reusing the same value across a session improves cache hit rate.
         /// </param>
@@ -461,6 +465,7 @@ namespace Moonshot
             global::Moonshot.ResponsesRequestText? text = default,
             global::System.Collections.Generic.IList<global::Moonshot.ResponsesTool>? tools = default,
             global::Moonshot.ResponsesToolChoice? toolChoice = default,
+            global::System.Collections.Generic.IList<global::Moonshot.ResponsesRequestIncludeItem>? include = default,
             string? promptCacheKey = default,
             string? safetyIdentifier = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
@@ -477,6 +482,7 @@ namespace Moonshot
                 Text = text,
                 Tools = tools,
                 ToolChoice = toolChoice,
+                Include = include,
                 PromptCacheKey = promptCacheKey,
                 SafetyIdentifier = safetyIdentifier,
             };

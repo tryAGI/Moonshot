@@ -31,6 +31,14 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
+        ResponseCustomToolCallInputDelta,
+        /// <summary>
+        ///
+        /// </summary>
+        ResponseCustomToolCallInputDone,
+        /// <summary>
+        ///
+        /// </summary>
         ResponseFailed,
         /// <summary>
         ///
@@ -80,6 +88,18 @@ namespace Moonshot
         ///
         /// </summary>
         ResponseReasoningSummaryTextDone,
+        /// <summary>
+        ///
+        /// </summary>
+        ResponseWebSearchCallCompleted,
+        /// <summary>
+        ///
+        /// </summary>
+        ResponseWebSearchCallInProgress,
+        /// <summary>
+        ///
+        /// </summary>
+        ResponseWebSearchCallSearching,
     }
 
     /// <summary>
@@ -99,6 +119,8 @@ namespace Moonshot
                 ResponsesStreamEventType.ResponseContentPartAdded => "response.content_part.added",
                 ResponsesStreamEventType.ResponseContentPartDone => "response.content_part.done",
                 ResponsesStreamEventType.ResponseCreated => "response.created",
+                ResponsesStreamEventType.ResponseCustomToolCallInputDelta => "response.custom_tool_call_input.delta",
+                ResponsesStreamEventType.ResponseCustomToolCallInputDone => "response.custom_tool_call_input.done",
                 ResponsesStreamEventType.ResponseFailed => "response.failed",
                 ResponsesStreamEventType.ResponseFunctionCallArgumentsDelta => "response.function_call_arguments.delta",
                 ResponsesStreamEventType.ResponseFunctionCallArgumentsDone => "response.function_call_arguments.done",
@@ -112,6 +134,9 @@ namespace Moonshot
                 ResponsesStreamEventType.ResponseReasoningSummaryPartDone => "response.reasoning_summary_part.done",
                 ResponsesStreamEventType.ResponseReasoningSummaryTextDelta => "response.reasoning_summary_text.delta",
                 ResponsesStreamEventType.ResponseReasoningSummaryTextDone => "response.reasoning_summary_text.done",
+                ResponsesStreamEventType.ResponseWebSearchCallCompleted => "response.web_search_call.completed",
+                ResponsesStreamEventType.ResponseWebSearchCallInProgress => "response.web_search_call.in_progress",
+                ResponsesStreamEventType.ResponseWebSearchCallSearching => "response.web_search_call.searching",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -127,6 +152,8 @@ namespace Moonshot
                 "response.content_part.added" => ResponsesStreamEventType.ResponseContentPartAdded,
                 "response.content_part.done" => ResponsesStreamEventType.ResponseContentPartDone,
                 "response.created" => ResponsesStreamEventType.ResponseCreated,
+                "response.custom_tool_call_input.delta" => ResponsesStreamEventType.ResponseCustomToolCallInputDelta,
+                "response.custom_tool_call_input.done" => ResponsesStreamEventType.ResponseCustomToolCallInputDone,
                 "response.failed" => ResponsesStreamEventType.ResponseFailed,
                 "response.function_call_arguments.delta" => ResponsesStreamEventType.ResponseFunctionCallArgumentsDelta,
                 "response.function_call_arguments.done" => ResponsesStreamEventType.ResponseFunctionCallArgumentsDone,
@@ -140,6 +167,9 @@ namespace Moonshot
                 "response.reasoning_summary_part.done" => ResponsesStreamEventType.ResponseReasoningSummaryPartDone,
                 "response.reasoning_summary_text.delta" => ResponsesStreamEventType.ResponseReasoningSummaryTextDelta,
                 "response.reasoning_summary_text.done" => ResponsesStreamEventType.ResponseReasoningSummaryTextDone,
+                "response.web_search_call.completed" => ResponsesStreamEventType.ResponseWebSearchCallCompleted,
+                "response.web_search_call.in_progress" => ResponsesStreamEventType.ResponseWebSearchCallInProgress,
+                "response.web_search_call.searching" => ResponsesStreamEventType.ResponseWebSearchCallSearching,
                 _ => null,
             };
         }

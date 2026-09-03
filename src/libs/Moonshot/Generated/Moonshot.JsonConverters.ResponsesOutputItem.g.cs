@@ -42,6 +42,20 @@ namespace Moonshot.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.ResponsesOutputFunctionCallItem)}");
                 functionCall = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Moonshot.ResponsesOutputCustomToolCallItem? customToolCall = default;
+            if (discriminator?.Type == global::Moonshot.ResponsesOutputItemDiscriminatorType.CustomToolCall)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesOutputCustomToolCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesOutputCustomToolCallItem> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.ResponsesOutputCustomToolCallItem)}");
+                customToolCall = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+            global::Moonshot.ResponsesOutputWebSearchCallItem? webSearchCall = default;
+            if (discriminator?.Type == global::Moonshot.ResponsesOutputItemDiscriminatorType.WebSearchCall)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesOutputWebSearchCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesOutputWebSearchCallItem> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Moonshot.ResponsesOutputWebSearchCallItem)}");
+                webSearchCall = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
 
             var __value = new global::Moonshot.ResponsesOutputItem(
                 discriminator?.Type,
@@ -49,7 +63,11 @@ namespace Moonshot.JsonConverters
 
                 message,
 
-                functionCall
+                functionCall,
+
+                customToolCall,
+
+                webSearchCall
                 );
 
             return __value;
@@ -81,6 +99,18 @@ namespace Moonshot.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesOutputFunctionCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesOutputFunctionCallItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesOutputFunctionCallItem).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionCall!, typeInfo);
+            }
+            else if (value.IsCustomToolCall)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesOutputCustomToolCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesOutputCustomToolCallItem?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesOutputCustomToolCallItem).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CustomToolCall!, typeInfo);
+            }
+            else if (value.IsWebSearchCall)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesOutputWebSearchCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesOutputWebSearchCallItem?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesOutputWebSearchCallItem).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WebSearchCall!, typeInfo);
             }
         }
     }

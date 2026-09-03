@@ -51,7 +51,7 @@ namespace Moonshot
         public string? Model { get; set; }
 
         /// <summary>
-        /// Array of output items, ordered as reasoning, message, then tool calls.
+        /// The output item array, ordered as web_search_call (if any), reasoning, message, tool calls.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output")]
         public global::System.Collections.Generic.IList<global::Moonshot.ResponsesOutputItem>? Output { get; set; }
@@ -191,7 +191,7 @@ namespace Moonshot
         /// Model that produced the response.
         /// </param>
         /// <param name="output">
-        /// Array of output items, ordered as reasoning, message, then tool calls.
+        /// The output item array, ordered as web_search_call (if any), reasoning, message, tool calls.
         /// </param>
         /// <param name="usage"></param>
         /// <param name="incompleteDetails">
