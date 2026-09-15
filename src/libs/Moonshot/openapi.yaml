@@ -2824,6 +2824,276 @@
 					"data"
 				]
 			},
+			"ToolsSearchRequest": {
+				"type": "object",
+				"properties": {
+					"text_query": {
+						"type": "string",
+						"description": "Search query text. Must not be empty."
+					},
+					"timeout_seconds": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 60,
+						"description": "Search timeout in seconds, from 1 to 60. If omitted, no per-request timeout is applied."
+					},
+					"limit": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 20,
+						"default": 5,
+						"description": "Maximum number of results to return, from 1 to 20. Defaults to 5."
+					},
+					"include_content": {
+						"type": "boolean",
+						"default": false,
+						"description": "Whether to return full page content in each result's `text` field. Defaults to false."
+					}
+				},
+				"required": [
+					"text_query"
+				]
+			},
+			"ToolsSearchResponse": {
+				"type": "object",
+				"properties": {
+					"search_results": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ToolsSearchResult"
+						},
+						"description": "List of search results; an empty array when nothing matches."
+					}
+				},
+				"required": [
+					"search_results"
+				]
+			},
+			"ToolsSearchResult": {
+				"type": "object",
+				"properties": {
+					"authority": {
+						"type": "string",
+						"description": "Authority level of the source."
+					},
+					"date": {
+						"type": "string",
+						"description": "Date of the search result."
+					},
+					"icon": {
+						"type": "string",
+						"description": "Site icon URL."
+					},
+					"mime": {
+						"type": "string",
+						"description": "MIME type of the content."
+					},
+					"site_name": {
+						"type": "string",
+						"description": "Site name."
+					},
+					"snippet": {
+						"type": "string",
+						"description": "Snippet of the search result."
+					},
+					"text": {
+						"type": "string",
+						"description": "Full page content; returned when include_content=true, otherwise an empty string."
+					},
+					"title": {
+						"type": "string",
+						"description": "Title of the search result."
+					},
+					"url": {
+						"type": "string",
+						"description": "URL of the search result."
+					}
+				},
+				"required": [
+					"authority",
+					"date",
+					"icon",
+					"mime",
+					"site_name",
+					"snippet",
+					"text",
+					"title",
+					"url"
+				]
+			},
+			"ToolsSearchProRequest": {
+				"type": "object",
+				"properties": {
+					"text_query": {
+						"type": "string",
+						"description": "Search query text. Must not be empty."
+					},
+					"timeout_seconds": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 60,
+						"description": "Search timeout in seconds, from 1 to 60. If omitted, no per-request timeout is applied."
+					},
+					"limit": {
+						"type": "integer",
+						"minimum": 1,
+						"maximum": 20,
+						"default": 5,
+						"description": "Maximum number of results to return, from 1 to 20. Defaults to 5."
+					},
+					"sites": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"maxItems": 5,
+						"description": "Restrict results to the given sites. Multiple sites are OR'd, up to 5 entries; each entry must be non-empty and must not contain whitespace or parentheses."
+					},
+					"time_window": {
+						"$ref": "#/components/schemas/ToolsSearchTimeWindow"
+					}
+				},
+				"required": [
+					"text_query"
+				]
+			},
+			"ToolsSearchTimeWindow": {
+				"type": "object",
+				"description": "Time-window constraint on result dates. start and end are each normalized to the first day of their period before comparison; start must not be later than end.",
+				"properties": {
+					"start": {
+						"type": "string",
+						"description": "Lower bound of the time window, in YYYY / YYYY-MM / YYYY-MM-DD format."
+					},
+					"end": {
+						"type": "string",
+						"description": "Upper bound of the time window, in YYYY / YYYY-MM / YYYY-MM-DD format."
+					}
+				}
+			},
+			"ToolsSearchProResponse": {
+				"type": "object",
+				"properties": {
+					"search_results": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ToolsSearchProResult"
+						},
+						"description": "List of search results; an empty array when nothing matches."
+					}
+				},
+				"required": [
+					"search_results"
+				]
+			},
+			"ToolsSearchProResult": {
+				"type": "object",
+				"properties": {
+					"authority": {
+						"type": "string",
+						"description": "Authority level of the source."
+					},
+					"date": {
+						"type": "string",
+						"description": "Date of the search result."
+					},
+					"icon": {
+						"type": "string",
+						"description": "Site icon URL."
+					},
+					"mime": {
+						"type": "string",
+						"description": "MIME type of the content."
+					},
+					"site_name": {
+						"type": "string",
+						"description": "Site name."
+					},
+					"snippet": {
+						"type": "string",
+						"description": "Snippet of the search result."
+					},
+					"title": {
+						"type": "string",
+						"description": "Title of the search result."
+					},
+					"url": {
+						"type": "string",
+						"description": "URL of the search result."
+					},
+					"chunks": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ToolsSearchProChunk"
+						},
+						"description": "Structured content chunks collected for each page; an empty array when no content is available."
+					}
+				},
+				"required": [
+					"authority",
+					"date",
+					"icon",
+					"mime",
+					"site_name",
+					"snippet",
+					"title",
+					"url",
+					"chunks"
+				]
+			},
+			"ToolsSearchProChunk": {
+				"type": "object",
+				"properties": {
+					"text": {
+						"type": "string",
+						"description": "Content of the chunk."
+					},
+					"score": {
+						"type": "number",
+						"format": "float",
+						"description": "Relevance score of the chunk to the query."
+					}
+				},
+				"required": [
+					"text",
+					"score"
+				]
+			},
+			"ToolsFetchRequest": {
+				"type": "object",
+				"properties": {
+					"url": {
+						"type": "string",
+						"format": "uri",
+						"description": "URL of the page to fetch. Only http and https are supported."
+					}
+				},
+				"required": [
+					"url"
+				]
+			},
+			"ToolsFetchResponse": {
+				"type": "object",
+				"properties": {
+					"url": {
+						"type": "string",
+						"description": "The fetched URL."
+					},
+					"markdown": {
+						"type": "string",
+						"description": "Fetched content in Markdown. Text and images are concatenated in page order, with images rendered as `![imageN](url)` placeholders."
+					},
+					"title": {
+						"type": "string",
+						"description": "Page title."
+					}
+				},
+				"required": [
+					"url",
+					"markdown",
+					"title"
+				]
+			},
 			"ErrorResponse": {
 				"type": "object",
 				"properties": {
@@ -4711,6 +4981,431 @@
 					},
 					"500": {
 						"description": "Server error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v1/tools/search": {
+			"post": {
+				"summary": "Web Search Basic",
+				"description": "Run a web search and get structured results with title, snippet, site, and URL. You are charged once per successful call that returns at least one result; failed or empty-result calls are free. See [WebSearch Pricing](/pricing/tools).",
+				"tags": [
+					"Tools"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ToolsSearchRequest"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Search results",
+						"headers": {
+							"X-Msh-Track-Id": {
+								"description": "Request ID. If the client sends this header, its value is reused; otherwise the server generates one. Provide this ID when troubleshooting.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-Msh-Chat-Id": {
+								"description": "Session ID, always `toolgw-{X-Msh-Track-Id}`; provide both IDs when troubleshooting.",
+								"schema": {
+									"type": "string"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ToolsSearchResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request - Invalid parameters or missing required fields",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized - Invalid or missing API key (status code only, no error body)"
+					},
+					"403": {
+						"description": "Forbidden - account inactive or suspended (status code only, no error body)"
+					},
+					"408": {
+						"description": "Client canceled the request",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"429": {
+						"description": "Too many requests - rate or concurrency limit exceeded, or rate-limit service temporarily unavailable",
+						"headers": {
+							"X-RateLimit-Limit": {
+								"description": "The rate limit that was hit.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-RateLimit-Remaining": {
+								"description": "Remaining quota in the current window.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-RateLimit-Reset": {
+								"description": "When the rate-limit window resets (Unix timestamp in seconds; returned when a per-second rate limit is hit).",
+								"schema": {
+									"type": "string"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Internal server error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"502": {
+						"description": "Service temporarily unavailable; retry later",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"504": {
+						"description": "Request timed out",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v1/tools/search_pro": {
+			"post": {
+				"summary": "Web Search Pro",
+				"description": "Web Search Basic with site and time-range constraints, plus structured content chunks (`chunks`) for each result. You are charged once per successful call that returns at least one result; failed or empty-result calls are free. See [WebSearch Pricing](/pricing/tools).",
+				"tags": [
+					"Tools"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ToolsSearchProRequest"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Search results with content snippets",
+						"headers": {
+							"X-Msh-Track-Id": {
+								"description": "Request ID. If the client sends this header, its value is reused; otherwise the server generates one. Provide this ID when troubleshooting.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-Msh-Chat-Id": {
+								"description": "Session ID, always `toolgw-{X-Msh-Track-Id}`; provide both IDs when troubleshooting.",
+								"schema": {
+									"type": "string"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ToolsSearchProResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request - Invalid parameters or missing required fields",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized - Invalid or missing API key (status code only, no error body)"
+					},
+					"403": {
+						"description": "Forbidden - account inactive or suspended (status code only, no error body)"
+					},
+					"408": {
+						"description": "Client canceled the request",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"429": {
+						"description": "Too many requests - rate or concurrency limit exceeded, or rate-limit service temporarily unavailable",
+						"headers": {
+							"X-RateLimit-Limit": {
+								"description": "The rate limit that was hit.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-RateLimit-Remaining": {
+								"description": "Remaining quota in the current window.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-RateLimit-Reset": {
+								"description": "When the rate-limit window resets (Unix timestamp in seconds; returned when a per-second rate limit is hit).",
+								"schema": {
+									"type": "string"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Internal server error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"502": {
+						"description": "Service temporarily unavailable; retry later",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"504": {
+						"description": "Request timed out",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/v1/tools/fetch": {
+			"post": {
+				"summary": "URL Fetch",
+				"description": "Fetch the content of a URL and get the page title and body text in Markdown (text and images concatenated in order). Only http and https URLs are supported. You are charged once per successful call that extracts content; failed or empty-content calls are free. See [WebSearch Pricing](/pricing/tools).",
+				"tags": [
+					"Tools"
+				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ToolsFetchRequest"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "Fetch result",
+						"headers": {
+							"X-Msh-Track-Id": {
+								"description": "Request ID. If the client sends this header, its value is reused; otherwise the server generates one. Provide this ID when troubleshooting.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-Msh-Chat-Id": {
+								"description": "Session ID, always `toolgw-{X-Msh-Track-Id}`; provide both IDs when troubleshooting.",
+								"schema": {
+									"type": "string"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ToolsFetchResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request - Invalid parameters or malformed URL",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized - Invalid or missing API key (status code only, no error body)"
+					},
+					"403": {
+						"description": "Forbidden - account inactive or suspended (no error body), or the URL was blocked by security risk control (returns a security_risk error)",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "No extractable content found for the URL (markdown_not_found)",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"408": {
+						"description": "Client canceled the request",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"429": {
+						"description": "Too many requests - rate or concurrency limit exceeded, or rate-limit service temporarily unavailable",
+						"headers": {
+							"X-RateLimit-Limit": {
+								"description": "The rate limit that was hit.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-RateLimit-Remaining": {
+								"description": "Remaining quota in the current window.",
+								"schema": {
+									"type": "string"
+								}
+							},
+							"X-RateLimit-Reset": {
+								"description": "When the rate-limit window resets (Unix timestamp in seconds; returned when a per-second rate limit is hit).",
+								"schema": {
+									"type": "string"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Internal server error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"502": {
+						"description": "Service temporarily unavailable; retry later",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorResponse"
+								}
+							}
+						}
+					},
+					"504": {
+						"description": "Request timed out",
 						"content": {
 							"application/json": {
 								"schema": {
