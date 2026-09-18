@@ -76,6 +76,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestMetadata))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControl))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControlType), TypeInfoPropertyName = "MessagesRequestCacheControlType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControlTtl), TypeInfoPropertyName = "MessagesRequestCacheControlTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigEffort), TypeInfoPropertyName = "MessagesRequestOutputConfigEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigFormat))]
@@ -93,6 +96,7 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemToolUseType), TypeInfoPropertyName = "MessagesResponseContentItemToolUseType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseStopReason), TypeInfoPropertyName = "MessagesResponseStopReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsageCacheCreation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsageOutputTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEvent), TypeInfoPropertyName = "MessagesStreamEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStart))]
@@ -116,6 +120,7 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaDelta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaDeltaStopReason), TypeInfoPropertyName = "MessagesStreamEventMessageDeltaDeltaStopReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsageCacheCreation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsageOutputTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStop))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStopType), TypeInfoPropertyName = "MessagesStreamEventMessageStopType2")]
@@ -141,6 +146,8 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesToolChoiceType?), TypeInfoPropertyName = "NullableMessagesToolChoiceType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestModel?), TypeInfoPropertyName = "NullableMessagesRequestModel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>?), TypeInfoPropertyName = "NullableOneOfStringIListMessagesTextBlockParam2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControlType?), TypeInfoPropertyName = "NullableMessagesRequestCacheControlType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControlTtl?), TypeInfoPropertyName = "NullableMessagesRequestCacheControlTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigEffort?), TypeInfoPropertyName = "NullableMessagesRequestOutputConfigEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigFormatType?), TypeInfoPropertyName = "NullableMessagesRequestOutputConfigFormatType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseType?), TypeInfoPropertyName = "NullableMessagesResponseType2")]
@@ -310,6 +317,14 @@ namespace Moonshot
                     || typeToConvert == typeof(global::Moonshot.MessagesRequestModel)
 
                     || typeToConvert == typeof(global::Moonshot.MessagesRequestModel?)
+
+                    || typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlType)
+
+                    || typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlType?)
+
+                    || typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlTtl)
+
+                    || typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlTtl?)
 
                     || typeToConvert == typeof(global::Moonshot.MessagesRequestOutputConfigEffort)
 
@@ -554,6 +569,26 @@ namespace Moonshot
                 if (typeToConvert == typeof(global::Moonshot.MessagesRequestModel?))
                 {
                     return new global::Moonshot.JsonConverters.MessagesRequestModelNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlType))
+                {
+                    return new global::Moonshot.JsonConverters.MessagesRequestCacheControlTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlType?))
+                {
+                    return new global::Moonshot.JsonConverters.MessagesRequestCacheControlTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlTtl))
+                {
+                    return new global::Moonshot.JsonConverters.MessagesRequestCacheControlTtlJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.MessagesRequestCacheControlTtl?))
+                {
+                    return new global::Moonshot.JsonConverters.MessagesRequestCacheControlTtlNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Moonshot.MessagesRequestOutputConfigEffort))

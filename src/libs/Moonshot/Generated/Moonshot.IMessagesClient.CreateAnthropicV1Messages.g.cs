@@ -68,6 +68,9 @@ namespace Moonshot
         /// Controls whether the model calls tools. `auto` (default): the model decides; `any`: force a call to any tool; `none`: do not call tools.
         /// </param>
         /// <param name="metadata"></param>
+        /// <param name="cacheControl">
+        /// Context cache write options. Only effective when passed at the top level; cache_control markers inside the messages array are ignored. When omitted, the request only attempts to read the cache (5m tier) and does not write
+        /// </param>
         /// <param name="outputConfig">
         /// Output configuration: reasoning effort and structured output
         /// </param>
@@ -84,6 +87,7 @@ namespace Moonshot
             global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>? tools = default,
             global::Moonshot.MessagesToolChoice? toolChoice = default,
             global::Moonshot.MessagesRequestMetadata? metadata = default,
+            global::Moonshot.MessagesRequestCacheControl? cacheControl = default,
             global::Moonshot.MessagesRequestOutputConfig? outputConfig = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

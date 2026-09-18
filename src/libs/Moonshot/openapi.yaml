@@ -367,6 +367,29 @@
 						"default": null,
 						"description": "Used to cache responses for similar requests to optimize cache hit rates. For Coding Agents, this is typically a session id or task id representing a single session; if the session is exited and later resumed, this value should remain the same. For Kimi Code Plan, this field is required to improve cache hit rates. For other agents involving multi-turn conversations, it is also recommended to implement this field"
 					},
+					"prompt_cache_options": {
+						"type": "object",
+						"description": "Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier",
+						"properties": {
+							"mode": {
+								"type": "string",
+								"enum": [
+									"implicit"
+								],
+								"default": "implicit",
+								"description": "Cache write mode. Only implicit is supported: automatically writes the request prefix to the cache"
+							},
+							"ttl": {
+								"type": "string",
+								"enum": [
+									"5m",
+									"1h"
+								],
+								"default": "5m",
+								"description": "Lifetime of the written cache. The 5m and 1h tiers are independent of each other. When a request with the same prefix hits the cache within its lifetime, the cache entry is refreshed with its original TTL"
+							}
+						}
+					},
 					"safety_identifier": {
 						"type": "string",
 						"description": "A stable identifier used to help detect users of your application that may be violating usage policies. The ID should be a string that uniquely identifies each user. It is recommended to hash the username or email address to avoid sending any identifying information"
@@ -554,6 +577,29 @@
 						"type": "string",
 						"default": null,
 						"description": "Used to cache responses for similar requests to optimize cache hit rates. For Coding Agents, this is typically a session id or task id representing a single session; if the session is exited and later resumed, this value should remain the same. For Kimi Code Plan, this field is required to improve cache hit rates. For other agents involving multi-turn conversations, it is also recommended to implement this field"
+					},
+					"prompt_cache_options": {
+						"type": "object",
+						"description": "Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier",
+						"properties": {
+							"mode": {
+								"type": "string",
+								"enum": [
+									"implicit"
+								],
+								"default": "implicit",
+								"description": "Cache write mode. Only implicit is supported: automatically writes the request prefix to the cache"
+							},
+							"ttl": {
+								"type": "string",
+								"enum": [
+									"5m",
+									"1h"
+								],
+								"default": "5m",
+								"description": "Lifetime of the written cache. The 5m and 1h tiers are independent of each other. When a request with the same prefix hits the cache within its lifetime, the cache entry is refreshed with its original TTL"
+							}
+						}
 					},
 					"safety_identifier": {
 						"type": "string",
@@ -867,6 +913,24 @@
 							"cached_tokens": {
 								"type": "integer",
 								"description": "Number of tokens served from cache"
+							},
+							"prompt_tokens_details": {
+								"type": "object",
+								"description": "Breakdown of prompt tokens. cached_tokens, cache_write_tokens and the uncached remainder are mutually exclusive and sum to prompt_tokens",
+								"properties": {
+									"cached_tokens": {
+										"type": "integer",
+										"description": "Number of tokens served from cache"
+									},
+									"cache_write_tokens": {
+										"type": "integer",
+										"description": "Number of tokens written to the cache by this request. Billed according to the TTL tier at write time; see prompt_cache_options"
+									}
+								},
+								"required": [
+									"cached_tokens",
+									"cache_write_tokens"
+								]
 							}
 						}
 					}
@@ -921,6 +985,24 @@
 							"cached_tokens": {
 								"type": "integer",
 								"description": "Number of tokens served from cache"
+							},
+							"prompt_tokens_details": {
+								"type": "object",
+								"description": "Breakdown of prompt tokens. cached_tokens, cache_write_tokens and the uncached remainder are mutually exclusive and sum to prompt_tokens",
+								"properties": {
+									"cached_tokens": {
+										"type": "integer",
+										"description": "Number of tokens served from cache"
+									},
+									"cache_write_tokens": {
+										"type": "integer",
+										"description": "Number of tokens written to the cache by this request. Billed according to the TTL tier at write time; see prompt_cache_options"
+									}
+								},
+								"required": [
+									"cached_tokens",
+									"cache_write_tokens"
+								]
 							}
 						}
 					}
@@ -1123,6 +1205,29 @@
 					"prompt_cache_key": {
 						"type": "string",
 						"description": "Context cache identifier. Reusing the same value across a session improves cache hit rate."
+					},
+					"prompt_cache_options": {
+						"type": "object",
+						"description": "Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier",
+						"properties": {
+							"mode": {
+								"type": "string",
+								"enum": [
+									"implicit"
+								],
+								"default": "implicit",
+								"description": "Cache write mode. Only implicit is supported: automatically writes the request prefix to the cache"
+							},
+							"ttl": {
+								"type": "string",
+								"enum": [
+									"5m",
+									"1h"
+								],
+								"default": "5m",
+								"description": "Lifetime of the written cache. The 5m and 1h tiers are independent of each other. When a request with the same prefix hits the cache within its lifetime, the cache entry is refreshed with its original TTL"
+							}
+						}
 					},
 					"safety_identifier": {
 						"type": "string",
@@ -1989,6 +2094,27 @@
 							"null"
 						],
 						"description": "Always `null`."
+					},
+					"prompt_cache_options": {
+						"type": "object",
+						"description": "The context cache write options actually applied by the server. When the request omits prompt_cache_options, refer to the mode and ttl returned here",
+						"properties": {
+							"mode": {
+								"type": "string",
+								"enum": [
+									"implicit"
+								],
+								"description": "The write mode actually applied"
+							},
+							"ttl": {
+								"type": "string",
+								"enum": [
+									"5m",
+									"1h"
+								],
+								"description": "The cache lifetime actually applied"
+							}
+						}
 					}
 				}
 			},
@@ -3526,6 +3652,31 @@
 							}
 						}
 					},
+					"cache_control": {
+						"type": "object",
+						"description": "Context cache write options. Only effective when passed at the top level; cache_control markers inside the messages array are ignored. When omitted, the request only attempts to read the cache (5m tier) and does not write",
+						"properties": {
+							"type": {
+								"type": "string",
+								"enum": [
+									"ephemeral"
+								],
+								"description": "Cache type, fixed as ephemeral"
+							},
+							"ttl": {
+								"type": "string",
+								"enum": [
+									"5m",
+									"1h"
+								],
+								"default": "5m",
+								"description": "Lifetime of the written cache. The 5m and 1h tiers are independent of each other. When a request with the same prefix hits the cache within its lifetime, the cache entry is refreshed with its original TTL"
+							}
+						},
+						"required": [
+							"type"
+						]
+					},
 					"output_config": {
 						"type": "object",
 						"description": "Output configuration: reasoning effort and structured output",
@@ -3698,7 +3849,7 @@
 						"properties": {
 							"input_tokens": {
 								"type": "integer",
-								"description": "Input tokens (excluding cache hits)"
+								"description": "Input tokens (excluding cache hits and cache writes). Total input = input_tokens + cache_read_input_tokens + cache_creation_input_tokens"
 							},
 							"output_tokens": {
 								"type": "integer",
@@ -3711,6 +3862,24 @@
 							"cache_creation_input_tokens": {
 								"type": "integer",
 								"description": "Input tokens written to cache"
+							},
+							"cache_creation": {
+								"type": "object",
+								"description": "Cache write breakdown by TTL tier",
+								"properties": {
+									"ephemeral_5m_input_tokens": {
+										"type": "integer",
+										"description": "Input tokens written to the 5-minute cache tier"
+									},
+									"ephemeral_1h_input_tokens": {
+										"type": "integer",
+										"description": "Input tokens written to the 1-hour cache tier"
+									}
+								},
+								"required": [
+									"ephemeral_5m_input_tokens",
+									"ephemeral_1h_input_tokens"
+								]
 							},
 							"output_tokens_details": {
 								"type": "object",
@@ -3951,7 +4120,7 @@
 								"properties": {
 									"input_tokens": {
 										"type": "integer",
-										"description": "Input tokens (excluding cache hits)"
+										"description": "Input tokens (excluding cache hits and cache writes). Total input = input_tokens + cache_read_input_tokens + cache_creation_input_tokens"
 									},
 									"output_tokens": {
 										"type": "integer",
@@ -3964,6 +4133,24 @@
 									"cache_creation_input_tokens": {
 										"type": "integer",
 										"description": "Input tokens written to cache"
+									},
+									"cache_creation": {
+										"type": "object",
+										"description": "Cache write breakdown by TTL tier",
+										"properties": {
+											"ephemeral_5m_input_tokens": {
+												"type": "integer",
+												"description": "Input tokens written to the 5-minute cache tier"
+											},
+											"ephemeral_1h_input_tokens": {
+												"type": "integer",
+												"description": "Input tokens written to the 1-hour cache tier"
+											}
+										},
+										"required": [
+											"ephemeral_5m_input_tokens",
+											"ephemeral_1h_input_tokens"
+										]
 									},
 									"output_tokens_details": {
 										"type": "object",

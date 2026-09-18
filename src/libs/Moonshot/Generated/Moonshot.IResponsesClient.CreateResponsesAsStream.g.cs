@@ -59,6 +59,9 @@ namespace Moonshot
         /// <param name="promptCacheKey">
         /// Context cache identifier. Reusing the same value across a session improves cache hit rate.
         /// </param>
+        /// <param name="promptCacheOptions">
+        /// Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier
+        /// </param>
         /// <param name="safetyIdentifier">
         /// A stable identifier used to help detect users of your application that may be violating usage policies. The ID should be a string that uniquely identifies each user. It is recommended to hash the username or email address to avoid sending any identifying information
         /// </param>
@@ -77,6 +80,7 @@ namespace Moonshot
             global::Moonshot.ResponsesToolChoice? toolChoice = default,
             global::System.Collections.Generic.IList<global::Moonshot.ResponsesRequestIncludeItem>? include = default,
             string? promptCacheKey = default,
+            global::Moonshot.ResponsesRequestPromptCacheOptions? promptCacheOptions = default,
             string? safetyIdentifier = default,
             global::Moonshot.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

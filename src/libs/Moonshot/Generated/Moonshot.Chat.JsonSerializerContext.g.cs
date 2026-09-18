@@ -56,6 +56,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<string>>), TypeInfoPropertyName = "OneOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonStreamOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsMode), TypeInfoPropertyName = "ChatRequestCommonPromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsTtl), TypeInfoPropertyName = "ChatRequestCommonPromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ChatRequestCommonToolChoiceEnum?, global::Moonshot.ChatRequestCommonToolChoiceEnum2>), TypeInfoPropertyName = "OneOfChatRequestCommonToolChoiceEnumChatRequestCommonToolChoiceEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum), TypeInfoPropertyName = "ChatRequestCommonToolChoiceEnum2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum2))]
@@ -69,6 +72,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseResponseFormatType), TypeInfoPropertyName = "ChatRequestBaseResponseFormatType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseResponseFormatJsonSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseStreamOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsMode), TypeInfoPropertyName = "ChatRequestBasePromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsTtl), TypeInfoPropertyName = "ChatRequestBasePromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>), TypeInfoPropertyName = "OneOfChatRequestBaseToolChoiceEnumChatRequestBaseToolChoiceEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum), TypeInfoPropertyName = "ChatRequestBaseToolChoiceEnum2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum2))]
@@ -103,10 +109,12 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseChoiceMessageToolCallFunction))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseChoiceFinishReason), TypeInfoPropertyName = "ChatCompletionResponseChoiceFinishReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseUsagePromptTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionChunk))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ChoiceDelta>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChoiceDelta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionChunkUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionChunkUsagePromptTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChoiceDeltaDelta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ChoiceDeltaDeltaToolCall>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChoiceDeltaDeltaToolCall))]
@@ -135,11 +143,15 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<object>>?), TypeInfoPropertyName = "NullableOneOfStringIListObject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonResponseFormatType?), TypeInfoPropertyName = "NullableChatRequestCommonResponseFormatType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<string>>?), TypeInfoPropertyName = "NullableOneOfStringIListString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsMode?), TypeInfoPropertyName = "NullableChatRequestCommonPromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsTtl?), TypeInfoPropertyName = "NullableChatRequestCommonPromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ChatRequestCommonToolChoiceEnum?, global::Moonshot.ChatRequestCommonToolChoiceEnum2>?), TypeInfoPropertyName = "NullableOneOfChatRequestCommonToolChoiceEnumChatRequestCommonToolChoiceEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum?), TypeInfoPropertyName = "NullableChatRequestCommonToolChoiceEnum2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonToolChoiceEnumType?), TypeInfoPropertyName = "NullableChatRequestCommonToolChoiceEnumType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePredictionType?), TypeInfoPropertyName = "NullableChatRequestBasePredictionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseResponseFormatType?), TypeInfoPropertyName = "NullableChatRequestBaseResponseFormatType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsMode?), TypeInfoPropertyName = "NullableChatRequestBasePromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsTtl?), TypeInfoPropertyName = "NullableChatRequestBasePromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>?), TypeInfoPropertyName = "NullableOneOfChatRequestBaseToolChoiceEnumChatRequestBaseToolChoiceEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum?), TypeInfoPropertyName = "NullableChatRequestBaseToolChoiceEnum2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnumType?), TypeInfoPropertyName = "NullableChatRequestBaseToolChoiceEnumType2")]
@@ -287,6 +299,14 @@ namespace Moonshot
 
                     || typeToConvert == typeof(global::Moonshot.ChatRequestCommonResponseFormatType?)
 
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsMode)
+
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsMode?)
+
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsTtl)
+
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsTtl?)
+
                     || typeToConvert == typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum)
 
                     || typeToConvert == typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum?)
@@ -302,6 +322,14 @@ namespace Moonshot
                     || typeToConvert == typeof(global::Moonshot.ChatRequestBaseResponseFormatType)
 
                     || typeToConvert == typeof(global::Moonshot.ChatRequestBaseResponseFormatType?)
+
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsMode)
+
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsMode?)
+
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsTtl)
+
+                    || typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsTtl?)
 
                     || typeToConvert == typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum)
 
@@ -452,6 +480,26 @@ namespace Moonshot
                     return new global::Moonshot.JsonConverters.ChatRequestCommonResponseFormatTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsMode))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsMode?))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsTtl))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsTtlJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsTtl?))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsTtlNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum))
                 {
                     return new global::Moonshot.JsonConverters.ChatRequestCommonToolChoiceEnumJsonConverter();
@@ -490,6 +538,26 @@ namespace Moonshot
                 if (typeToConvert == typeof(global::Moonshot.ChatRequestBaseResponseFormatType?))
                 {
                     return new global::Moonshot.JsonConverters.ChatRequestBaseResponseFormatTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsMode))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsMode?))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsTtl))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsTtlJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsTtl?))
+                {
+                    return new global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsTtlNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum))
