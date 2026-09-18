@@ -45,6 +45,14 @@ namespace Moonshot
 
             typeof(global::Moonshot.JsonConverters.ChatRequestCommonResponseFormatTypeNullableJsonConverter),
 
+            typeof(global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsModeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsModeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsTtlJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ChatRequestCommonPromptCacheOptionsTtlNullableJsonConverter),
+
             typeof(global::Moonshot.JsonConverters.ChatRequestCommonToolChoiceEnumJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ChatRequestCommonToolChoiceEnumNullableJsonConverter),
@@ -60,6 +68,14 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.ChatRequestBaseResponseFormatTypeJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ChatRequestBaseResponseFormatTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsModeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsModeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsTtlJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ChatRequestBasePromptCacheOptionsTtlNullableJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ChatRequestBaseToolChoiceEnumJsonConverter),
 
@@ -132,6 +148,14 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.ResponsesRequestIncludeItemJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesRequestIncludeItemNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesRequestPromptCacheOptionsModeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesRequestPromptCacheOptionsModeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesRequestPromptCacheOptionsTtlJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesRequestPromptCacheOptionsTtlNullableJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesMessageItemTypeJsonConverter),
 
@@ -280,6 +304,14 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.ResponsesResponseIncompleteDetailsReasonJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesResponseIncompleteDetailsReasonNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesResponsePromptCacheOptionsModeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesResponsePromptCacheOptionsModeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesResponsePromptCacheOptionsTtlJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.ResponsesResponsePromptCacheOptionsTtlNullableJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.ResponsesOutputItemDiscriminatorTypeJsonConverter),
 
@@ -432,6 +464,14 @@ namespace Moonshot
             typeof(global::Moonshot.JsonConverters.MessagesRequestModelJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.MessagesRequestModelNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestCacheControlTypeJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestCacheControlTypeNullableJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestCacheControlTtlJsonConverter),
+
+            typeof(global::Moonshot.JsonConverters.MessagesRequestCacheControlTtlNullableJsonConverter),
 
             typeof(global::Moonshot.JsonConverters.MessagesRequestOutputConfigEffortJsonConverter),
 
@@ -626,6 +666,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<string>>), TypeInfoPropertyName = "OneOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonStreamOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsMode), TypeInfoPropertyName = "ChatRequestCommonPromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonPromptCacheOptionsTtl), TypeInfoPropertyName = "ChatRequestCommonPromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ChatRequestCommonToolChoiceEnum?, global::Moonshot.ChatRequestCommonToolChoiceEnum2>), TypeInfoPropertyName = "OneOfChatRequestCommonToolChoiceEnumChatRequestCommonToolChoiceEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum), TypeInfoPropertyName = "ChatRequestCommonToolChoiceEnum2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestCommonToolChoiceEnum2))]
@@ -639,6 +682,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseResponseFormatType), TypeInfoPropertyName = "ChatRequestBaseResponseFormatType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseResponseFormatJsonSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseStreamOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsMode), TypeInfoPropertyName = "ChatRequestBasePromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBasePromptCacheOptionsTtl), TypeInfoPropertyName = "ChatRequestBasePromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>), TypeInfoPropertyName = "OneOfChatRequestBaseToolChoiceEnumChatRequestBaseToolChoiceEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum), TypeInfoPropertyName = "ChatRequestBaseToolChoiceEnum2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum2))]
@@ -673,10 +719,12 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseChoiceMessageToolCallFunction))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseChoiceFinishReason), TypeInfoPropertyName = "ChatCompletionResponseChoiceFinishReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponseUsagePromptTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionChunk))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ChoiceDelta>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChoiceDelta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionChunkUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionChunkUsagePromptTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChoiceDeltaDelta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ChoiceDeltaDeltaToolCall>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChoiceDeltaDeltaToolCall))]
@@ -698,6 +746,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesToolChoice), TypeInfoPropertyName = "ResponsesToolChoice2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ResponsesRequestIncludeItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesRequestIncludeItem), TypeInfoPropertyName = "ResponsesRequestIncludeItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesRequestPromptCacheOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesRequestPromptCacheOptionsMode), TypeInfoPropertyName = "ResponsesRequestPromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesRequestPromptCacheOptionsTtl), TypeInfoPropertyName = "ResponsesRequestPromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesMessageItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesReasoningItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesFunctionCallItem))]
@@ -771,6 +822,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponseIncompleteDetailsReason), TypeInfoPropertyName = "ResponsesResponseIncompleteDetailsReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponsePromptCacheOptions))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponsePromptCacheOptionsMode), TypeInfoPropertyName = "ResponsesResponsePromptCacheOptionsMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesResponsePromptCacheOptionsTtl), TypeInfoPropertyName = "ResponsesResponsePromptCacheOptionsTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputReasoningItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputMessageItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ResponsesOutputFunctionCallItem))]
@@ -886,6 +940,9 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestMetadata))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControl))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControlType), TypeInfoPropertyName = "MessagesRequestCacheControlType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestCacheControlTtl), TypeInfoPropertyName = "MessagesRequestCacheControlTtl2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigEffort), TypeInfoPropertyName = "MessagesRequestOutputConfigEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesRequestOutputConfigFormat))]
@@ -903,6 +960,7 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseContentItemToolUseType), TypeInfoPropertyName = "MessagesResponseContentItemToolUseType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseStopReason), TypeInfoPropertyName = "MessagesResponseStopReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsageCacheCreation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesResponseUsageOutputTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEvent), TypeInfoPropertyName = "MessagesStreamEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStart))]
@@ -927,6 +985,7 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaDelta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaDeltaStopReason), TypeInfoPropertyName = "MessagesStreamEventMessageDeltaDeltaStopReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsageCacheCreation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageDeltaUsageOutputTokensDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStop))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.MessagesStreamEventMessageStopType), TypeInfoPropertyName = "MessagesStreamEventMessageStopType2")]

@@ -83,6 +83,12 @@ namespace Moonshot
         public string? PromptCacheKey { get; set; }
 
         /// <summary>
+        /// Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt_cache_options")]
+        public global::Moonshot.ChatRequestCommonPromptCacheOptions? PromptCacheOptions { get; set; }
+
+        /// <summary>
         /// A stable identifier used to help detect users of your application that may be violating usage policies. The ID should be a string that uniquely identifies each user. It is recommended to hash the username or email address to avoid sending any identifying information
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("safety_identifier")]
@@ -138,6 +144,9 @@ namespace Moonshot
         /// Used to cache responses for similar requests to optimize cache hit rates. For Coding Agents, this is typically a session id or task id representing a single session; if the session is exited and later resumed, this value should remain the same. For Kimi Code Plan, this field is required to improve cache hit rates. For other agents involving multi-turn conversations, it is also recommended to implement this field<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
+        /// <param name="promptCacheOptions">
+        /// Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier
+        /// </param>
         /// <param name="safetyIdentifier">
         /// A stable identifier used to help detect users of your application that may be violating usage policies. The ID should be a string that uniquely identifies each user. It is recommended to hash the username or email address to avoid sending any identifying information
         /// </param>
@@ -158,6 +167,7 @@ namespace Moonshot
             global::Moonshot.ChatRequestCommonStreamOptions? streamOptions,
             global::System.Collections.Generic.IList<global::Moonshot.ToolDefinition>? tools,
             string? promptCacheKey,
+            global::Moonshot.ChatRequestCommonPromptCacheOptions? promptCacheOptions,
             string? safetyIdentifier,
             global::Moonshot.OneOf<global::Moonshot.ChatRequestCommonToolChoiceEnum?, global::Moonshot.ChatRequestCommonToolChoiceEnum2>? toolChoice)
         {
@@ -171,6 +181,7 @@ namespace Moonshot
             this.StreamOptions = streamOptions;
             this.Tools = tools;
             this.PromptCacheKey = promptCacheKey;
+            this.PromptCacheOptions = promptCacheOptions;
             this.SafetyIdentifier = safetyIdentifier;
             this.ToolChoice = toolChoice;
         }

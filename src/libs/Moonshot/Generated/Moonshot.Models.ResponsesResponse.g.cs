@@ -165,6 +165,12 @@ namespace Moonshot
         public object? Conversation { get; set; }
 
         /// <summary>
+        /// The context cache write options actually applied by the server. When the request omits prompt_cache_options, refer to the mode and ttl returned here
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt_cache_options")]
+        public global::Moonshot.ResponsesResponsePromptCacheOptions? PromptCacheOptions { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -223,6 +229,9 @@ namespace Moonshot
         /// <param name="conversation">
         /// Always `null`.
         /// </param>
+        /// <param name="promptCacheOptions">
+        /// The context cache write options actually applied by the server. When the request omits prompt_cache_options, refer to the mode and ttl returned here
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -251,7 +260,8 @@ namespace Moonshot
             bool? store,
             bool? background,
             string? previousResponseId,
-            object? conversation)
+            object? conversation,
+            global::Moonshot.ResponsesResponsePromptCacheOptions? promptCacheOptions)
         {
             this.Id = id;
             this.Object = @object;
@@ -278,6 +288,7 @@ namespace Moonshot
             this.Background = background;
             this.PreviousResponseId = previousResponseId;
             this.Conversation = conversation;
+            this.PromptCacheOptions = promptCacheOptions;
         }
 
         /// <summary>

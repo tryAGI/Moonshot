@@ -70,6 +70,12 @@ namespace Moonshot
         public global::Moonshot.MessagesRequestMetadata? Metadata { get; set; }
 
         /// <summary>
+        /// Context cache write options. Only effective when passed at the top level; cache_control markers inside the messages array are ignored. When omitted, the request only attempts to read the cache (5m tier) and does not write
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_control")]
+        public global::Moonshot.MessagesRequestCacheControl? CacheControl { get; set; }
+
+        /// <summary>
         /// Output configuration: reasoning effort and structured output
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_config")]
@@ -107,6 +113,9 @@ namespace Moonshot
         /// Controls whether the model calls tools. `auto` (default): the model decides; `any`: force a call to any tool; `none`: do not call tools.
         /// </param>
         /// <param name="metadata"></param>
+        /// <param name="cacheControl">
+        /// Context cache write options. Only effective when passed at the top level; cache_control markers inside the messages array are ignored. When omitted, the request only attempts to read the cache (5m tier) and does not write
+        /// </param>
         /// <param name="outputConfig">
         /// Output configuration: reasoning effort and structured output
         /// </param>
@@ -126,6 +135,7 @@ namespace Moonshot
             global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>? tools,
             global::Moonshot.MessagesToolChoice? toolChoice,
             global::Moonshot.MessagesRequestMetadata? metadata,
+            global::Moonshot.MessagesRequestCacheControl? cacheControl,
             global::Moonshot.MessagesRequestOutputConfig? outputConfig,
             global::Moonshot.MessagesRequestModel model = global::Moonshot.MessagesRequestModel.KimiK3)
         {
@@ -138,6 +148,7 @@ namespace Moonshot
             this.Tools = tools;
             this.ToolChoice = toolChoice;
             this.Metadata = metadata;
+            this.CacheControl = cacheControl;
             this.OutputConfig = outputConfig;
         }
 

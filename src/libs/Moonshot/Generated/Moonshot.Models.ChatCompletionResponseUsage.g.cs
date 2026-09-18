@@ -33,6 +33,12 @@ namespace Moonshot
         public int? CachedTokens { get; set; }
 
         /// <summary>
+        /// Breakdown of prompt tokens. cached_tokens, cache_write_tokens and the uncached remainder are mutually exclusive and sum to prompt_tokens
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt_tokens_details")]
+        public global::Moonshot.ChatCompletionResponseUsagePromptTokensDetails? PromptTokensDetails { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -53,6 +59,9 @@ namespace Moonshot
         /// <param name="cachedTokens">
         /// Number of tokens served from cache
         /// </param>
+        /// <param name="promptTokensDetails">
+        /// Breakdown of prompt tokens. cached_tokens, cache_write_tokens and the uncached remainder are mutually exclusive and sum to prompt_tokens
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -60,12 +69,14 @@ namespace Moonshot
             int? promptTokens,
             int? completionTokens,
             int? totalTokens,
-            int? cachedTokens)
+            int? cachedTokens,
+            global::Moonshot.ChatCompletionResponseUsagePromptTokensDetails? promptTokensDetails)
         {
             this.PromptTokens = promptTokens;
             this.CompletionTokens = completionTokens;
             this.TotalTokens = totalTokens;
             this.CachedTokens = cachedTokens;
+            this.PromptTokensDetails = promptTokensDetails;
         }
 
         /// <summary>

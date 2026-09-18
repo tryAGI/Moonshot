@@ -9,7 +9,7 @@ namespace Moonshot
     public sealed partial class MessagesResponseUsage
     {
         /// <summary>
-        /// Input tokens (excluding cache hits)
+        /// Input tokens (excluding cache hits and cache writes). Total input = input_tokens + cache_read_input_tokens + cache_creation_input_tokens
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("input_tokens")]
         public int? InputTokens { get; set; }
@@ -33,6 +33,12 @@ namespace Moonshot
         public int? CacheCreationInputTokens { get; set; }
 
         /// <summary>
+        /// Cache write breakdown by TTL tier
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation")]
+        public global::Moonshot.MessagesResponseUsageCacheCreation? CacheCreation { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_tokens_details")]
@@ -48,7 +54,7 @@ namespace Moonshot
         /// Initializes a new instance of the <see cref="MessagesResponseUsage" /> class.
         /// </summary>
         /// <param name="inputTokens">
-        /// Input tokens (excluding cache hits)
+        /// Input tokens (excluding cache hits and cache writes). Total input = input_tokens + cache_read_input_tokens + cache_creation_input_tokens
         /// </param>
         /// <param name="outputTokens">
         /// Output tokens (including reasoning tokens)
@@ -59,6 +65,9 @@ namespace Moonshot
         /// <param name="cacheCreationInputTokens">
         /// Input tokens written to cache
         /// </param>
+        /// <param name="cacheCreation">
+        /// Cache write breakdown by TTL tier
+        /// </param>
         /// <param name="outputTokensDetails"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -68,12 +77,14 @@ namespace Moonshot
             int? outputTokens,
             int? cacheReadInputTokens,
             int? cacheCreationInputTokens,
+            global::Moonshot.MessagesResponseUsageCacheCreation? cacheCreation,
             global::Moonshot.MessagesResponseUsageOutputTokensDetails? outputTokensDetails)
         {
             this.InputTokens = inputTokens;
             this.OutputTokens = outputTokens;
             this.CacheReadInputTokens = cacheReadInputTokens;
             this.CacheCreationInputTokens = cacheCreationInputTokens;
+            this.CacheCreation = cacheCreation;
             this.OutputTokensDetails = outputTokensDetails;
         }
 

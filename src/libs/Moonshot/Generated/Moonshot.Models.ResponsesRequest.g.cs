@@ -82,6 +82,12 @@ namespace Moonshot
         public string? PromptCacheKey { get; set; }
 
         /// <summary>
+        /// Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt_cache_options")]
+        public global::Moonshot.ResponsesRequestPromptCacheOptions? PromptCacheOptions { get; set; }
+
+        /// <summary>
         /// A stable identifier used to help detect users of your application that may be violating usage policies. The ID should be a string that uniquely identifies each user. It is recommended to hash the username or email address to avoid sending any identifying information
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("safety_identifier")]
@@ -131,6 +137,9 @@ namespace Moonshot
         /// <param name="promptCacheKey">
         /// Context cache identifier. Reusing the same value across a session improves cache hit rate.
         /// </param>
+        /// <param name="promptCacheOptions">
+        /// Context cache write options. When omitted, cache write is enabled by default (5m tier): the system automatically writes the request prefix to the 5m cache tier
+        /// </param>
         /// <param name="safetyIdentifier">
         /// A stable identifier used to help detect users of your application that may be violating usage policies. The ID should be a string that uniquely identifies each user. It is recommended to hash the username or email address to avoid sending any identifying information
         /// </param>
@@ -149,6 +158,7 @@ namespace Moonshot
             global::Moonshot.ResponsesToolChoice? toolChoice,
             global::System.Collections.Generic.IList<global::Moonshot.ResponsesRequestIncludeItem>? include,
             string? promptCacheKey,
+            global::Moonshot.ResponsesRequestPromptCacheOptions? promptCacheOptions,
             string? safetyIdentifier)
         {
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
@@ -162,6 +172,7 @@ namespace Moonshot
             this.ToolChoice = toolChoice;
             this.Include = include;
             this.PromptCacheKey = promptCacheKey;
+            this.PromptCacheOptions = promptCacheOptions;
             this.SafetyIdentifier = safetyIdentifier;
         }
 

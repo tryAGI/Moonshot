@@ -67,6 +67,7 @@ namespace Moonshot.JsonConverters
             if (__jsonProps.Contains("delta.stop_sequence")) __score4++;
             if (__jsonProps.Contains("type")) __score4++;
             if (__jsonProps.Contains("usage")) __score4++;
+            if (__jsonProps.Contains("usage.cache_creation")) __score4++;
             if (__jsonProps.Contains("usage.cache_creation_input_tokens")) __score4++;
             if (__jsonProps.Contains("usage.cache_read_input_tokens")) __score4++;
             if (__jsonProps.Contains("usage.input_tokens")) __score4++;
