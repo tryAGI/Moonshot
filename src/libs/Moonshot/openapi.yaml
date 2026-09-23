@@ -4621,7 +4621,7 @@
 		"/v1/files/{file_id}/content": {
 			"get": {
 				"summary": "Get File Content",
-				"description": "Retrieves extracted text content for files uploaded with purpose `file-extract`.",
+				"description": "Retrieves the extracted content for files uploaded with purpose `file-extract`, returned as Markdown-formatted text.",
 				"tags": [
 					"Files"
 				],
@@ -4648,7 +4648,7 @@
 							"text/plain": {
 								"schema": {
 									"type": "string",
-									"description": "Extracted file content as plain text"
+									"description": "Extracted file content as Markdown-formatted text"
 								}
 							}
 						}
