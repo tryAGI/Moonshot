@@ -43,7 +43,7 @@ namespace Moonshot
 
         /// <summary>
         /// Get File Content<br/>
-        /// Retrieves extracted text content for files uploaded with purpose `file-extract`.
+        /// Retrieves the extracted content for files uploaded with purpose `file-extract`, returned as Markdown-formatted text.
         /// </summary>
         /// <param name="fileId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -64,7 +64,7 @@ namespace Moonshot
         }
         /// <summary>
         /// Get File Content<br/>
-        /// Retrieves extracted text content for files uploaded with purpose `file-extract`.
+        /// Retrieves the extracted content for files uploaded with purpose `file-extract`, returned as Markdown-formatted text.
         /// </summary>
         /// <param name="fileId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
