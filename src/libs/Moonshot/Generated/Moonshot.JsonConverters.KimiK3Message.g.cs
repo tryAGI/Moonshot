@@ -132,13 +132,13 @@ namespace Moonshot.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.Message), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.Message?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.Message).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.StandardMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickStandardMessage(), typeInfo);
             }
             else if (value.IsDynamicToolMessage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK3DynamicToolMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK3DynamicToolMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK3DynamicToolMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DynamicToolMessage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickDynamicToolMessage(), typeInfo);
             }
         }
     }

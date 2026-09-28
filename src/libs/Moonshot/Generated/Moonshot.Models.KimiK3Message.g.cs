@@ -42,8 +42,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.Message PickStandardMessage() => IsStandardMessage
-            ? StandardMessage!
+        public global::Moonshot.Message PickStandardMessage() => StandardMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'StandardMessage' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.KimiK3DynamicToolMessage PickDynamicToolMessage() => IsDynamicToolMessage
-            ? DynamicToolMessage!
+        public global::Moonshot.KimiK3DynamicToolMessage PickDynamicToolMessage() => DynamicToolMessage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DynamicToolMessage' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsStandardMessage && standardMessage != null)
+            if (StandardMessage is { } __value0 && standardMessage != null)
             {
-                return standardMessage(StandardMessage!);
+                return standardMessage(__value0);
             }
-            else if (IsDynamicToolMessage && dynamicToolMessage != null)
+            else if (DynamicToolMessage is { } __value1 && dynamicToolMessage != null)
             {
-                return dynamicToolMessage(DynamicToolMessage!);
+                return dynamicToolMessage(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsStandardMessage)
+            if (StandardMessage is { } __value0)
             {
-                standardMessage?.Invoke(StandardMessage!);
+                standardMessage?.Invoke(__value0);
             }
-            else if (IsDynamicToolMessage)
+            else if (DynamicToolMessage is { } __value1)
             {
-                dynamicToolMessage?.Invoke(DynamicToolMessage!);
+                dynamicToolMessage?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsStandardMessage)
+            if (StandardMessage is { } __value0)
             {
-                standardMessage?.Invoke(StandardMessage!);
+                standardMessage?.Invoke(__value0);
             }
-            else if (IsDynamicToolMessage)
+            else if (DynamicToolMessage is { } __value1)
             {
-                dynamicToolMessage?.Invoke(DynamicToolMessage!);
+                dynamicToolMessage?.Invoke(__value1);
             }
         }
 

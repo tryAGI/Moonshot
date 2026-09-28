@@ -47,8 +47,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.KimiK3ChatRequest PickKimiK3() => IsKimiK3
-            ? KimiK3!.Value
+        public global::Moonshot.KimiK3ChatRequest PickKimiK3() => KimiK3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK3' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.KimiK27CodeChatRequest PickKimiK27Code() => IsKimiK27Code
-            ? KimiK27Code!.Value
+        public global::Moonshot.KimiK27CodeChatRequest PickKimiK27Code() => KimiK27Code is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK27Code' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.KimiK26ChatRequest PickKimiK26() => IsKimiK26
-            ? KimiK26!.Value
+        public global::Moonshot.KimiK26ChatRequest PickKimiK26() => KimiK26 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK26' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -250,17 +250,17 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsKimiK3 && kimiK3 != null)
+            if (KimiK3 is { } __value0 && kimiK3 != null)
             {
-                return kimiK3(KimiK3!);
+                return kimiK3(__value0);
             }
-            else if (IsKimiK27Code && kimiK27Code != null)
+            else if (KimiK27Code is { } __value1 && kimiK27Code != null)
             {
-                return kimiK27Code(KimiK27Code!);
+                return kimiK27Code(__value1);
             }
-            else if (IsKimiK26 && kimiK26 != null)
+            else if (KimiK26 is { } __value2 && kimiK26 != null)
             {
-                return kimiK26(KimiK26!);
+                return kimiK26(__value2);
             }
 
             return default(TResult);
@@ -282,17 +282,17 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsKimiK3)
+            if (KimiK3 is { } __value0)
             {
-                kimiK3?.Invoke(KimiK3!);
+                kimiK3?.Invoke(__value0);
             }
-            else if (IsKimiK27Code)
+            else if (KimiK27Code is { } __value1)
             {
-                kimiK27Code?.Invoke(KimiK27Code!);
+                kimiK27Code?.Invoke(__value1);
             }
-            else if (IsKimiK26)
+            else if (KimiK26 is { } __value2)
             {
-                kimiK26?.Invoke(KimiK26!);
+                kimiK26?.Invoke(__value2);
             }
         }
 
@@ -310,17 +310,17 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsKimiK3)
+            if (KimiK3 is { } __value0)
             {
-                kimiK3?.Invoke(KimiK3!);
+                kimiK3?.Invoke(__value0);
             }
-            else if (IsKimiK27Code)
+            else if (KimiK27Code is { } __value1)
             {
-                kimiK27Code?.Invoke(KimiK27Code!);
+                kimiK27Code?.Invoke(__value1);
             }
-            else if (IsKimiK26)
+            else if (KimiK26 is { } __value2)
             {
-                kimiK26?.Invoke(KimiK26!);
+                kimiK26?.Invoke(__value2);
             }
         }
 

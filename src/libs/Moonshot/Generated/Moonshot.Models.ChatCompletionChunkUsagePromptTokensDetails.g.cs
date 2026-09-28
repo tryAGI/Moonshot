@@ -16,7 +16,7 @@ namespace Moonshot
         public required int CachedTokens { get; set; }
 
         /// <summary>
-        /// Number of tokens written to the cache by this request. Billed according to the TTL tier at write time; see prompt_cache_options
+        /// Number of tokens written to the cache by this request. Billed according to the TTL at write time; see prompt_cache_options
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cache_write_tokens")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -35,7 +35,7 @@ namespace Moonshot
         /// Number of tokens served from cache
         /// </param>
         /// <param name="cacheWriteTokens">
-        /// Number of tokens written to the cache by this request. Billed according to the TTL tier at write time; see prompt_cache_options
+        /// Number of tokens written to the cache by this request. Billed according to the TTL at write time; see prompt_cache_options
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

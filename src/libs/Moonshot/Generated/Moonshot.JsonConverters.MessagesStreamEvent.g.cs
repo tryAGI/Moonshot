@@ -316,37 +316,37 @@ namespace Moonshot.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MessagesStreamEventMessageStart), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MessagesStreamEventMessageStart?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.MessagesStreamEventMessageStart).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MessageStart!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMessageStart(), typeInfo);
             }
             else if (value.IsContentBlockStart)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MessagesStreamEventContentBlockStart), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MessagesStreamEventContentBlockStart?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.MessagesStreamEventContentBlockStart).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ContentBlockStart!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickContentBlockStart(), typeInfo);
             }
             else if (value.IsContentBlockDelta)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MessagesStreamEventContentBlockDelta), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MessagesStreamEventContentBlockDelta?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.MessagesStreamEventContentBlockDelta).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ContentBlockDelta!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickContentBlockDelta(), typeInfo);
             }
             else if (value.IsContentBlockStop)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MessagesStreamEventContentBlockStop), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MessagesStreamEventContentBlockStop?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.MessagesStreamEventContentBlockStop).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ContentBlockStop!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickContentBlockStop(), typeInfo);
             }
             else if (value.IsMessageDelta)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MessagesStreamEventMessageDelta), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MessagesStreamEventMessageDelta?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.MessagesStreamEventMessageDelta).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MessageDelta!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMessageDelta(), typeInfo);
             }
             else if (value.IsMessageStop)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.MessagesStreamEventMessageStop), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.MessagesStreamEventMessageStop?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.MessagesStreamEventMessageStop).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.MessageStop!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMessageStop(), typeInfo);
             }
         }
     }

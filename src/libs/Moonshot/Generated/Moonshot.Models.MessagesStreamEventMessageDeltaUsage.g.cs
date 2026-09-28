@@ -33,7 +33,7 @@ namespace Moonshot
         public int? CacheCreationInputTokens { get; set; }
 
         /// <summary>
-        /// Cache write breakdown by TTL tier
+        /// Cache write breakdown by TTL
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cache_creation")]
         public global::Moonshot.MessagesStreamEventMessageDeltaUsageCacheCreation? CacheCreation { get; set; }
@@ -66,7 +66,7 @@ namespace Moonshot
         /// Input tokens written to cache
         /// </param>
         /// <param name="cacheCreation">
-        /// Cache write breakdown by TTL tier
+        /// Cache write breakdown by TTL
         /// </param>
         /// <param name="outputTokensDetails"></param>
 #if NET7_0_OR_GREATER

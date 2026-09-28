@@ -42,8 +42,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ChatRequestBase PickBase() => IsBase
-            ? Base!
+        public global::Moonshot.ChatRequestBase PickBase() => Base is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Base' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.KimiK27CodeChatRequestVariant2 PickKimiK27CodeChatRequestVariant2() => IsKimiK27CodeChatRequestVariant2
-            ? KimiK27CodeChatRequestVariant2!
+        public global::Moonshot.KimiK27CodeChatRequestVariant2 PickKimiK27CodeChatRequestVariant2() => KimiK27CodeChatRequestVariant2 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK27CodeChatRequestVariant2' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsBase && @base != null)
+            if (Base is { } __value0 && @base != null)
             {
-                return @base(Base!);
+                return @base(__value0);
             }
-            else if (IsKimiK27CodeChatRequestVariant2 && kimiK27CodeChatRequestVariant2 != null)
+            else if (KimiK27CodeChatRequestVariant2 is { } __value1 && kimiK27CodeChatRequestVariant2 != null)
             {
-                return kimiK27CodeChatRequestVariant2(KimiK27CodeChatRequestVariant2!);
+                return kimiK27CodeChatRequestVariant2(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsBase)
+            if (Base is { } __value0)
             {
-                @base?.Invoke(Base!);
+                @base?.Invoke(__value0);
             }
-            else if (IsKimiK27CodeChatRequestVariant2)
+            else if (KimiK27CodeChatRequestVariant2 is { } __value1)
             {
-                kimiK27CodeChatRequestVariant2?.Invoke(KimiK27CodeChatRequestVariant2!);
+                kimiK27CodeChatRequestVariant2?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsBase)
+            if (Base is { } __value0)
             {
-                @base?.Invoke(Base!);
+                @base?.Invoke(__value0);
             }
-            else if (IsKimiK27CodeChatRequestVariant2)
+            else if (KimiK27CodeChatRequestVariant2 is { } __value1)
             {
-                kimiK27CodeChatRequestVariant2?.Invoke(KimiK27CodeChatRequestVariant2!);
+                kimiK27CodeChatRequestVariant2?.Invoke(__value1);
             }
         }
 

@@ -42,8 +42,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageStart PickMessageStart() => IsMessageStart
-            ? MessageStart!
+        public global::Moonshot.MessagesStreamEventMessageStart PickMessageStart() => MessageStart is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageStart' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStart PickContentBlockStart() => IsContentBlockStart
-            ? ContentBlockStart!
+        public global::Moonshot.MessagesStreamEventContentBlockStart PickContentBlockStart() => ContentBlockStart is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ContentBlockStart' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockDelta PickContentBlockDelta() => IsContentBlockDelta
-            ? ContentBlockDelta!
+        public global::Moonshot.MessagesStreamEventContentBlockDelta PickContentBlockDelta() => ContentBlockDelta is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ContentBlockDelta' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventContentBlockStop PickContentBlockStop() => IsContentBlockStop
-            ? ContentBlockStop!
+        public global::Moonshot.MessagesStreamEventContentBlockStop PickContentBlockStop() => ContentBlockStop is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ContentBlockStop' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageDelta PickMessageDelta() => IsMessageDelta
-            ? MessageDelta!
+        public global::Moonshot.MessagesStreamEventMessageDelta PickMessageDelta() => MessageDelta is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageDelta' but the value was {ToString()}.");
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.MessagesStreamEventMessageStop PickMessageStop() => IsMessageStop
-            ? MessageStop!
+        public global::Moonshot.MessagesStreamEventMessageStop PickMessageStop() => MessageStop is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MessageStop' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -437,29 +437,29 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsMessageStart && messageStart != null)
+            if (MessageStart is { } __value0 && messageStart != null)
             {
-                return messageStart(MessageStart!);
+                return messageStart(__value0);
             }
-            else if (IsContentBlockStart && contentBlockStart != null)
+            else if (ContentBlockStart is { } __value1 && contentBlockStart != null)
             {
-                return contentBlockStart(ContentBlockStart!);
+                return contentBlockStart(__value1);
             }
-            else if (IsContentBlockDelta && contentBlockDelta != null)
+            else if (ContentBlockDelta is { } __value2 && contentBlockDelta != null)
             {
-                return contentBlockDelta(ContentBlockDelta!);
+                return contentBlockDelta(__value2);
             }
-            else if (IsContentBlockStop && contentBlockStop != null)
+            else if (ContentBlockStop is { } __value3 && contentBlockStop != null)
             {
-                return contentBlockStop(ContentBlockStop!);
+                return contentBlockStop(__value3);
             }
-            else if (IsMessageDelta && messageDelta != null)
+            else if (MessageDelta is { } __value4 && messageDelta != null)
             {
-                return messageDelta(MessageDelta!);
+                return messageDelta(__value4);
             }
-            else if (IsMessageStop && messageStop != null)
+            else if (MessageStop is { } __value5 && messageStop != null)
             {
-                return messageStop(MessageStop!);
+                return messageStop(__value5);
             }
 
             return default(TResult);
@@ -487,29 +487,29 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsMessageStart)
+            if (MessageStart is { } __value0)
             {
-                messageStart?.Invoke(MessageStart!);
+                messageStart?.Invoke(__value0);
             }
-            else if (IsContentBlockStart)
+            else if (ContentBlockStart is { } __value1)
             {
-                contentBlockStart?.Invoke(ContentBlockStart!);
+                contentBlockStart?.Invoke(__value1);
             }
-            else if (IsContentBlockDelta)
+            else if (ContentBlockDelta is { } __value2)
             {
-                contentBlockDelta?.Invoke(ContentBlockDelta!);
+                contentBlockDelta?.Invoke(__value2);
             }
-            else if (IsContentBlockStop)
+            else if (ContentBlockStop is { } __value3)
             {
-                contentBlockStop?.Invoke(ContentBlockStop!);
+                contentBlockStop?.Invoke(__value3);
             }
-            else if (IsMessageDelta)
+            else if (MessageDelta is { } __value4)
             {
-                messageDelta?.Invoke(MessageDelta!);
+                messageDelta?.Invoke(__value4);
             }
-            else if (IsMessageStop)
+            else if (MessageStop is { } __value5)
             {
-                messageStop?.Invoke(MessageStop!);
+                messageStop?.Invoke(__value5);
             }
         }
 
@@ -530,29 +530,29 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsMessageStart)
+            if (MessageStart is { } __value0)
             {
-                messageStart?.Invoke(MessageStart!);
+                messageStart?.Invoke(__value0);
             }
-            else if (IsContentBlockStart)
+            else if (ContentBlockStart is { } __value1)
             {
-                contentBlockStart?.Invoke(ContentBlockStart!);
+                contentBlockStart?.Invoke(__value1);
             }
-            else if (IsContentBlockDelta)
+            else if (ContentBlockDelta is { } __value2)
             {
-                contentBlockDelta?.Invoke(ContentBlockDelta!);
+                contentBlockDelta?.Invoke(__value2);
             }
-            else if (IsContentBlockStop)
+            else if (ContentBlockStop is { } __value3)
             {
-                contentBlockStop?.Invoke(ContentBlockStop!);
+                contentBlockStop?.Invoke(__value3);
             }
-            else if (IsMessageDelta)
+            else if (MessageDelta is { } __value4)
             {
-                messageDelta?.Invoke(MessageDelta!);
+                messageDelta?.Invoke(__value4);
             }
-            else if (IsMessageStop)
+            else if (MessageStop is { } __value5)
             {
-                messageStop?.Invoke(MessageStop!);
+                messageStop?.Invoke(__value5);
             }
         }
 
