@@ -924,7 +924,7 @@
 									},
 									"cache_write_tokens": {
 										"type": "integer",
-										"description": "Number of tokens written to the cache by this request. Billed according to the TTL tier at write time; see prompt_cache_options"
+										"description": "Number of tokens written to the cache by this request. Billed according to the TTL at write time; see prompt_cache_options"
 									}
 								},
 								"required": [
@@ -996,7 +996,7 @@
 									},
 									"cache_write_tokens": {
 										"type": "integer",
-										"description": "Number of tokens written to the cache by this request. Billed according to the TTL tier at write time; see prompt_cache_options"
+										"description": "Number of tokens written to the cache by this request. Billed according to the TTL at write time; see prompt_cache_options"
 									}
 								},
 								"required": [
@@ -3865,7 +3865,7 @@
 							},
 							"cache_creation": {
 								"type": "object",
-								"description": "Cache write breakdown by TTL tier",
+								"description": "Cache write breakdown by TTL",
 								"properties": {
 									"ephemeral_5m_input_tokens": {
 										"type": "integer",
@@ -4136,7 +4136,7 @@
 									},
 									"cache_creation": {
 										"type": "object",
-										"description": "Cache write breakdown by TTL tier",
+										"description": "Cache write breakdown by TTL",
 										"properties": {
 											"ephemeral_5m_input_tokens": {
 												"type": "integer",

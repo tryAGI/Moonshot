@@ -42,8 +42,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesInputContentPartInputText PickInputText() => IsInputText
-            ? InputText!
+        public global::Moonshot.ResponsesInputContentPartInputText PickInputText() => InputText is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputText' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesInputContentPartInputImage PickInputImage() => IsInputImage
-            ? InputImage!
+        public global::Moonshot.ResponsesInputContentPartInputImage PickInputImage() => InputImage is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'InputImage' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesInputContentPartOutputText PickOutputText() => IsOutputText
-            ? OutputText!
+        public global::Moonshot.ResponsesInputContentPartOutputText PickOutputText() => OutputText is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OutputText' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsInputText && inputText != null)
+            if (InputText is { } __value0 && inputText != null)
             {
-                return inputText(InputText!);
+                return inputText(__value0);
             }
-            else if (IsInputImage && inputImage != null)
+            else if (InputImage is { } __value1 && inputImage != null)
             {
-                return inputImage(InputImage!);
+                return inputImage(__value1);
             }
-            else if (IsOutputText && outputText != null)
+            else if (OutputText is { } __value2 && outputText != null)
             {
-                return outputText(OutputText!);
+                return outputText(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsInputText)
+            if (InputText is { } __value0)
             {
-                inputText?.Invoke(InputText!);
+                inputText?.Invoke(__value0);
             }
-            else if (IsInputImage)
+            else if (InputImage is { } __value1)
             {
-                inputImage?.Invoke(InputImage!);
+                inputImage?.Invoke(__value1);
             }
-            else if (IsOutputText)
+            else if (OutputText is { } __value2)
             {
-                outputText?.Invoke(OutputText!);
+                outputText?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsInputText)
+            if (InputText is { } __value0)
             {
-                inputText?.Invoke(InputText!);
+                inputText?.Invoke(__value0);
             }
-            else if (IsInputImage)
+            else if (InputImage is { } __value1)
             {
-                inputImage?.Invoke(InputImage!);
+                inputImage?.Invoke(__value1);
             }
-            else if (IsOutputText)
+            else if (OutputText is { } __value2)
             {
-                outputText?.Invoke(OutputText!);
+                outputText?.Invoke(__value2);
             }
         }
 

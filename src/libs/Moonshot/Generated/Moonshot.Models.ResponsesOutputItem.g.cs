@@ -47,8 +47,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesOutputReasoningItem PickReasoning() => IsReasoning
-            ? Reasoning!
+        public global::Moonshot.ResponsesOutputReasoningItem PickReasoning() => Reasoning is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Reasoning' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesOutputMessageItem PickMessage() => IsMessage
-            ? Message!
+        public global::Moonshot.ResponsesOutputMessageItem PickMessage() => Message is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Message' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesOutputFunctionCallItem PickFunctionCall() => IsFunctionCall
-            ? FunctionCall!
+        public global::Moonshot.ResponsesOutputFunctionCallItem PickFunctionCall() => FunctionCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FunctionCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -158,8 +158,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesOutputCustomToolCallItem PickCustomToolCall() => IsCustomToolCall
-            ? CustomToolCall!
+        public global::Moonshot.ResponsesOutputCustomToolCallItem PickCustomToolCall() => CustomToolCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CustomToolCall' but the value was {ToString()}.");
 
         /// <summary>
@@ -195,8 +195,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesOutputWebSearchCallItem PickWebSearchCall() => IsWebSearchCall
-            ? WebSearchCall!
+        public global::Moonshot.ResponsesOutputWebSearchCallItem PickWebSearchCall() => WebSearchCall is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearchCall' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -380,25 +380,25 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsReasoning && reasoning != null)
+            if (Reasoning is { } __value0 && reasoning != null)
             {
-                return reasoning(Reasoning!);
+                return reasoning(__value0);
             }
-            else if (IsMessage && message != null)
+            else if (Message is { } __value1 && message != null)
             {
-                return message(Message!);
+                return message(__value1);
             }
-            else if (IsFunctionCall && functionCall != null)
+            else if (FunctionCall is { } __value2 && functionCall != null)
             {
-                return functionCall(FunctionCall!);
+                return functionCall(__value2);
             }
-            else if (IsCustomToolCall && customToolCall != null)
+            else if (CustomToolCall is { } __value3 && customToolCall != null)
             {
-                return customToolCall(CustomToolCall!);
+                return customToolCall(__value3);
             }
-            else if (IsWebSearchCall && webSearchCall != null)
+            else if (WebSearchCall is { } __value4 && webSearchCall != null)
             {
-                return webSearchCall(WebSearchCall!);
+                return webSearchCall(__value4);
             }
 
             return default(TResult);
@@ -424,25 +424,25 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsReasoning)
+            if (Reasoning is { } __value0)
             {
-                reasoning?.Invoke(Reasoning!);
+                reasoning?.Invoke(__value0);
             }
-            else if (IsMessage)
+            else if (Message is { } __value1)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value1);
             }
-            else if (IsFunctionCall)
+            else if (FunctionCall is { } __value2)
             {
-                functionCall?.Invoke(FunctionCall!);
+                functionCall?.Invoke(__value2);
             }
-            else if (IsCustomToolCall)
+            else if (CustomToolCall is { } __value3)
             {
-                customToolCall?.Invoke(CustomToolCall!);
+                customToolCall?.Invoke(__value3);
             }
-            else if (IsWebSearchCall)
+            else if (WebSearchCall is { } __value4)
             {
-                webSearchCall?.Invoke(WebSearchCall!);
+                webSearchCall?.Invoke(__value4);
             }
         }
 
@@ -462,25 +462,25 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsReasoning)
+            if (Reasoning is { } __value0)
             {
-                reasoning?.Invoke(Reasoning!);
+                reasoning?.Invoke(__value0);
             }
-            else if (IsMessage)
+            else if (Message is { } __value1)
             {
-                message?.Invoke(Message!);
+                message?.Invoke(__value1);
             }
-            else if (IsFunctionCall)
+            else if (FunctionCall is { } __value2)
             {
-                functionCall?.Invoke(FunctionCall!);
+                functionCall?.Invoke(__value2);
             }
-            else if (IsCustomToolCall)
+            else if (CustomToolCall is { } __value3)
             {
-                customToolCall?.Invoke(CustomToolCall!);
+                customToolCall?.Invoke(__value3);
             }
-            else if (IsWebSearchCall)
+            else if (WebSearchCall is { } __value4)
             {
-                webSearchCall?.Invoke(WebSearchCall!);
+                webSearchCall?.Invoke(__value4);
             }
         }
 

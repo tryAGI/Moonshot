@@ -47,8 +47,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesFunctionTool PickFunction() => IsFunction
-            ? Function!
+        public global::Moonshot.ResponsesFunctionTool PickFunction() => Function is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Function' but the value was {ToString()}.");
 
         /// <summary>
@@ -84,8 +84,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesCustomTool PickCustom() => IsCustom
-            ? Custom!
+        public global::Moonshot.ResponsesCustomTool PickCustom() => Custom is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Custom' but the value was {ToString()}.");
 
         /// <summary>
@@ -121,8 +121,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesNamespaceTool PickNamespace() => IsNamespace
-            ? Namespace!
+        public global::Moonshot.ResponsesNamespaceTool PickNamespace() => Namespace is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Namespace' but the value was {ToString()}.");
 
         /// <summary>
@@ -158,8 +158,8 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ResponsesWebSearchTool PickWebSearch() => IsWebSearch
-            ? WebSearch!
+        public global::Moonshot.ResponsesWebSearchTool PickWebSearch() => WebSearch is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'WebSearch' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -315,21 +315,21 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsFunction && function != null)
+            if (Function is { } __value0 && function != null)
             {
-                return function(Function!);
+                return function(__value0);
             }
-            else if (IsCustom && custom != null)
+            else if (Custom is { } __value1 && custom != null)
             {
-                return custom(Custom!);
+                return custom(__value1);
             }
-            else if (IsNamespace && @namespace != null)
+            else if (Namespace is { } __value2 && @namespace != null)
             {
-                return @namespace(Namespace!);
+                return @namespace(__value2);
             }
-            else if (IsWebSearch && webSearch != null)
+            else if (WebSearch is { } __value3 && webSearch != null)
             {
-                return webSearch(WebSearch!);
+                return webSearch(__value3);
             }
 
             return default(TResult);
@@ -353,21 +353,21 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsFunction)
+            if (Function is { } __value0)
             {
-                function?.Invoke(Function!);
+                function?.Invoke(__value0);
             }
-            else if (IsCustom)
+            else if (Custom is { } __value1)
             {
-                custom?.Invoke(Custom!);
+                custom?.Invoke(__value1);
             }
-            else if (IsNamespace)
+            else if (Namespace is { } __value2)
             {
-                @namespace?.Invoke(Namespace!);
+                @namespace?.Invoke(__value2);
             }
-            else if (IsWebSearch)
+            else if (WebSearch is { } __value3)
             {
-                webSearch?.Invoke(WebSearch!);
+                webSearch?.Invoke(__value3);
             }
         }
 
@@ -386,21 +386,21 @@ namespace Moonshot
                 Validate();
             }
 
-            if (IsFunction)
+            if (Function is { } __value0)
             {
-                function?.Invoke(Function!);
+                function?.Invoke(__value0);
             }
-            else if (IsCustom)
+            else if (Custom is { } __value1)
             {
-                custom?.Invoke(Custom!);
+                custom?.Invoke(__value1);
             }
-            else if (IsNamespace)
+            else if (Namespace is { } __value2)
             {
-                @namespace?.Invoke(Namespace!);
+                @namespace?.Invoke(__value2);
             }
-            else if (IsWebSearch)
+            else if (WebSearch is { } __value3)
             {
-                webSearch?.Invoke(WebSearch!);
+                webSearch?.Invoke(__value3);
             }
         }
 

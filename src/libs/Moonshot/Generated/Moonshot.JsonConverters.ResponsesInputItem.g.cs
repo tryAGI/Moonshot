@@ -396,49 +396,49 @@ namespace Moonshot.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesMessageItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesMessageItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesMessageItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Message!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickMessage(), typeInfo);
             }
             else if (value.IsReasoning)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesReasoningItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesReasoningItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesReasoningItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Reasoning!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickReasoning(), typeInfo);
             }
             else if (value.IsFunctionCall)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesFunctionCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesFunctionCallItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesFunctionCallItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionCall!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickFunctionCall(), typeInfo);
             }
             else if (value.IsFunctionCallOutput)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesFunctionCallOutputItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesFunctionCallOutputItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesFunctionCallOutputItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.FunctionCallOutput!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickFunctionCallOutput(), typeInfo);
             }
             else if (value.IsCustomToolCall)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesCustomToolCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesCustomToolCallItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesCustomToolCallItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CustomToolCall!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickCustomToolCall(), typeInfo);
             }
             else if (value.IsCustomToolCallOutput)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesCustomToolCallOutputItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesCustomToolCallOutputItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesCustomToolCallOutputItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CustomToolCallOutput!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickCustomToolCallOutput(), typeInfo);
             }
             else if (value.IsWebSearchCall)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesWebSearchCallItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesWebSearchCallItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesWebSearchCallItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WebSearchCall!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickWebSearchCall(), typeInfo);
             }
             else if (value.IsAdditionalTools)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesAdditionalToolsItem), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesAdditionalToolsItem?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesAdditionalToolsItem).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AdditionalTools!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickAdditionalTools(), typeInfo);
             }
         }
     }

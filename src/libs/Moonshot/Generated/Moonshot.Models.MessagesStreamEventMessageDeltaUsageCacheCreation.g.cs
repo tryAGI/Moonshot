@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Cache write breakdown by TTL tier
+    /// Cache write breakdown by TTL
     /// </summary>
     public sealed partial class MessagesStreamEventMessageDeltaUsageCacheCreation
     {

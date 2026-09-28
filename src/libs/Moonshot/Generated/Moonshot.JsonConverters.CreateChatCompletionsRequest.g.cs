@@ -68,19 +68,19 @@ namespace Moonshot.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK3ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK3ChatRequest> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK3ChatRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK3!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickKimiK3(), typeInfo);
             }
             else if (value.IsKimiK27Code)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK27CodeChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK27CodeChatRequest> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK27CodeChatRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK27Code!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickKimiK27Code(), typeInfo);
             }
             else if (value.IsKimiK26)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK26ChatRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK26ChatRequest> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK26ChatRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.KimiK26!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickKimiK26(), typeInfo);
             }
         }
     }

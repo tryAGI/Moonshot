@@ -70,7 +70,7 @@ namespace Moonshot.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ChatRequestBase), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ChatRequestBase?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ChatRequestBase).Name}");
-                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.Base!, typeInfo);
+                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickBase(), typeInfo);
                 if (__element0.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");
@@ -88,7 +88,7 @@ namespace Moonshot.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK26ChatRequestVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK26ChatRequestVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK26ChatRequestVariant2).Name}");
-                var __element1 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.KimiK26ChatRequestVariant2!, typeInfo);
+                var __element1 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickKimiK26ChatRequestVariant2(), typeInfo);
                 if (__element1.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");

@@ -170,19 +170,19 @@ namespace Moonshot.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesInputContentPartInputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesInputContentPartInputText?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesInputContentPartInputText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.InputText!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickInputText(), typeInfo);
             }
             else if (value.IsInputImage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesInputContentPartInputImage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesInputContentPartInputImage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesInputContentPartInputImage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.InputImage!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickInputImage(), typeInfo);
             }
             else if (value.IsOutputText)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ResponsesInputContentPartOutputText), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ResponsesInputContentPartOutputText?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ResponsesInputContentPartOutputText).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OutputText!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickOutputText(), typeInfo);
             }
         }
     }
