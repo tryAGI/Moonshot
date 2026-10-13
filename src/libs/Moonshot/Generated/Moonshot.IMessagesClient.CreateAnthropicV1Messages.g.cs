@@ -69,7 +69,7 @@ namespace Moonshot
         /// </param>
         /// <param name="metadata"></param>
         /// <param name="cacheControl">
-        /// Context cache write options. Only effective when passed at the top level; cache_control markers inside the messages array are ignored. When omitted, the request only attempts to read the cache (5m tier) and does not write
+        /// Context cache write options. Only effective when passed at the top level; cache_control markers inside the messages array are ignored. When omitted, cache reads and writes use the 5m TTL by default
         /// </param>
         /// <param name="outputConfig">
         /// Output configuration: reasoning effort and structured output
