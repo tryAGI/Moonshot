@@ -34,14 +34,14 @@ namespace Moonshot
         /// <inheritdoc/>
         public global::Moonshot.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Moonshot.BillingSourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext>? JsonSerializerContextProvider { get; set; }
 
         /// <summary>
         ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
-            get => JsonSerializerContextProvider.Value;
+            get => JsonSerializerContextProvider?.Value ?? global::Moonshot.BillingSourceGenerationContext.Default;
             set => JsonSerializerContextProvider = new(() => value);
         }
 
