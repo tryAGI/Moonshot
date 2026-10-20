@@ -31,6 +31,10 @@ namespace Moonshot.JsonConverters
             catch (global::System.InvalidOperationException)
             {
             }
+            catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+            {
+                // Legacy enum converters signal an incompatible JSON token with this exception.
+            }
 
             global::Moonshot.KimiK26ChatRequestVariant2? kimiK26ChatRequestVariant2 = default;
             try
@@ -44,6 +48,10 @@ namespace Moonshot.JsonConverters
             }
             catch (global::System.InvalidOperationException)
             {
+            }
+            catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+            {
+                // Legacy enum converters signal an incompatible JSON token with this exception.
             }
             var __value = new global::Moonshot.KimiK26ChatRequest(
                 @base,
