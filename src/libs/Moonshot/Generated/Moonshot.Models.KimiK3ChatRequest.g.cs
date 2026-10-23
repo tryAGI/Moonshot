@@ -13,38 +13,38 @@ namespace Moonshot
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Moonshot.ChatRequestCommon? Common { get; init; }
+        public global::Moonshot.KimiK3ChatRequestBase? Base { get; init; }
 #else
-        public global::Moonshot.ChatRequestCommon? Common { get; }
+        public global::Moonshot.KimiK3ChatRequestBase? Base { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Common))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Base))]
 #endif
-        public bool IsCommon => Common != null;
+        public bool IsBase => Base != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickCommon(
+        public bool TryPickBase(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Moonshot.ChatRequestCommon? value)
+            out global::Moonshot.KimiK3ChatRequestBase? value)
         {
-            value = Common;
-            return IsCommon;
+            value = Base;
+            return IsBase;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Moonshot.ChatRequestCommon PickCommon() => Common is { } value
+        public global::Moonshot.KimiK3ChatRequestBase PickBase() => Base is { } value
             ? value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'Common' but the value was {ToString()}.");
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Base' but the value was {ToString()}.");
 
         /// <summary>
         ///
@@ -85,25 +85,25 @@ namespace Moonshot
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator KimiK3ChatRequest(global::Moonshot.ChatRequestCommon value) => new KimiK3ChatRequest((global::Moonshot.ChatRequestCommon?)value);
+        public static implicit operator KimiK3ChatRequest(global::Moonshot.KimiK3ChatRequestBase value) => new KimiK3ChatRequest((global::Moonshot.KimiK3ChatRequestBase?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Moonshot.ChatRequestCommon?(KimiK3ChatRequest @this) => @this.Common;
+        public static implicit operator global::Moonshot.KimiK3ChatRequestBase?(KimiK3ChatRequest @this) => @this.Base;
 
         /// <summary>
         ///
         /// </summary>
-        public KimiK3ChatRequest(global::Moonshot.ChatRequestCommon? value)
+        public KimiK3ChatRequest(global::Moonshot.KimiK3ChatRequestBase? value)
         {
-            Common = value;
+            Base = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static KimiK3ChatRequest FromCommon(global::Moonshot.ChatRequestCommon? value) => new KimiK3ChatRequest(value);
+        public static KimiK3ChatRequest FromBase(global::Moonshot.KimiK3ChatRequestBase? value) => new KimiK3ChatRequest(value);
 
         /// <summary>
         ///
@@ -132,11 +132,11 @@ namespace Moonshot
         ///
         /// </summary>
         public KimiK3ChatRequest(
-            global::Moonshot.ChatRequestCommon? common,
+            global::Moonshot.KimiK3ChatRequestBase? @base,
             global::Moonshot.KimiK3ChatRequestVariant2? kimiK3ChatRequestVariant2
             )
         {
-            Common = common;
+            Base = @base;
             KimiK3ChatRequestVariant2 = kimiK3ChatRequestVariant2;
         }
 
@@ -145,14 +145,14 @@ namespace Moonshot
         /// </summary>
         public object? Object =>
             KimiK3ChatRequestVariant2 as object ??
-            Common as object
+            Base as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            Common?.ToString() ??
+            Base?.ToString() ??
             KimiK3ChatRequestVariant2?.ToString()
             ;
 
@@ -161,14 +161,14 @@ namespace Moonshot
         /// </summary>
         public bool Validate()
         {
-            return IsCommon && IsKimiK3ChatRequestVariant2;
+            return IsBase && IsKimiK3ChatRequestVariant2;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Moonshot.ChatRequestCommon, TResult>? common = null,
+            global::System.Func<global::Moonshot.KimiK3ChatRequestBase?, TResult>? @base = null,
             global::System.Func<global::Moonshot.KimiK3ChatRequestVariant2, TResult>? kimiK3ChatRequestVariant2 = null,
             bool validate = true)
         {
@@ -177,9 +177,9 @@ namespace Moonshot
                 Validate();
             }
 
-            if (Common is { } __value0 && common != null)
+            if (Base is { } __value0 && @base != null)
             {
-                return common(__value0);
+                return @base(__value0);
             }
             else if (KimiK3ChatRequestVariant2 is { } __value1 && kimiK3ChatRequestVariant2 != null)
             {
@@ -193,7 +193,7 @@ namespace Moonshot
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::Moonshot.ChatRequestCommon>? common = null,
+            global::System.Action<global::Moonshot.KimiK3ChatRequestBase?>? @base = null,
 
             global::System.Action<global::Moonshot.KimiK3ChatRequestVariant2>? kimiK3ChatRequestVariant2 = null,
             bool validate = true)
@@ -203,9 +203,9 @@ namespace Moonshot
                 Validate();
             }
 
-            if (Common is { } __value0)
+            if (Base is { } __value0)
             {
-                common?.Invoke(__value0);
+                @base?.Invoke(__value0);
             }
             else if (KimiK3ChatRequestVariant2 is { } __value1)
             {
@@ -217,7 +217,7 @@ namespace Moonshot
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::Moonshot.ChatRequestCommon>? common = null,
+            global::System.Action<global::Moonshot.KimiK3ChatRequestBase?>? @base = null,
             global::System.Action<global::Moonshot.KimiK3ChatRequestVariant2>? kimiK3ChatRequestVariant2 = null,
             bool validate = true)
         {
@@ -226,9 +226,9 @@ namespace Moonshot
                 Validate();
             }
 
-            if (Common is { } __value0)
+            if (Base is { } __value0)
             {
-                common?.Invoke(__value0);
+                @base?.Invoke(__value0);
             }
             else if (KimiK3ChatRequestVariant2 is { } __value1)
             {
@@ -243,8 +243,8 @@ namespace Moonshot
         {
             var fields = new object?[]
             {
-                Common,
-                typeof(global::Moonshot.ChatRequestCommon),
+                Base,
+                typeof(global::Moonshot.KimiK3ChatRequestBase),
                 KimiK3ChatRequestVariant2,
                 typeof(global::Moonshot.KimiK3ChatRequestVariant2),
             };
@@ -263,7 +263,7 @@ namespace Moonshot
         public bool Equals(KimiK3ChatRequest other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Moonshot.ChatRequestCommon?>.Default.Equals(Common, other.Common) &&
+                global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK3ChatRequestBase?>.Default.Equals(Base, other.Base) &&
                 global::System.Collections.Generic.EqualityComparer<global::Moonshot.KimiK3ChatRequestVariant2?>.Default.Equals(KimiK3ChatRequestVariant2, other.KimiK3ChatRequestVariant2)
                 ;
         }

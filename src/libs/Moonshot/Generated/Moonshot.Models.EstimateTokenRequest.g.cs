@@ -10,13 +10,13 @@ namespace Moonshot
     {
         /// <summary>
         /// Model ID<br/>
-        /// Default Value: kimi-k3
+        /// Default Value: kimi-k3.1-pro
         /// </summary>
-        /// <default>global::Moonshot.EstimateTokenRequestModel.KimiK3</default>
+        /// <default>global::Moonshot.EstimateTokenRequestModel.KimiK31Pro</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Moonshot.JsonConverters.EstimateTokenRequestModelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Moonshot.EstimateTokenRequestModel Model { get; set; } = global::Moonshot.EstimateTokenRequestModel.KimiK3;
+        public required global::Moonshot.EstimateTokenRequestModel Model { get; set; } = global::Moonshot.EstimateTokenRequestModel.KimiK31Pro;
 
         /// <summary>
         /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty
@@ -36,7 +36,7 @@ namespace Moonshot
         /// </summary>
         /// <param name="model">
         /// Model ID<br/>
-        /// Default Value: kimi-k3
+        /// Default Value: kimi-k3.1-pro
         /// </param>
         /// <param name="messages">
         /// A list of messages in the conversation so far. Each element has the format {"role": "user", "content": "Hello"}. role supports system, user, assistant, or tool. content must not be empty

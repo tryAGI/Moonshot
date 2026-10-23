@@ -24,6 +24,14 @@ namespace Moonshot
         ///
         /// </summary>
         KimiK3,
+        /// <summary>
+        ///
+        /// </summary>
+        KimiK31Pro,
+        /// <summary>
+        ///
+        /// </summary>
+        KimiK31ProHighspeed,
     }
 
     /// <summary>
@@ -42,6 +50,8 @@ namespace Moonshot
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code => "kimi-k2.7-code",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK27CodeHighspeed => "kimi-k2.7-code-highspeed",
                 CreateChatCompletionsRequestDiscriminatorModel.KimiK3 => "kimi-k3",
+                CreateChatCompletionsRequestDiscriminatorModel.KimiK31Pro => "kimi-k3.1-pro",
+                CreateChatCompletionsRequestDiscriminatorModel.KimiK31ProHighspeed => "kimi-k3.1-pro-highspeed",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -56,6 +66,8 @@ namespace Moonshot
                 "kimi-k2.7-code" => CreateChatCompletionsRequestDiscriminatorModel.KimiK27Code,
                 "kimi-k2.7-code-highspeed" => CreateChatCompletionsRequestDiscriminatorModel.KimiK27CodeHighspeed,
                 "kimi-k3" => CreateChatCompletionsRequestDiscriminatorModel.KimiK3,
+                "kimi-k3.1-pro" => CreateChatCompletionsRequestDiscriminatorModel.KimiK31Pro,
+                "kimi-k3.1-pro-highspeed" => CreateChatCompletionsRequestDiscriminatorModel.KimiK31ProHighspeed,
                 _ => null,
             };
         }

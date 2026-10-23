@@ -4,8 +4,8 @@
 namespace Moonshot
 {
     /// <summary>
-    /// Model ID<br/>
-    /// Default Value: kimi-k3
+    /// ID of the model to use. This endpoint currently supports `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`.<br/>
+    /// Default Value: kimi-k3.1-pro
     /// </summary>
     public enum MessagesRequestModel
     {
@@ -13,6 +13,14 @@ namespace Moonshot
         ///
         /// </summary>
         KimiK3,
+        /// <summary>
+        ///
+        /// </summary>
+        KimiK31Pro,
+        /// <summary>
+        ///
+        /// </summary>
+        KimiK31ProHighspeed,
     }
 
     /// <summary>
@@ -28,6 +36,8 @@ namespace Moonshot
             return value switch
             {
                 MessagesRequestModel.KimiK3 => "kimi-k3",
+                MessagesRequestModel.KimiK31Pro => "kimi-k3.1-pro",
+                MessagesRequestModel.KimiK31ProHighspeed => "kimi-k3.1-pro-highspeed",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -39,6 +49,8 @@ namespace Moonshot
             return value switch
             {
                 "kimi-k3" => MessagesRequestModel.KimiK3,
+                "kimi-k3.1-pro" => MessagesRequestModel.KimiK31Pro,
+                "kimi-k3.1-pro-highspeed" => MessagesRequestModel.KimiK31ProHighspeed,
                 _ => null,
             };
         }

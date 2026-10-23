@@ -9,13 +9,14 @@ namespace Moonshot
     public sealed partial class MessagesRequest
     {
         /// <summary>
-        /// Model ID<br/>
-        /// Default Value: kimi-k3
+        /// ID of the model to use. This endpoint currently supports `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`.<br/>
+        /// Default Value: kimi-k3.1-pro
         /// </summary>
-        /// <default>global::Moonshot.MessagesRequestModel.KimiK3</default>
+        /// <default>global::Moonshot.MessagesRequestModel.KimiK31Pro</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Moonshot.JsonConverters.MessagesRequestModelJsonConverter))]
-        public global::Moonshot.MessagesRequestModel Model { get; set; } = global::Moonshot.MessagesRequestModel.KimiK3;
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Moonshot.MessagesRequestModel Model { get; set; } = global::Moonshot.MessagesRequestModel.KimiK31Pro;
 
         /// <summary>
         /// The conversation messages. If the last message is from the assistant, the model continues from that content (Partial Mode).
@@ -90,6 +91,10 @@ namespace Moonshot
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagesRequest" /> class.
         /// </summary>
+        /// <param name="model">
+        /// ID of the model to use. This endpoint currently supports `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`.<br/>
+        /// Default Value: kimi-k3.1-pro
+        /// </param>
         /// <param name="messages">
         /// The conversation messages. If the last message is from the assistant, the model continues from that content (Partial Mode).
         /// </param>
@@ -119,14 +124,11 @@ namespace Moonshot
         /// <param name="outputConfig">
         /// Output configuration: reasoning effort and structured output
         /// </param>
-        /// <param name="model">
-        /// Model ID<br/>
-        /// Default Value: kimi-k3
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MessagesRequest(
+            global::Moonshot.MessagesRequestModel model,
             global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam> messages,
             int maxTokens,
             global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>? system,
@@ -136,8 +138,7 @@ namespace Moonshot
             global::Moonshot.MessagesToolChoice? toolChoice,
             global::Moonshot.MessagesRequestMetadata? metadata,
             global::Moonshot.MessagesRequestCacheControl? cacheControl,
-            global::Moonshot.MessagesRequestOutputConfig? outputConfig,
-            global::Moonshot.MessagesRequestModel model = global::Moonshot.MessagesRequestModel.KimiK3)
+            global::Moonshot.MessagesRequestOutputConfig? outputConfig)
         {
             this.Model = model;
             this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));

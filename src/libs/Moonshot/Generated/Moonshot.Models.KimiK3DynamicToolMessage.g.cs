@@ -4,7 +4,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// A Kimi K3 dynamic tool loading message. This message must use the system role, declares tools available to subsequent conversation turns from its position, and does not include a content field.
+    /// Declares tools available to subsequent conversation turns through the tools field. role must be system, and content must be omitted.
     /// </summary>
     public sealed partial class KimiK3DynamicToolMessage
     {

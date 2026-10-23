@@ -10,9 +10,9 @@ namespace Moonshot
     {
         /// <summary>
         /// Model ID<br/>
-        /// Example: kimi-k3
+        /// Example: kimi-k3.1-pro
         /// </summary>
-        /// <example>kimi-k3</example>
+        /// <example>kimi-k3.1-pro</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public string? Id { get; set; }
 
@@ -71,7 +71,7 @@ namespace Moonshot
         /// </summary>
         /// <param name="id">
         /// Model ID<br/>
-        /// Example: kimi-k3
+        /// Example: kimi-k3.1-pro
         /// </param>
         /// <param name="object">
         /// Example: model
