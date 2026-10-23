@@ -198,7 +198,7 @@
 			},
 			"KimiK3DynamicToolMessage": {
 				"type": "object",
-				"description": "A Kimi K3 dynamic tool loading message. This message must use the system role, declares tools available to subsequent conversation turns from its position, and does not include a content field.",
+				"description": "Declares tools available to subsequent conversation turns through the tools field. role must be system, and content must be omitted.",
 				"properties": {
 					"role": {
 						"type": "string",
@@ -232,7 +232,7 @@
 						"$ref": "#/components/schemas/KimiK3DynamicToolMessage"
 					}
 				],
-				"description": "A Kimi K3 conversation message. Supports both standard messages and system messages that omit content and declare dynamically loaded tools through tools."
+				"description": "Supports standard conversation messages and system messages for dynamically loading tools."
 			},
 			"ChatRequestCommon": {
 				"type": "object",
@@ -282,7 +282,7 @@
 					},
 					"max_completion_tokens": {
 						"type": "integer",
-						"description": "The maximum number of tokens to generate for the chat completion. The default varies by model: for Kimi K3 it defaults to 131072 and can be set up to 1048576. If the result reaches the maximum number of tokens without ending, the finish reason will be \"length\"; otherwise, it will be \"stop\". This refers to the length of tokens you expect us to return, not the total length of input plus output. If the sum of the input token count (`prompt_tokens`) and `max_completion_tokens` exceeds the model context window, the API automatically lowers the generation limit for the current request to fit the remaining context space and continues processing the request. The input token count itself must be less than the model context window size."
+						"description": "The maximum number of tokens to generate for the chat completion. The default varies by model: for Kimi K3-series models (kimi-k3.1-pro, kimi-k3.1-pro-highspeed, kimi-k3) it defaults to 131072 and can be set up to 1048576. If the result reaches the maximum number of tokens without ending, the finish reason will be \"length\"; otherwise, it will be \"stop\". This refers to the length of tokens you expect us to return, not the total length of input plus output. If the sum of the input token count (`prompt_tokens`) and `max_completion_tokens` exceeds the model context window, the API automatically lowers the generation limit for the current request to fit the remaining context space and continues processing the request. The input token count itself must be less than the model context window size."
 					},
 					"response_format": {
 						"type": "object",
@@ -493,7 +493,7 @@
 					},
 					"max_completion_tokens": {
 						"type": "integer",
-						"description": "The maximum number of tokens to generate for the chat completion. The default varies by model: for Kimi K3 it defaults to 131072 and can be set up to 1048576. If the result reaches the maximum number of tokens without ending, the finish reason will be \"length\"; otherwise, it will be \"stop\". This refers to the length of tokens you expect us to return, not the total length of input plus output. If the sum of the input token count (`prompt_tokens`) and `max_completion_tokens` exceeds the model context window, the API automatically lowers the generation limit for the current request to fit the remaining context space and continues processing the request. The input token count itself must be less than the model context window size."
+						"description": "The maximum number of tokens to generate for the chat completion. The default varies by model: for Kimi K3-series models (kimi-k3.1-pro, kimi-k3.1-pro-highspeed, kimi-k3) it defaults to 131072 and can be set up to 1048576. If the result reaches the maximum number of tokens without ending, the finish reason will be \"length\"; otherwise, it will be \"stop\". This refers to the length of tokens you expect us to return, not the total length of input plus output. If the sum of the input token count (`prompt_tokens`) and `max_completion_tokens` exceeds the model context window, the API automatically lowers the generation limit for the current request to fit the remaining context space and continues processing the request. The input token count itself must be less than the model context window size."
 					},
 					"response_format": {
 						"type": "object",
@@ -652,8 +652,7 @@
 					"messages"
 				]
 			},
-			"KimiK3ChatRequest": {
-				"title": "kimi-k3",
+			"KimiK3ChatRequestBase": {
 				"allOf": [
 					{
 						"$ref": "#/components/schemas/ChatRequestCommon"
@@ -661,17 +660,9 @@
 					{
 						"type": "object",
 						"properties": {
-							"model": {
-								"type": "string",
-								"description": "Model ID",
-								"enum": [
-									"kimi-k3"
-								],
-								"default": "kimi-k3"
-							},
 							"messages": {
 								"type": "array",
-								"description": "A list of Kimi K3 conversation messages. In addition to standard messages, you can insert a {\"role\": \"system\", \"tools\": [...]} message at any conversation position to dynamically load tools. A dynamic tool message omits content and only affects subsequent conversation turns.",
+								"description": "A list of conversation messages.",
 								"items": {
 									"$ref": "#/components/schemas/KimiK3Message"
 								}
@@ -684,12 +675,60 @@
 									"max"
 								],
 								"default": "max",
-								"description": "Kimi K3 always enables thinking with Preserved Thinking. Reasoning effort supports low, high, and max, with max as the default."
+								"description": "Kimi K3-series models always enable thinking with Preserved Thinking. Reasoning effort supports low, high, and max, with max as the default."
 							}
 						},
 						"required": [
-							"model",
 							"messages"
+						]
+					}
+				]
+			},
+			"KimiK31ProChatRequest": {
+				"title": "kimi-k3.1-pro series",
+				"allOf": [
+					{
+						"$ref": "#/components/schemas/KimiK3ChatRequestBase"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"model": {
+								"type": "string",
+								"description": "Model ID",
+								"enum": [
+									"kimi-k3.1-pro",
+									"kimi-k3.1-pro-highspeed"
+								],
+								"default": "kimi-k3.1-pro"
+							}
+						},
+						"required": [
+							"model"
+						]
+					}
+				]
+			},
+			"KimiK3ChatRequest": {
+				"title": "kimi-k3",
+				"allOf": [
+					{
+						"$ref": "#/components/schemas/KimiK3ChatRequestBase"
+					},
+					{
+						"type": "object",
+						"properties": {
+							"model": {
+								"type": "string",
+								"description": "Model ID",
+								"enum": [
+									"kimi-k3"
+								],
+								"default": "kimi-k3"
+							}
+						},
+						"required": [
+							"model"
 						]
 					}
 				]
@@ -1101,8 +1140,8 @@
 				"properties": {
 					"model": {
 						"type": "string",
-						"description": "ID of the model to use. This endpoint currently supports `kimi-k3`.",
-						"example": "kimi-k3"
+						"description": "ID of the model to use. This endpoint currently supports `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`.",
+						"example": "kimi-k3.1-pro"
 					},
 					"input": {
 						"description": "Input for this request. A string is equivalent to a single user message. An array holds ordered typed items and may contain conversation history, tool calls, and tool results.",
@@ -1129,7 +1168,7 @@
 					},
 					"max_output_tokens": {
 						"type": "integer",
-						"description": "Maximum number of tokens to generate for this response. For `kimi-k3` it defaults to 131072 and can be set up to 1048576. This refers to the length of tokens you expect us to return, not the total length of input plus output. When the limit is reached, `status` is `incomplete` and `incomplete_details.reason` is `max_output_tokens`."
+						"description": "Maximum number of tokens to generate for this response. For Kimi K3-series models (`kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`) it defaults to 131072 and can be set up to 1048576. This refers to the length of tokens you expect us to return, not the total length of input plus output. When the limit is reached, `status` is `incomplete` and `incomplete_details.reason` is `max_output_tokens`."
 					},
 					"reasoning": {
 						"type": "object",
@@ -2556,8 +2595,10 @@
 					"model": {
 						"type": "string",
 						"description": "Model ID",
-						"default": "kimi-k3",
+						"default": "kimi-k3.1-pro",
 						"enum": [
+							"kimi-k3.1-pro",
+							"kimi-k3.1-pro-highspeed",
 							"kimi-k3",
 							"kimi-k2.7-code",
 							"kimi-k2.7-code-highspeed",
@@ -3583,16 +3624,18 @@
 				]
 			},
 			"MessagesRequest": {
-				"title": "kimi-k3",
+				"title": "Kimi K3 series",
 				"type": "object",
 				"properties": {
 					"model": {
 						"type": "string",
-						"description": "Model ID",
+						"description": "ID of the model to use. This endpoint currently supports `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`.",
 						"enum": [
+							"kimi-k3.1-pro",
+							"kimi-k3.1-pro-highspeed",
 							"kimi-k3"
 						],
-						"default": "kimi-k3"
+						"default": "kimi-k3.1-pro"
 					},
 					"messages": {
 						"type": "array",
@@ -4258,7 +4301,7 @@
 													"id": {
 														"type": "string",
 														"description": "Model ID",
-														"example": "kimi-k3"
+														"example": "kimi-k3.1-pro"
 													},
 													"object": {
 														"type": "string",
@@ -4718,6 +4761,9 @@
 							"schema": {
 								"oneOf": [
 									{
+										"$ref": "#/components/schemas/KimiK31ProChatRequest"
+									},
+									{
 										"$ref": "#/components/schemas/KimiK3ChatRequest"
 									},
 									{
@@ -4730,6 +4776,8 @@
 								"discriminator": {
 									"propertyName": "model",
 									"mapping": {
+										"kimi-k3.1-pro": "#/components/schemas/KimiK31ProChatRequest",
+										"kimi-k3.1-pro-highspeed": "#/components/schemas/KimiK31ProChatRequest",
 										"kimi-k3": "#/components/schemas/KimiK3ChatRequest",
 										"kimi-k2.7-code": "#/components/schemas/KimiK27CodeChatRequest",
 										"kimi-k2.7-code-highspeed": "#/components/schemas/KimiK27CodeChatRequest",

@@ -29,8 +29,8 @@ namespace Moonshot
         /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
         /// </param>
         /// <param name="model">
-        /// Model ID<br/>
-        /// Default Value: kimi-k3
+        /// ID of the model to use. This endpoint currently supports `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`.<br/>
+        /// Default Value: kimi-k3.1-pro
         /// </param>
         /// <param name="messages">
         /// The conversation messages. If the last message is from the assistant, the model continues from that content (Partial Mode).
@@ -64,7 +64,7 @@ namespace Moonshot
             global::System.Collections.Generic.IList<global::Moonshot.MessagesMessageParam> messages,
             int maxTokens,
             string? xMshRequestNonce = default,
-            global::Moonshot.MessagesRequestModel model = global::Moonshot.MessagesRequestModel.KimiK3,
+            global::Moonshot.MessagesRequestModel model = global::Moonshot.MessagesRequestModel.KimiK31Pro,
             global::Moonshot.OneOf<string, global::System.Collections.Generic.IList<global::Moonshot.MessagesTextBlockParam>>? system = default,
             global::System.Collections.Generic.IList<string>? stopSequences = default,
             global::System.Collections.Generic.IList<global::Moonshot.MessagesTool>? tools = default,

@@ -5,7 +5,7 @@ namespace Moonshot
 {
     /// <summary>
     /// Model ID<br/>
-    /// Default Value: kimi-k3
+    /// Default Value: kimi-k3.1-pro
     /// </summary>
     public enum EstimateTokenRequestModel
     {
@@ -25,6 +25,14 @@ namespace Moonshot
         ///
         /// </summary>
         KimiK3,
+        /// <summary>
+        ///
+        /// </summary>
+        KimiK31Pro,
+        /// <summary>
+        ///
+        /// </summary>
+        KimiK31ProHighspeed,
     }
 
     /// <summary>
@@ -43,6 +51,8 @@ namespace Moonshot
                 EstimateTokenRequestModel.KimiK27Code => "kimi-k2.7-code",
                 EstimateTokenRequestModel.KimiK27CodeHighspeed => "kimi-k2.7-code-highspeed",
                 EstimateTokenRequestModel.KimiK3 => "kimi-k3",
+                EstimateTokenRequestModel.KimiK31Pro => "kimi-k3.1-pro",
+                EstimateTokenRequestModel.KimiK31ProHighspeed => "kimi-k3.1-pro-highspeed",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -57,6 +67,8 @@ namespace Moonshot
                 "kimi-k2.7-code" => EstimateTokenRequestModel.KimiK27Code,
                 "kimi-k2.7-code-highspeed" => EstimateTokenRequestModel.KimiK27CodeHighspeed,
                 "kimi-k3" => EstimateTokenRequestModel.KimiK3,
+                "kimi-k3.1-pro" => EstimateTokenRequestModel.KimiK31Pro,
+                "kimi-k3.1-pro-highspeed" => EstimateTokenRequestModel.KimiK31ProHighspeed,
                 _ => null,
             };
         }

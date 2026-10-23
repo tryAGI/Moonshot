@@ -75,11 +75,16 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnumType), TypeInfoPropertyName = "ChatRequestBaseToolChoiceEnumType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnumFunction))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestBase), TypeInfoPropertyName = "KimiK3ChatRequestBase2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestBaseVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.KimiK3Message>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestBaseVariant2ReasoningEffort), TypeInfoPropertyName = "KimiK3ChatRequestBaseVariant2ReasoningEffort2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK31ProChatRequest), TypeInfoPropertyName = "KimiK31ProChatRequest2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK31ProChatRequestVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK31ProChatRequestVariant2Model), TypeInfoPropertyName = "KimiK31ProChatRequestVariant2Model2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequest), TypeInfoPropertyName = "KimiK3ChatRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestVariant2Model), TypeInfoPropertyName = "KimiK3ChatRequestVariant2Model2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.KimiK3Message>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestVariant2ReasoningEffort), TypeInfoPropertyName = "KimiK3ChatRequestVariant2ReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequest), TypeInfoPropertyName = "KimiK26ChatRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2Model), TypeInfoPropertyName = "KimiK26ChatRequestVariant2Model2")]
@@ -150,9 +155,12 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.OneOf<global::Moonshot.ChatRequestBaseToolChoiceEnum?, global::Moonshot.ChatRequestBaseToolChoiceEnum2>?), TypeInfoPropertyName = "NullableOneOfChatRequestBaseToolChoiceEnumChatRequestBaseToolChoiceEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnum?), TypeInfoPropertyName = "NullableChatRequestBaseToolChoiceEnum2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatRequestBaseToolChoiceEnumType?), TypeInfoPropertyName = "NullableChatRequestBaseToolChoiceEnumType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestBase?), TypeInfoPropertyName = "NullableKimiK3ChatRequestBase2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestBaseVariant2ReasoningEffort?), TypeInfoPropertyName = "NullableKimiK3ChatRequestBaseVariant2ReasoningEffort2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK31ProChatRequest?), TypeInfoPropertyName = "NullableKimiK31ProChatRequest2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK31ProChatRequestVariant2Model?), TypeInfoPropertyName = "NullableKimiK31ProChatRequestVariant2Model2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequest?), TypeInfoPropertyName = "NullableKimiK3ChatRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestVariant2Model?), TypeInfoPropertyName = "NullableKimiK3ChatRequestVariant2Model2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestVariant2ReasoningEffort?), TypeInfoPropertyName = "NullableKimiK3ChatRequestVariant2ReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequest?), TypeInfoPropertyName = "NullableKimiK26ChatRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2Model?), TypeInfoPropertyName = "NullableKimiK26ChatRequestVariant2Model2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2ThinkingType?), TypeInfoPropertyName = "NullableKimiK26ChatRequestVariant2ThinkingType2")]
@@ -229,6 +237,8 @@ namespace Moonshot
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             options.Converters.Add(new global::Moonshot.JsonConverters.KimiK3MessageJsonConverter());
+            options.Converters.Add(new global::Moonshot.JsonConverters.KimiK3ChatRequestBaseJsonConverter());
+            options.Converters.Add(new global::Moonshot.JsonConverters.KimiK31ProChatRequestJsonConverter());
             options.Converters.Add(new global::Moonshot.JsonConverters.KimiK3ChatRequestJsonConverter());
             options.Converters.Add(new global::Moonshot.JsonConverters.KimiK26ChatRequestJsonConverter());
             options.Converters.Add(new global::Moonshot.JsonConverters.KimiK27CodeChatRequestJsonConverter());
@@ -337,13 +347,17 @@ namespace Moonshot
 
                     || typeToConvert == typeof(global::Moonshot.ChatRequestBaseToolChoiceEnumType?)
 
+                    || typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestBaseVariant2ReasoningEffort)
+
+                    || typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestBaseVariant2ReasoningEffort?)
+
+                    || typeToConvert == typeof(global::Moonshot.KimiK31ProChatRequestVariant2Model)
+
+                    || typeToConvert == typeof(global::Moonshot.KimiK31ProChatRequestVariant2Model?)
+
                     || typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2Model)
 
                     || typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2Model?)
-
-                    || typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2ReasoningEffort)
-
-                    || typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2ReasoningEffort?)
 
                     || typeToConvert == typeof(global::Moonshot.KimiK26ChatRequestVariant2Model)
 
@@ -578,6 +592,26 @@ namespace Moonshot
                     return new global::Moonshot.JsonConverters.ChatRequestBaseToolChoiceEnumTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestBaseVariant2ReasoningEffort))
+                {
+                    return new global::Moonshot.JsonConverters.KimiK3ChatRequestBaseVariant2ReasoningEffortJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestBaseVariant2ReasoningEffort?))
+                {
+                    return new global::Moonshot.JsonConverters.KimiK3ChatRequestBaseVariant2ReasoningEffortNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.KimiK31ProChatRequestVariant2Model))
+                {
+                    return new global::Moonshot.JsonConverters.KimiK31ProChatRequestVariant2ModelJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Moonshot.KimiK31ProChatRequestVariant2Model?))
+                {
+                    return new global::Moonshot.JsonConverters.KimiK31ProChatRequestVariant2ModelNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2Model))
                 {
                     return new global::Moonshot.JsonConverters.KimiK3ChatRequestVariant2ModelJsonConverter();
@@ -586,16 +620,6 @@ namespace Moonshot
                 if (typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2Model?))
                 {
                     return new global::Moonshot.JsonConverters.KimiK3ChatRequestVariant2ModelNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2ReasoningEffort))
-                {
-                    return new global::Moonshot.JsonConverters.KimiK3ChatRequestVariant2ReasoningEffortJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Moonshot.KimiK3ChatRequestVariant2ReasoningEffort?))
-                {
-                    return new global::Moonshot.JsonConverters.KimiK3ChatRequestVariant2ReasoningEffortNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Moonshot.KimiK26ChatRequestVariant2Model))

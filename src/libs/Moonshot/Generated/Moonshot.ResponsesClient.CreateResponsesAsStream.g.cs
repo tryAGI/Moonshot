@@ -420,8 +420,8 @@ namespace Moonshot
         /// Example: 7d929748-0ae6-41c2-ab5d-a186498ad721
         /// </param>
         /// <param name="model">
-        /// ID of the model to use. This endpoint currently supports `kimi-k3`.<br/>
-        /// Example: kimi-k3
+        /// ID of the model to use. This endpoint currently supports `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`.<br/>
+        /// Example: kimi-k3.1-pro
         /// </param>
         /// <param name="input">
         /// Input for this request. A string is equivalent to a single user message. An array holds ordered typed items and may contain conversation history, tool calls, and tool results.
@@ -430,7 +430,7 @@ namespace Moonshot
         /// Top-level system instructions, applied ahead of every input item.
         /// </param>
         /// <param name="maxOutputTokens">
-        /// Maximum number of tokens to generate for this response. For `kimi-k3` it defaults to 131072 and can be set up to 1048576. This refers to the length of tokens you expect us to return, not the total length of input plus output. When the limit is reached, `status` is `incomplete` and `incomplete_details.reason` is `max_output_tokens`.
+        /// Maximum number of tokens to generate for this response. For Kimi K3-series models (`kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`, and `kimi-k3`) it defaults to 131072 and can be set up to 1048576. This refers to the length of tokens you expect us to return, not the total length of input plus output. When the limit is reached, `status` is `incomplete` and `incomplete_details.reason` is `max_output_tokens`.
         /// </param>
         /// <param name="reasoning">
         /// Reasoning configuration.

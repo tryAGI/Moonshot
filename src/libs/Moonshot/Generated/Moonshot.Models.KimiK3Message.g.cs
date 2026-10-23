@@ -5,7 +5,7 @@
 namespace Moonshot
 {
     /// <summary>
-    /// A Kimi K3 conversation message. Supports both standard messages and system messages that omit content and declare dynamically loaded tools through tools.
+    /// Supports standard conversation messages and system messages for dynamically loading tools.
     /// </summary>
     public readonly partial struct KimiK3Message : global::System.IEquatable<KimiK3Message>
     {
@@ -47,7 +47,7 @@ namespace Moonshot
             : throw new global::System.InvalidOperationException($"Expected union variant 'StandardMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// A Kimi K3 dynamic tool loading message. This message must use the system role, declares tools available to subsequent conversation turns from its position, and does not include a content field.
+        /// Declares tools available to subsequent conversation turns through the tools field. role must be system, and content must be omitted.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK3DynamicToolMessage? DynamicToolMessage { get; init; }

@@ -18,12 +18,12 @@ namespace Moonshot.JsonConverters
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
 
-            global::Moonshot.ChatRequestCommon? common = default;
+            global::Moonshot.KimiK3ChatRequestBase? @base = default;
             try
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ChatRequestCommon), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ChatRequestCommon> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ChatRequestCommon).Name}");
-                common = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK3ChatRequestBase), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK3ChatRequestBase> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK3ChatRequestBase).Name}");
+                @base = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
             {
@@ -54,7 +54,7 @@ namespace Moonshot.JsonConverters
                 // Legacy enum converters signal an incompatible JSON token with this exception.
             }
             var __value = new global::Moonshot.KimiK3ChatRequest(
-                common,
+                @base,
 
                 kimiK3ChatRequestVariant2
                 );
@@ -74,11 +74,11 @@ namespace Moonshot.JsonConverters
 
             writer.WriteStartObject();
             var __writtenPropertyNames = new global::System.Collections.Generic.HashSet<string>(global::System.StringComparer.Ordinal);
-            if (value.IsCommon)
+            if (value.IsBase)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.ChatRequestCommon), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.ChatRequestCommon?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.ChatRequestCommon).Name}");
-                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickCommon(), typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Moonshot.KimiK3ChatRequestBase), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Moonshot.KimiK3ChatRequestBase> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Moonshot.KimiK3ChatRequestBase).Name}");
+                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickBase(), typeInfo);
                 if (__element0.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");
