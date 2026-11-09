@@ -16,8 +16,8 @@ fetch_spec() {
 # OpenAPI spec: https://platform.kimi.ai/docs/openapi.json
 install_autosdk_cli
 rm -rf Generated
-fetch_spec --fail --silent --show-error -L -o openapi.yaml https://platform.kimi.ai/docs/openapi.json
-autosdk generate openapi.yaml \
+fetch_spec --fail --silent --show-error -L -o openapi.json https://platform.kimi.ai/docs/openapi.json
+autosdk generate openapi.json \
   --namespace Moonshot \
   --clientClassName MoonshotClient \
   --targetFramework net10.0 \
