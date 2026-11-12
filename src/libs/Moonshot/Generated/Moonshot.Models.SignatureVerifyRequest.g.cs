@@ -28,9 +28,9 @@ namespace Moonshot
 
         /// <summary>
         /// The `model` value from the request body of the model call, exactly as sent.<br/>
-        /// Example: kimi-k2.7-code
+        /// Example: kimi-k3.1-pro
         /// </summary>
-        /// <example>kimi-k2.7-code</example>
+        /// <example>kimi-k3.1-pro</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Model { get; set; }
@@ -63,7 +63,7 @@ namespace Moonshot
         /// </param>
         /// <param name="model">
         /// The `model` value from the request body of the model call, exactly as sent.<br/>
-        /// Example: kimi-k2.7-code
+        /// Example: kimi-k3.1-pro
         /// </param>
         /// <param name="signature">
         /// The signature token returned in the `Msh-Request-Signature` response header of the model call.<br/>
