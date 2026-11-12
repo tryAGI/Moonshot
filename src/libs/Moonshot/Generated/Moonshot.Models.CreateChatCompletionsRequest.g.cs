@@ -89,7 +89,7 @@ namespace Moonshot
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK3' but the value was {ToString()}.");
 
         /// <summary>
-        ///
+        /// No longer available to newly registered users. Users who registered before November 1, 2026, can continue using this model until its planned retirement at the end of December 2026.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK27CodeChatRequest? KimiK27Code { get; init; }
@@ -126,7 +126,7 @@ namespace Moonshot
             : throw new global::System.InvalidOperationException($"Expected union variant 'KimiK27Code' but the value was {ToString()}.");
 
         /// <summary>
-        ///
+        /// No longer available to newly registered users. Users who registered before November 1, 2026, can continue using this model until its planned retirement at the end of December 2026.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Moonshot.KimiK26ChatRequest? KimiK26 { get; init; }

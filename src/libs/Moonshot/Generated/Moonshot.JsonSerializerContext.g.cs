@@ -708,18 +708,42 @@ namespace Moonshot
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequest), TypeInfoPropertyName = "KimiK3ChatRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK3ChatRequestVariant2Model), TypeInfoPropertyName = "KimiK3ChatRequestVariant2Model2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequest), TypeInfoPropertyName = "KimiK26ChatRequest2")]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2))]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2Model), TypeInfoPropertyName = "KimiK26ChatRequestVariant2Model2")]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2Thinking))]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2ThinkingType), TypeInfoPropertyName = "KimiK26ChatRequestVariant2ThinkingType2")]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK26ChatRequestVariant2ThinkingKeep), TypeInfoPropertyName = "KimiK26ChatRequestVariant2ThinkingKeep2")]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequest), TypeInfoPropertyName = "KimiK27CodeChatRequest2")]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2))]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2Model), TypeInfoPropertyName = "KimiK27CodeChatRequestVariant2Model2")]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2Thinking))]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2ThinkingType), TypeInfoPropertyName = "KimiK27CodeChatRequestVariant2ThinkingType2")]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.KimiK27CodeChatRequestVariant2ThinkingKeep), TypeInfoPropertyName = "KimiK27CodeChatRequestVariant2ThinkingKeep2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Moonshot.ChatCompletionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTimeOffset))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Moonshot.ChatCompletionResponseChoice>))]

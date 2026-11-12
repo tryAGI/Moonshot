@@ -5,7 +5,7 @@
 namespace Moonshot
 {
     /// <summary>
-    ///
+    /// No longer available to newly registered users. Users who registered before November 1, 2026, can continue using this model until its planned retirement at the end of December 2026.
     /// </summary>
     public readonly partial struct KimiK26ChatRequest : global::System.IEquatable<KimiK26ChatRequest>
     {

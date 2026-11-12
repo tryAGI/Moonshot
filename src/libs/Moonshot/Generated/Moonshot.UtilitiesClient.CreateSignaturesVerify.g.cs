@@ -597,7 +597,7 @@ namespace Moonshot
         /// </param>
         /// <param name="model">
         /// The `model` value from the request body of the model call, exactly as sent.<br/>
-        /// Example: kimi-k2.7-code
+        /// Example: kimi-k3.1-pro
         /// </param>
         /// <param name="signature">
         /// The signature token returned in the `Msh-Request-Signature` response header of the model call.<br/>
